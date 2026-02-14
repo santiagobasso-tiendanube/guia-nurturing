@@ -8,11 +8,18 @@ const CHECK_SVG = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><
 
 /* ---------- PROGRESS SYSTEM ---------- */
 const ALL_SECTIONS = [
-  'eco-vision','eco-deliverys','eco-fullfunnel','eco-bienvenidos','eco-quiz',
-  'hs-intro','hs-contactos','hs-workflows','hs-emails','hs-quiz',
-  'num-deliverys','num-funnel','num-ql','num-sales','num-quiz',
-  'est-problemas','est-plan','est-framework','est-quiz',
-  'rec-ruta','rec-cursos'
+  /* index.html — Inicio + Historia */
+  'hist-historia','hist-filosofia',
+  /* sistema.html — El Sistema */
+  'sis-vision','sis-funnel','sis-puertas','sis-quiz',
+  /* analisis.html — Caso de Estudio + Numeros */
+  'ana-caso','ana-lecciones','ana-numeros','ana-quiz',
+  /* herramientas.html — HubSpot */
+  'hs-intro','hs-contactos','hs-workflows','hs-emails','hs-broadcasts','hs-quiz',
+  /* estrategia.html — Estrategia 2026 */
+  'est-vision','est-pilares','est-proyectos','est-riesgos','est-framework','est-quiz',
+  /* recursos.html — Recursos */
+  'rec-ruta','rec-glosario'
 ];
 
 function getProgress(){
@@ -224,49 +231,41 @@ function initGlossary(){
 /* ---------- QUIZ SYSTEM ---------- */
 function initQuizzes(){
   document.querySelectorAll('.quiz-card').forEach(card=>{
+    const correctValue=card.dataset.correct; // e.g. "b"
     const opts=card.querySelectorAll('.q-opt');
-    const feedback=card.querySelector('.q-feedback');
-    opts.forEach(opt=>{
-      opt.addEventListener('click',()=>{
+    const radios=card.querySelectorAll('input[type="radio"]');
+    const fbRight=card.querySelector('.q-feedback.q-right');
+    const fbWrong=card.querySelector('.q-feedback.q-wrong');
+
+    radios.forEach(radio=>{
+      radio.addEventListener('change',()=>{
         if(card.classList.contains('answered'))return;
         card.classList.add('answered');
+        const selected=radio.value;
+        const isCorrect=selected===correctValue;
+
+        // Disable all radios
+        radios.forEach(r=>{r.disabled=true});
         opts.forEach(o=>o.classList.add('disabled'));
-        const correct=opt.dataset.correct==='true';
-        opt.classList.add(correct?'correct':'wrong');
-        // Show correct answer
-        if(!correct){
-          opts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('correct')});
+
+        // Highlight selected option
+        const selectedLabel=radio.closest('.q-opt');
+        selectedLabel.classList.add(isCorrect?'correct':'wrong');
+
+        // Show correct answer if wrong
+        if(!isCorrect){
+          opts.forEach(o=>{
+            const r=o.querySelector('input[type="radio"]');
+            if(r&&r.value===correctValue)o.classList.add('correct');
+          });
         }
-        if(feedback){
-          feedback.classList.add('show',correct?'correct':'wrong');
-          const fb=correct?opt.dataset.fbCorrect||feedback.dataset.fbCorrect:opt.dataset.fbWrong||feedback.dataset.fbWrong||feedback.dataset.fbCorrect;
-          if(fb)feedback.innerHTML=fb;
-        }
-        checkQuizComplete(card);
+
+        // Show feedback
+        if(isCorrect&&fbRight){fbRight.classList.add('show')}
+        if(!isCorrect&&fbWrong){fbWrong.classList.add('show')}
       });
     });
   });
-}
-
-function checkQuizComplete(card){
-  const quizSection=card.closest('.quiz-section');
-  if(!quizSection)return;
-  const allCards=quizSection.querySelectorAll('.quiz-card');
-  const answered=quizSection.querySelectorAll('.quiz-card.answered');
-  if(answered.length===allCards.length){
-    const results=quizSection.querySelector('.quiz-results');
-    if(results){
-      let score=0;
-      allCards.forEach(c=>{
-        // If there's no .q-opt.wrong in this card, the user picked the correct answer
-        if(!c.querySelector('.q-opt.wrong'))score++;
-      });
-      results.querySelector('.score').textContent=score+'/'+allCards.length;
-      results.classList.add('show');
-      const sectionId=quizSection.dataset.quizId;
-      if(sectionId)markAsRead(sectionId);
-    }
-  }
 }
 
 /* ---------- ACCORDION ---------- */

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>El Sistema — Nurturing Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-logo">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    Nurturing <span>Academy</span>
+  </div>
+  <nav class="header-tabs">
+    <a href="index.html" class="header-tab">Inicio</a>
+    <a href="sistema.html" class="header-tab" data-page="sistema">El Sistema</a>
+    <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="herramientas.html" class="header-tab">HubSpot</a>
+    <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
+    <a href="recursos.html" class="header-tab">Recursos</a>
+  </nav>
+  <div class="header-right">
+    <button class="glos-trigger" id="glos-btn">📖 Glosario</button>
+    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/24</span></div>
+  </div>
+</header>
+<div class="progress-strip"><div class="progress-strip-fill" style="width:0%"></div></div>
+
+<main class="app-main">
+<div class="page active" data-page="sistema">
+
+  <div class="sub-tabs-wrap">
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="sis-vision">Vista General <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="sis-funnel">El Funnel Email x Email <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="sis-puertas">Puertas de Entrada <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="sis-quiz">Quiz <span class="check-icon"></span></button>
+    </div>
+  </div>
+
+  <!-- ─── Vista General ─── -->
+  <div class="sub-page active" data-sub="sis-vision">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>El Sistema de Nurturing: Vista General</h1>
+        <p class="subtitle">El full-funnel como máquina automatizada — desde que un lead deja su email hasta que paga (o se descarta).</p>
+
+        <p>Antes del sistema, nurturing era "mandemos un broadcast y veamos qué pasa". Ahora es un recorrido planificado con <strong>22 emails distribuidos en 4 etapas</strong>, criterios de pasaje por comportamiento y segmentación por canal de venta.</p>
+
+        <h2>Diagrama del Full-Funnel</h2>
+
+        <div class="flow-diagram">
+          <div class="flow-row">
+            <div class="flow-box flow-entry">
+              <strong>ENTRADA</strong><br>
+              Formularios / Deliverys / Eventos / Broadcasts
+            </div>
+          </div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row">
+            <div class="flow-box flow-tofu">
+              <strong>TOFU — Conocimiento</strong><br>
+              4 emails × 3 segmentos (12 emails)<br>
+              <small>Objetivo: Educar + Segmentar</small><br>
+              <small>Criterio de pasaje: "vió precio" o "vió 5+ páginas"</small>
+            </div>
+          </div>
+          <div class="flow-arrow">▼ Señal de intención</div>
+          <div class="flow-row">
+            <div class="flow-box flow-mofu">
+              <strong>MOFU — Evaluación</strong><br>
+              7 emails (resuelven objeciones)<br>
+              <small>Objetivo: Resolver frenos y generar confianza</small><br>
+              <small>Criterio de pasaje: "entró a crear tienda" o engagement alto</small>
+            </div>
+          </div>
+          <div class="flow-arrow">▼ Alta intención</div>
+          <div class="flow-row">
+            <div class="flow-box flow-bofu">
+              <strong>BOFU — Decisión</strong><br>
+              5 emails segmentados por canal de venta<br>
+              <small>Objetivo: Empujar a crear tienda o activar plan</small><br>
+              <small>Criterio de pasaje: Crea tienda / paga / no responde</small>
+            </div>
+          </div>
+          <div class="flow-arrow">▼ No convirtió</div>
+          <div class="flow-row">
+            <div class="flow-box flow-remark">
+              <strong>REMARKETING</strong><br>
+              7 emails (última oportunidad)<br>
+              <small>Objetivo: Recuperar leads perdidos con ángulos diferentes</small><br>
+              <small>Final: Se descarta o vuelve al sistema por acción propia</small>
+            </div>
+          </div>
+        </div>
+
+        <h2>Los 3 Segmentos del Full-Funnel</h2>
+        <p>Desde TOFU, el sistema divide leads en 3 caminos según cómo respondieron "¿Cómo vendés actualmente?" en el formulario:</p>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value danger">No vende / N/S</div>
+            <div class="stat-label">45 leads en el cruce. 8,9% conversión. Necesitan inspiración y guía paso a paso.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value teal">Vende Online</div>
+            <div class="stat-label">27 leads. 22,2% conversión. Ya entienden ecommerce. Necesitan por qué Tiendanube es mejor.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value coral">Vende Físico</div>
+            <div class="stat-label">33 leads. 9,1% conversión. Tienen negocio pero no experiencia online.</div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>El dato de "Vende Online" con 22,2% de conversión vs "No vende" con 8,9% es la razón de la segmentación. Antes, los 3 segmentos recibían el mismo email. Ahora, cada uno tiene un tono, un enfoque y objeciones diferentes que resolver. <strong>Este es el principio más importante del sistema: la madurez del lead define el mensaje.</strong></p>
+        </div>
+
+        <h2>Criterios de Pasaje: Comportamiento, No Tiempo</h2>
+        <p>El sistema no avanza a un lead por "lleva 15 días" sino por <strong>señales concretas</strong>:</p>
+        <table class="data-table">
+          <thead><tr><th>De</th><th>A</th><th>Señal</th><th>Lógica</th></tr></thead>
+          <tbody>
+            <tr><td>TOFU</td><td>MOFU</td><td>Visitó página de precio o vio 5+ páginas</td><td>Si está buscando precios, ya no necesita educación básica</td></tr>
+            <tr><td>MOFU</td><td>BOFU</td><td>Entró a crear tienda o engagement alto en emails MOFU</td><td>Si empezó a crear tienda, necesita el empujón final</td></tr>
+            <tr><td>BOFU</td><td>Remarketing</td><td>No creó tienda ni pagó después de 5 emails</td><td>Necesita un ángulo distinto o se descarta</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>¿Por qué esto importa?</strong>
+            <p>Porque en el modelo viejo, un lead podía estar 6 meses recibiendo emails genéricos sin avanzar. En el sistema nuevo, si un lead no muestra señales de intención después del remarketing, se descarta. Es mejor tener una base más chica de leads engaged que una base enorme de leads zombies.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="sis-vision" onclick="markAsRead('sis-vision')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── El Funnel Email x Email ─── -->
+  <div class="sub-page" data-sub="sis-funnel">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>El Funnel Email por Email</h1>
+        <p class="subtitle">Cada email tiene una función estratégica. Acá vas a ver qué dice cada uno, por qué y cómo se conecta con el siguiente.</p>
+
+        <!-- TOFU -->
+        <h2>TOFU — Top of Funnel (4 emails por segmento)</h2>
+        <p><strong>Objetivo:</strong> Educar al lead sobre ecommerce y segmentarlo según comportamiento. No se vende. Se genera confianza.</p>
+        <p><strong>Criterio de entrada:</strong> Lead nuevo que completó formulario o descargó recurso.</p>
+        <p><strong>Criterio de salida:</strong> "Vio precio" o "visitó 5+ páginas" → Pasa a MOFU.</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">TOFU Email 1 — "Estás un paso más cerca de hacer tus sueños realidad" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header">
+                  <span class="es-tag tofu">TOFU</span>
+                  <span class="es-num">Email 1 de 4</span>
+                </div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> ¡Estás un paso más cerca de hacer tus sueños realidad!</div>
+                  <div><strong>Preheader:</strong> Empezar tu negocio online es más fácil de lo que pensás</div>
+                  <div><strong>Segmento:</strong> No vende / No se sabe</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"¡Hola! Sabemos que dar el primer paso puede ser intimidante, pero la buena noticia es que no estás solo/a. Miles de personas como vos ya hicieron realidad su sueño de tener un negocio online con Tiendanube."</em></p>
+                  <p><em>CTA: "Descubrí cómo empezar" → Blog educativo</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Función:</strong> Bienvenida + normalización. Le dice al lead "estás haciendo lo correcto" y reduce la ansiedad de empezar.</p>
+                  <p><strong>Por qué no vende acá:</strong> Porque el lead acaba de entrar. Todavía no sabe si Tiendanube es para él. Si le metemos un CTA de "Crear tienda" acá, lo espantamos.</p>
+                  <p><strong>CTA hacia blog:</strong> El objetivo es que consuma contenido, no que compre. Así se mide si tiene interés real (vuelve a la web, ve más páginas) o si es un lead fantasma.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">TOFU Email 2 — "6 historias de emprendedores para inspirarte" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header">
+                  <span class="es-tag tofu">TOFU</span>
+                  <span class="es-num">Email 2 de 4</span>
+                </div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> 6 historias de emprendedores que te van a inspirar</div>
+                  <div><strong>Preheader:</strong> Sus sueños se hicieron realidad... los tuyos también pueden</div>
+                  <div><strong>Segmento:</strong> Todos (general)</div>
+                </div>
+                <div class="es-body">
+                  <p><em>Casos de éxito reales: emprendedores que empezaron con Tiendanube y hoy tienen negocios que facturan. Cada historia muestra un perfil diferente (ropa, comida, decoración, etc.).</em></p>
+                  <p><em>CTA: "Conocé sus historias" → Página de casos de éxito</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Función:</strong> Social proof. El lead piensa "si ellos pudieron, yo también puedo". Es el segundo email — el momento de pasar de "me interesa" a "es posible".</p>
+                  <p><strong>Por qué casos de éxito:</strong> Porque un lead que recién entra no cree en datos ni en features. Cree en historias de gente como él. La emoción precede a la lógica.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">TOFU Email 3 — "Creá tu tienda en 6 pasos simples" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header">
+                  <span class="es-tag tofu">TOFU</span>
+                  <span class="es-num">Email 3 de 4</span>
+                </div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> Creá tu tienda online en 6 pasos simples</div>
+                  <div><strong>Preheader:</strong> Es más fácil de lo que pensás</div>
+                </div>
+                <div class="es-body">
+                  <p><em>Guía paso a paso visual: elegir plantilla → cargar productos → configurar envíos → configurar pagos → personalizar → lanzar. Cada paso con link a tutorial específico.</em></p>
+                  <p><em>CTA: "Empezá a crear tu tienda" → Página de registro</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Función:</strong> Reducir la percepción de complejidad. El lead ya sabe que es posible (Email 2). Ahora necesita saber que es <strong>fácil</strong>.</p>
+                  <p><strong>Primer CTA a registro:</strong> Es recién el Email 3, después de 2 emails puramente educativos. El lead ya recibió inspiración, social proof, y ahora recibe una guía práctica. Este es el momento natural para invitarlo a probar.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">TOFU Email 4 — "Cuánto sale crear tu tienda" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header">
+                  <span class="es-tag tofu">TOFU</span>
+                  <span class="es-num">Email 4 de 4 — Último</span>
+                </div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> ¿Cuánto sale crear una tienda online?</div>
+                  <div><strong>Preheader:</strong> Todos los costos, sin sorpresas</div>
+                </div>
+                <div class="es-body">
+                  <p><em>Transparencia total sobre costos: plan gratuito vs planes pagos, comisiones, costos de dominio, etc. Comparativa con otras plataformas.</em></p>
+                  <p><em>CTA: "Mirá los planes" → Página de precios</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Función:</strong> Resolver la objeción de precio. Si el lead llegó hasta el Email 4, está interesado. La pregunta "¿cuánto cuesta?" es la barrera natural. Responderla con transparencia genera confianza.</p>
+                  <p><strong>CTA a precios:</strong> Si el lead hace clic y mira precios, eso <strong>activa el criterio de pasaje a MOFU</strong> ("vio precio"). El sistema detecta la señal y lo avanza automáticamente.</p>
+                </div>
+              </div>
+              <div class="callout-strategy">
+                <div class="cs-title">🧠 La lógica del TOFU completo</div>
+                <p>Mirá la secuencia: <strong>Emoción → Social proof → Guía práctica → Precio</strong>. Cada email resuelve un freno específico en el orden natural en que piensa el lead. No es random. Es un embudo psicológico dentro del embudo técnico.</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- MOFU -->
+        <h2>MOFU — Middle of Funnel (7 emails)</h2>
+        <p><strong>Objetivo:</strong> Resolver objeciones específicas. El lead ya sabe qué es Tiendanube. Ahora necesita saber que <strong>funciona para él</strong>.</p>
+        <p><strong>Criterio de entrada:</strong> Vio precio o visitó 5+ páginas.</p>
+        <p><strong>Criterio de salida:</strong> Entró a crear tienda o engagement alto → Pasa a BOFU.</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 1 — Envíos: "Hacé tus envíos más fáciles y rápidos" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 1 de 7</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Envíos integrados</div>
+                  <div><strong>Objeción que resuelve:</strong> "Los envíos deben ser complicados y caros"</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"En Tiendanube, ya conectamos los principales medios de envío del país para que no tengas que preocuparte por nada..."</em></p>
+                  <p><em>CTA: "Conocé las opciones de envío" → Guía de envíos</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>¿Por qué envíos primero?</strong> Porque en Argentina, la logística es el freno #1 para emprendedores. "¿Cómo hago para enviar los productos?" es la primera pregunta práctica. Resolverla primero genera confianza inmediata.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 2 — Medios de pago: "Cobrá como quieras" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 2 de 7</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Medios de pago integrados</div>
+                  <div><strong>Objeción:</strong> "¿Podré cobrar con tarjeta? ¿Mercado Pago?"</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"Mercado Pago, tarjetas de crédito, transferencias... Todos los medios de pago que tus clientes usan, listos para que empieces a cobrar desde el primer día."</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Secuencia lógica:</strong> Después de envíos viene pagos. Son las dos "patas operativas" de un ecommerce. Si un lead sabe que puede enviar Y cobrar fácilmente, el 70% de sus preocupaciones prácticas están resueltas.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 3 — Diseño: "Tu tienda con tu estilo" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 3 de 7</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Diseño y personalización</div>
+                  <div><strong>Objeción:</strong> "Si no sé programar, ¿mi tienda va a verse profesional?"</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"+65 plantillas gratuitas, personalizables sin código. Arrastrá y soltá. Tu marca, tu estilo, tu tienda."</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Función emocional:</strong> Pasamos de lo práctico (envíos, pagos) a lo emocional (diseño, identidad). El lead ya sabe que funciona. Ahora necesita sentir que va a ser <em>suya</em>.</p>
+                </div>
+              </div>
+
+              <div class="before-after">
+                <h4>Tu Mirada Editorial — Optimización MOFU</h4>
+                <div class="ba-cols">
+                  <div class="ba-before">
+                    <h5>Antes (versión original)</h5>
+                    <p class="ba-subject"><strong>Subject:</strong> "Diseñá tu tienda online como un profesional"</p>
+                    <p>Enfoque en features: "65 plantillas", "editor drag & drop", "personalización avanzada".</p>
+                  </div>
+                  <div class="ba-after">
+                    <h5>Después (tu versión)</h5>
+                    <p class="ba-subject"><strong>Subject:</strong> "Tu tienda con tu estilo" (más corto, más emocional)</p>
+                    <p>Enfoque en el usuario: "Tu marca, tu estilo". Se redujeron las features y se amplió la conexión emocional. Cuerpo más corto, más directo.</p>
+                  </div>
+                </div>
+                <div class="ba-result">
+                  <strong>Resultado:</strong> Pendiente de medición comparativa. La hipótesis: un subject más corto y emocional genera mejor OR.
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 4 — Precios: "Planes desde $0" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 4 de 7</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Planes y precios</div>
+                  <div><strong>Objeción:</strong> "¿Y si es muy caro para mí?"</div>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p>El lead ya visitó la página de precios (por eso está en MOFU). Pero visitarla no significa que haya entendido el modelo. Este email explica la lógica: plan gratuito sin compromiso → upgradear cuando crezca. Reduce el riesgo percibido a cero.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 5 — IA: "La IA que vende por vos" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 5 de 7</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Funcionalidades de IA</div>
+                  <div><strong>Objeción:</strong> "¿Y si me lleva mucho tiempo?"</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"Tiendanube IA genera descripciones de productos, textos promocionales y respuestas a clientes en segundos. Vendé más, trabajá menos."</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p><strong>Por qué IA en MOFU:</strong> Es un diferenciador. Otras plataformas ofrecen envíos, pagos y diseño. Pocas ofrecen IA integrada. Este email posiciona a Tiendanube como la plataforma del futuro.</p>
+                  <p>Además, el delivery de "IA para e-commerce" de Evolucion tuvo <strong>9% de conversión a payment</strong> — el tema de IA es el que más conecta con la intención de compra.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 6 — Apps: "Tu tienda puede hacer eso" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 6 de 7</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Ecosistema de aplicaciones (+150 apps)</div>
+                  <div><strong>Objeción:</strong> "¿Y si necesito algo que Tiendanube no tiene?"</div>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p>La objeción de "le va a faltar algo" es real. Este email muestra que Tiendanube tiene un ecosistema abierto: si necesitás algo, hay una app para eso. No es una plataforma cerrada.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU 7 — "Tu negocio, listo para dar el salto" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MOFU</span><span class="es-num">Email 7 de 7 — Cierre</span></div>
+                <div class="es-meta">
+                  <div><strong>Tema:</strong> Recapitulación + empujón</div>
+                  <div><strong>Función:</strong> Recapitular todo lo aprendido y mover a acción</div>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis estratégico</h4>
+                  <p>Último email de MOFU. Recapitula: "Ya sabés que podés enviar, cobrar, diseñar, integrar IA y apps. ¿Qué te falta?" Es el puente a BOFU — el lead que no actuó después de 7 emails con objeciones resueltas necesita un empujón diferente.</p>
+                </div>
+              </div>
+
+              <div class="callout-strategy">
+                <div class="cs-title">🧠 La lógica del MOFU completo</div>
+                <p>Secuencia: <strong>Envíos → Pagos → Diseño → Precios → IA → Apps → Cierre</strong>. Cada email resuelve UNA objeción. No mezcla temas. No abruma. Es como una conversación donde cada pregunta del lead se responde en el momento justo.</p>
+                <p>El orden no es casual: primero lo práctico (envíos/pagos), luego lo emocional (diseño), luego lo racional (precio/IA/apps), y al final el empujón.</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- BOFU -->
+        <h2>BOFU — Bottom of Funnel (5 emails segmentados)</h2>
+        <p><strong>Objetivo:</strong> Empujar al lead a crear tienda o activar plan. Máxima personalización.</p>
+        <p><strong>Criterio de entrada:</strong> Entró a crear tienda o engagement alto en MOFU.</p>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Tu Mirada Editorial — Los BOFU</div>
+          <p>Estos fueron los primeros emails que escribió Julián cuando llegó al área. Y vos los revisaste. Vamos a ver tu feedback real, que definió las reglas editoriales de los BOFU que usamos hoy.</p>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">BOFU 1/5 — Segmentado por Sales Channel <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>El primer BOFU se envía en 3 versiones según el canal de venta:</p>
+              <div class="stat-grid">
+                <div class="stat-card"><div class="stat-value teal">Vende Online</div><div class="stat-label">"Redes Sociales / Marketplace / Tienda online" → CTA a crear tienda con foco en escalar</div></div>
+                <div class="stat-card"><div class="stat-value coral">Vende Físico</div><div class="stat-label">"Tienda física" → CTA a crear tienda con foco en digitalizar</div></div>
+                <div class="stat-card"><div class="stat-value navy">No vende / N/S</div><div class="stat-label">"Aún no vende" → CTA a crear tienda con foco en empezar fácil</div></div>
+              </div>
+              <p><strong>Cada versión habla desde la realidad del lead.</strong> No le decimos a alguien que ya vende por redes "es fácil empezar" — le decimos "es hora de escalar". No le decimos a alguien con tienda física "creá tu negocio" — le decimos "digitalizá tu local".</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">BOFU — Tu Feedback Editorial a Julián (10 reglas) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="callout-editorial">
+                <div class="ce-title">✏️ Tu Mirada Editorial — Feedback Real</div>
+                <p>Cuando Julián escribió los primeros BOFU, vos le diste estas correcciones. Son las 10 reglas editoriales que definieron el estándar de los emails de nurturing:</p>
+                <blockquote>"Personalizar como un desarrollador queda alejado del emprendedor promedio."</blockquote>
+                <p>Le marcaste que el tono era demasiado técnico para el público. Un emprendedor SMB no piensa en "personalización avanzada" — piensa en "que quede linda mi tienda".</p>
+
+                <blockquote>"Emojis con moderación — los emojis no generan la misma 'confianza' que el lenguaje directo y humano."</blockquote>
+                <p>Julián tendía a poner emojis en cada línea. Vos le mostraste que menos es más: un emoji bien puesto resalta; muchos emojis parecen spam.</p>
+
+                <blockquote>"Menos bullet points, más narrativa fluida."</blockquote>
+                <p>Los BOFU originales eran listas de features. Vos los transformaste en narrativas cortas que fluyen como una conversación, no como un catálogo.</p>
+
+                <blockquote>"El primer párrafo tiene que enganchar — si no conecta en las primeras 2 líneas, no se lee."</blockquote>
+                <p>Regla que ya aplicabas en los broadcasts. El subject abre el email; el primer párrafo decide si se lee.</p>
+
+                <blockquote>"Si el CTA no es claro en 3 segundos, hay que reescribirlo."</blockquote>
+                <p>Le marcaste que algunos CTAs eran demasiado creativos y no se entendía qué pasaba al hacer clic. "Descubrí tu potencial" no dice nada. "Creá tu tienda gratis" sí.</p>
+              </div>
+
+              <div class="callout-strategy">
+                <div class="cs-title">🧠 Pensar como Estratega</div>
+                <p>Fijate lo que pasó acá: Julián aportó la <strong>estructura estratégica</strong> (segmentación por sales channel, criterios de pasaje, flujo automatizado) y vos aportaste la <strong>ejecución creativa</strong> (tono, copy, CTAs). Ninguno de los dos por separado generaba un buen resultado. Los BOFU que funcionan hoy son la <strong>combinación de ambos</strong>.</p>
+                <p class="cs-question">Preguntate: cuando leas un email nuevo del área, ¿ves primero la estructura (a quién va, cuándo, por qué) o el copy (tono, subject, CTA)? Lo ideal es ver ambos.</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- REMARKETING -->
+        <h2>Remarketing (7 emails)</h2>
+        <p><strong>Objetivo:</strong> Última oportunidad antes de descarte. Cambiar el ángulo completamente.</p>
+        <p><strong>Criterio de entrada:</strong> Pasó por BOFU sin crear tienda ni pagar.</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Lógica del Remarketing <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Si un lead recibió 4 emails de TOFU + 7 de MOFU + 5 de BOFU = <strong>16 emails</strong> y no convirtió, claramente el approach actual no funciona para él. El remarketing usa ángulos completamente diferentes:</p>
+              <ul>
+                <li><strong>Urgencia real:</strong> Ofertas temporales, descuentos por activar plan</li>
+                <li><strong>Social proof amplificado:</strong> Casos de éxito más agresivos, números reales de ventas</li>
+                <li><strong>FOMO:</strong> "Otros emprendedores como vos ya están vendiendo"</li>
+                <li><strong>Último aviso:</strong> "Vamos a dejar de escribirte" (honestidad radical)</li>
+              </ul>
+              <p><strong>¿Y si no funciona?</strong> Se descarta al lead. No se lo deja "zombificado" en la base. Un lead que no muestra señales después de 23 emails no va a convertir con el email 24.</p>
+              <div class="callout callout-insight">
+                <div class="callout-icon">💡</div>
+                <div class="callout-body">
+                  <strong>Dato del reporte de deliverys:</strong> De los 124 trials sin payment, el problema no era la activación sino el <strong>cierre</strong>. Todos habían creado trial. Un flujo de remarketing enfocado en trials vencidos podría ser el quick win más grande de 2026.
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- Flujo de Deliverys -->
+        <h2>Flujo de Deliverys (secuencia paralela)</h2>
+        <p>Los deliverys no son parte del full-funnel — son una <strong>puerta de entrada</strong> que funciona en paralelo.</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Cómo funciona un Delivery <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="flow-diagram">
+                <div class="flow-row"><div class="flow-box flow-entry"><strong>Lead descarga recurso</strong><br>Form: nombre, email, teléfono, "¿Cómo vendés?"</div></div>
+                <div class="flow-arrow">▼</div>
+                <div class="flow-row"><div class="flow-box flow-tofu"><strong>Email del Descargable</strong><br>CTR 40-60% — Excepcional</div></div>
+                <div class="flow-arrow">▼ Retraso 2 min</div>
+                <div class="flow-row"><div class="flow-box flow-mofu"><strong>¿Ya recibió Bienvenida?</strong><br>Sí → Sigue en flujo | No → ¿Es Evolución?</div></div>
+                <div class="flow-arrow">▼ SMB</div>
+                <div class="flow-row"><div class="flow-box flow-bofu"><strong>Email de Bienvenidos</strong><br>CTR 2,14% — Cuello de botella</div></div>
+                <div class="flow-arrow">▼</div>
+                <div class="flow-row"><div class="flow-box flow-remark"><strong>TOFU (Full-Funnel)</strong><br>Mismo flujo para todos</div></div>
+              </div>
+              <div class="callout callout-danger">
+                <div class="callout-icon">⚠️</div>
+                <div class="callout-body">
+                  <strong>El cuello de botella:</strong> Se pasa de 40-60% CTR en el descargable a solo 2,14% en el Bienvenidos. Se pierde el <strong>95% del engagement</strong>. El plan de acción propone reemplazar el email genérico de Bienvenidos por 3 BOFU segmentados por canal de venta.
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="sis-funnel" onclick="markAsRead('sis-funnel')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Puertas de Entrada ─── -->
+  <div class="sub-page" data-sub="sis-puertas">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Puertas de Entrada al Sistema</h1>
+        <p class="subtitle">Un lead puede entrar al full-funnel por múltiples caminos. Cada puerta tiene sus propias reglas.</p>
+
+        <p>El sistema no depende de una sola fuente de leads. Estas son todas las formas en que un lead entra al ecosistema de nurturing:</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. Formularios Web (orgánico) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Lead que completa un formulario en tiendanube.com (registro, contacto, newsletter).</p>
+              <p><strong>Volumen:</strong> Principal fuente de leads orgánicos.</p>
+              <p><strong>Calidad:</strong> Media — depende de qué formulario completó.</p>
+              <p><strong>Flujo:</strong> Entra directamente al TOFU del full-funnel.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. Deliverys (descarga de recursos) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Lead que descarga un recurso gratuito (planilla, guía, checklist).</p>
+              <p><strong>Volumen:</strong> ~1.052 envíos/mes (feb 2026).</p>
+              <p><strong>Calidad:</strong> Alta en engagement (40-60% CTR). La conversión depende del tema.</p>
+              <p><strong>Datos clave:</strong></p>
+              <div class="stat-grid">
+                <div class="stat-card"><div class="stat-value coral">60,7%</div><div class="stat-label">CTR Generador de SKU (mejor)</div></div>
+                <div class="stat-card"><div class="stat-value teal">52,6%</div><div class="stat-label">CTR Calendario RRSS</div></div>
+                <div class="stat-card"><div class="stat-value danger">9,4%</div><div class="stat-label">CTR Checklist tienda online (peor)</div></div>
+              </div>
+              <p>El Checklist para crear tienda online — el recurso más directamente relacionado con el producto — tiene el <strong>peor CTR</strong>. Paradoja que hay que resolver.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. Eventos (webinars, Entrenamiento Nube) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Lead que se inscribe a un evento de Tiendanube.</p>
+              <p><strong>Volumen:</strong> Picos altos pero esporádicos.</p>
+              <p><strong>Calidad:</strong> Alta intención pero difícil de capitalizar sin journey dedicado.</p>
+              <p><strong>Caso real — Webinar Adquisición:</strong> 4.143 inscriptos → 136 tiendas → solo 4 payments. Mucho volumen, poca conversión.</p>
+              <p><strong>2026:</strong> Se planifica journey post-evento dedicado, WhatsApp post-evento, Zoom conectado al CRM.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">4. Broadcasts (campañas masivas) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Emails masivos enviados a toda la base o segmentos grandes.</p>
+              <p><strong>Volumen:</strong> El más alto de todos — pueden impactar a decenas de miles de leads.</p>
+              <p><strong>Calidad:</strong> Variable. 8% de conversión vs 66,7% del flujo Delivery.</p>
+              <p><strong>Rol en 2026:</strong> Pasan de ser "la estrella" a ser "combustible del sistema". Su función es <strong>alimentar los flujos automatizados</strong>. Un broadcast promueve la descarga de un recurso (delivery) que activa el flujo que mejor convierte.</p>
+              <div class="callout-strategy">
+                <div class="cs-title">🧠 Pensar como Estratega</div>
+                <p>El broadcast de "La Lapicera" que vos escribiste generó 6 payments. Impresionante como campaña aislada. Pero si ese broadcast hubiera promovido un delivery que alimentara el full-funnel, el sistema podría haber generado más payments con el mismo esfuerzo creativo.</p>
+                <p class="cs-question">Esta es la diferencia entre campañas y sistema: el broadcast no desaparece — se reconvierte en una pieza del rompecabezas más grande.</p>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">5. WhatsApp (2026 — en desarrollo) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Canal de mensajería directa como herramienta de cierre.</p>
+              <p><strong>Volumen:</strong> Todavía no implementado. Proyecto activo en Q1 2026.</p>
+              <p><strong>Rol:</strong> No reemplaza al email — lo <strong>complementa en el momento de cierre</strong>. Cuando un lead está en BOFU y no responde emails, un mensaje de WhatsApp puede ser el empujón final.</p>
+              <p><strong>Por qué WhatsApp:</strong> En Argentina, el 95% de los emprendedores usa WhatsApp como canal principal. Escribirles ahí es hablarles donde ya están.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">6. Afiliados que re-entran <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Usuarios que tuvieron tienda activa, la cerraron, y vuelven a interactuar.</p>
+              <p><strong>Volumen:</strong> Bajo pero valioso — son leads que ya conocen la plataforma.</p>
+              <p><strong>2026:</strong> Win-back flow dedicado. No tiene sentido mandarles un TOFU educativo — ya saben qué es Tiendanube. Necesitan una razón para volver (nuevas features, mejores precios, campaña de temporada).</p>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>Resumen visual de puertas</strong>
+            <p>Formularios + Deliverys + Eventos → Full-Funnel (TOFU → MOFU → BOFU)<br>
+            Broadcasts → Alimentan las puertas de arriba<br>
+            WhatsApp → Canal de cierre (BOFU)<br>
+            Afiliados re-entrantes → Win-back flow separado</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="sis-puertas" onclick="markAsRead('sis-puertas')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Quiz ─── -->
+  <div class="sub-page" data-sub="sis-quiz">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Quiz — El Sistema</h1>
+        <p class="subtitle">Verificá que entendiste la lógica del full-funnel.</p>
+
+        <div class="quiz-card" data-correct="b">
+          <h3>1. ¿Cuál es el criterio para que un lead pase de TOFU a MOFU?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="sq1" value="a"><span>Lleva 15 días en TOFU</span></label>
+            <label class="q-opt"><input type="radio" name="sq1" value="b"><span>Visitó la página de precios o vio 5+ páginas</span></label>
+            <label class="q-opt"><input type="radio" name="sq1" value="c"><span>Abrió todos los emails de TOFU</span></label>
+          </div>
+          <div class="q-feedback q-right">Correcto. Los criterios de pasaje son por comportamiento (señales de intención), no por tiempo.</div>
+          <div class="q-feedback q-wrong">Incorrecto. Recordá: el sistema avanza leads por señales de comportamiento, no por tiempo ni por apertura de emails.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="c">
+          <h3>2. ¿Cuántos emails recibe un lead antes del remarketing?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="sq2" value="a"><span>7 (solo MOFU)</span></label>
+            <label class="q-opt"><input type="radio" name="sq2" value="b"><span>12 (TOFU + MOFU)</span></label>
+            <label class="q-opt"><input type="radio" name="sq2" value="c"><span>16 (TOFU 4 + MOFU 7 + BOFU 5)</span></label>
+          </div>
+          <div class="q-feedback q-right">Exacto. 4 TOFU + 7 MOFU + 5 BOFU = 16 emails antes de entrar a remarketing.</div>
+          <div class="q-feedback q-wrong">No — sumá: TOFU (4) + MOFU (7) + BOFU (5) = 16 emails antes del remarketing.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="b">
+          <h3>3. ¿Por qué los deliverys de "IA para e-commerce" convirtieron más que los de planillas?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="sq3" value="a"><span>Porque tenían más volumen de envíos</span></label>
+            <label class="q-opt"><input type="radio" name="sq3" value="b"><span>Porque el tema conecta directamente con la propuesta de valor de Tiendanube</span></label>
+            <label class="q-opt"><input type="radio" name="sq3" value="c"><span>Porque usaban mejor copywriting</span></label>
+          </div>
+          <div class="q-feedback q-right">Sí. El tema del recurso define la calidad del lead. "IA para e-commerce" atrae leads con intención real de usar una plataforma de ecommerce.</div>
+          <div class="q-feedback q-wrong">Pensá en la intención del lead: alguien que descarga "IA para e-commerce" ya está pensando en ecommerce. Alguien que descarga una planilla de stock puede que no.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="a">
+          <h3>4. ¿Cuál es el segmento con mayor tasa de conversión a payment?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="sq4" value="a"><span>Vende Online (22,2%)</span></label>
+            <label class="q-opt"><input type="radio" name="sq4" value="b"><span>Vende Físico (9,1%)</span></label>
+            <label class="q-opt"><input type="radio" name="sq4" value="c"><span>No Vende (8,9%)</span></label>
+          </div>
+          <div class="q-feedback q-right">Correcto. Los que ya venden online convierten 2,5x más que los que aún no venden.</div>
+          <div class="q-feedback q-wrong">Revisá los datos del reporte: "Vende Online" convierte al 22,2%, más del doble que los otros segmentos.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="c">
+          <h3>5. ¿Cuál es el rol de los broadcasts en 2026?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="sq5" value="a"><span>Son la principal fuente de payments</span></label>
+            <label class="q-opt"><input type="radio" name="sq5" value="b"><span>Se eliminan del sistema</span></label>
+            <label class="q-opt"><input type="radio" name="sq5" value="c"><span>Se reconvierten en combustible del sistema — alimentan los flujos automatizados</span></label>
+          </div>
+          <div class="q-feedback q-right">Exacto. Los broadcasts pasan de "la estrella" a "motor de activación" — su función es meter leads en los flujos que mejor convierten.</div>
+          <div class="q-feedback q-wrong">Los broadcasts no desaparecen, pero cambian de rol: en vez de ser campañas aisladas, alimentan los flujos automatizados que tienen mejor conversión (delivery = 66,7%).</div>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="sis-quiz" onclick="markAsRead('sis-quiz')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page sistema -->
+</main>
+
+<!-- GLOSSARY (same structure) -->
+<div class="glos-overlay" id="glos-overlay"></div>
+<div class="glos-panel" id="glos-panel">
+  <div class="glos-head"><h3>Glosario</h3><button class="glos-close">&times;</button></div>
+  <div class="glos-search"><input type="text" placeholder="Buscar término…"></div>
+  <div class="glos-list">
+    <div class="glos-item"><div class="glos-term">TOFU</div><div class="glos-def">Top of Funnel — 4 emails educativos por segmento.</div></div>
+    <div class="glos-item"><div class="glos-term">MOFU</div><div class="glos-def">Middle of Funnel — 7 emails que resuelven objeciones.</div></div>
+    <div class="glos-item"><div class="glos-term">BOFU</div><div class="glos-def">Bottom of Funnel — 5 emails de conversión, segmentados por canal de venta.</div></div>
+    <div class="glos-item"><div class="glos-term">Remarketing</div><div class="glos-def">7 emails de última oportunidad con ángulos diferentes.</div></div>
+    <div class="glos-item"><div class="glos-term">Delivery</div><div class="glos-def">Secuencia de emails activada por descarga de recurso. CTR 40-60%.</div></div>
+    <div class="glos-item"><div class="glos-term">Sales Channel</div><div class="glos-def">Cómo vende el lead: No vende, Online, Físico, Marketplace, Redes.</div></div>
+    <div class="glos-item"><div class="glos-term">Criterio de pasaje</div><div class="glos-def">Señal de comportamiento que avanza a un lead de una etapa a otra.</div></div>
+    <div class="glos-item"><div class="glos-term">Full-Funnel</div><div class="glos-def">Sistema completo: TOFU → MOFU → BOFU → Remarketing.</div></div>
+  </div>
+</div>
+
+<footer class="app-footer">
+  Nurturing Academy — Growth AR — 2026
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

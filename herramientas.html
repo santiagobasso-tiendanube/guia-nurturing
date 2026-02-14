@@ -2,15 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HubSpot &amp; Números — Nurturing Academy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HubSpot — Nurturing Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER (same on all pages) -->
+<!-- HEADER -->
 <header class="app-header">
   <div class="header-logo">
     <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -18,788 +17,469 @@
   </div>
   <nav class="header-tabs">
     <a href="index.html" class="header-tab">Inicio</a>
-    <a href="index.html#ecosistema" class="header-tab">El Ecosistema</a>
-    <a href="herramientas.html#hubspot" class="header-tab" data-page="hubspot">HubSpot</a>
-    <a href="herramientas.html#numeros" class="header-tab" data-page="numeros">Los Números</a>
-    <a href="estrategia.html#estrategia" class="header-tab">Estrategia</a>
-    <a href="estrategia.html#recursos" class="header-tab">Recursos</a>
+    <a href="sistema.html" class="header-tab">El Sistema</a>
+    <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="herramientas.html" class="header-tab" data-page="herramientas">HubSpot</a>
+    <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
+    <a href="recursos.html" class="header-tab">Recursos</a>
   </nav>
   <div class="header-right">
-    <button class="glos-trigger">📖 Glosario</button>
-    <div class="progress-mini">
-      <span class="progress-text">0/21</span>
-      <div class="progress-mini-bar"><div class="progress-mini-fill"></div></div>
-    </div>
+    <button class="glos-trigger" id="glos-btn">📖 Glosario</button>
+    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/24</span></div>
   </div>
 </header>
-<div class="progress-strip"><div class="progress-strip-fill"></div></div>
-
-<!-- GLOSSARY (duplicated on each page for multi-page setup) -->
-<div id="glos-overlay" class="glos-overlay"></div>
-<div id="glos-panel" class="glos-panel">
-  <div class="glos-head"><h3>📖 Glosario</h3><button class="glos-close">✕</button></div>
-  <div class="glos-search"><input type="text" placeholder="Buscar término..."></div>
-  <div class="glos-list">
-    <div class="glos-item"><div class="glos-term">Workflow</div><div class="glos-def">Automatización en HubSpot: secuencia de acciones (enviar email, esperar, evaluar condición) que se ejecuta cuando un contacto cumple cierto criterio.</div></div>
-    <div class="glos-item"><div class="glos-term">Contacto</div><div class="glos-def">Registro en HubSpot con los datos de un lead: email, nombre, teléfono, propiedades personalizadas (sales channel, is new seller, etc.).</div></div>
-    <div class="glos-item"><div class="glos-term">Lista</div><div class="glos-def">Agrupación de contactos por criterios. Activa: se actualiza automáticamente. Estática: se mantiene fija una vez creada.</div></div>
-    <div class="glos-item"><div class="glos-term">Marketing Contact</div><div class="glos-def">Contacto marcado como "marketing" en HubSpot. Solo los marketing contacts pueden recibir emails de marketing. Esto tiene costo — cada contacto marketing cuenta para el plan.</div></div>
-    <div class="glos-item"><div class="glos-term">Enrollment Trigger</div><div class="glos-def">La condición que hace que un contacto entre a un workflow. Puede ser: completó un form, se agregó a una lista, cambió una propiedad, etc.</div></div>
-    <div class="glos-item"><div class="glos-term">If/Then Branch</div><div class="glos-def">Ramificación condicional dentro de un workflow. "Si el contacto tiene sales_channel = Tienda física, ir por el camino A; si no, ir por el camino B".</div></div>
-    <div class="glos-item"><div class="glos-term">Open Rate (OR)</div><div class="glos-def">Porcentaje de personas que abrieron el email vs. las que lo recibieron. Benchmark nurturing: >35%.</div></div>
-    <div class="glos-item"><div class="glos-term">CTR (Click-Through Rate)</div><div class="glos-def">Porcentaje de personas que hicieron clic en un enlace del email vs. las que lo recibieron. Benchmark nurturing: >3%.</div></div>
-    <div class="glos-item"><div class="glos-term">Quality Lead (QL)</div><div class="glos-def">Modelo de ML que predice en las primeras 72 horas del trial qué tan probable es que un lead pague. 8 perfiles de trial.</div></div>
-    <div class="glos-item"><div class="glos-term">UTM</div><div class="glos-def">Parámetros que se agregan a las URLs para trackear de dónde viene el tráfico. Ejemplo: ?utm_source=email&utm_campaign=delivery_stock</div></div>
-    <div class="glos-item"><div class="glos-term">Slide-in</div><div class="glos-def">Pop-up que aparece deslizándose desde un costado de la página. HubSpot los usa como formularios para captar leads en el blog.</div></div>
-    <div class="glos-item"><div class="glos-term">ICE Score</div><div class="glos-def">Framework: Impact × Confidence × Ease. Cada criterio se puntúa 1-10 para priorizar experimentos.</div></div>
-  </div>
-</div>
+<div class="progress-strip"><div class="progress-strip-fill" style="width:0%"></div></div>
 
 <main class="app-main">
+<div class="page active" data-page="herramientas">
 
-<!-- ======================== HUBSPOT ======================== -->
-<div class="page active" data-page="hubspot">
-<div class="sub-tabs-wrap">
-  <div class="sub-tabs">
-    <button class="sub-tab active" data-sub="hs-intro">¿Qué es HubSpot?</button>
-    <button class="sub-tab" data-sub="hs-contactos">Contactos y Listas</button>
-    <button class="sub-tab" data-sub="hs-workflows">Workflows</button>
-    <button class="sub-tab" data-sub="hs-emails">Emails y Formularios</button>
-    <button class="sub-tab" data-sub="hs-quiz">Quiz <span class="check-icon"></span></button>
-  </div>
-</div>
-
-<!-- HS INTRO -->
-<div class="sub-page active" data-sub="hs-intro">
-<div class="content-wrap">
-<div class="article">
-  <h1>HubSpot: tu centro de operaciones</h1>
-  <p class="subtitle">Todo lo que necesitás saber para operar HubSpot en el día a día del nurturing</p>
-
-  <p>HubSpot es la plataforma donde vive todo el ecosistema de nurturing. Es un CRM (Customer Relationship Management) que además tiene herramientas de email marketing, automatización, formularios, landing pages y analytics. Es como la cabina de un avión: desde ahí controlás todos los flujos, ves las métricas, y ejecutás las acciones.</p>
-
-  <p>No necesitás ser experto para empezar a operar. Lo que sí necesitás es entender los conceptos centrales y saber dónde encontrar cada cosa. Eso es lo que vamos a cubrir acá.</p>
-
-  <h2>El panel principal</h2>
-
-  <p>Cuando entrás a HubSpot, lo primero que ves es el dashboard. Pero para nurturing, vas a vivir principalmente en estas secciones:</p>
-
-  <div class="mockup">
-    <div class="mockup-titlebar">
-      <div class="mockup-dot red"></div><div class="mockup-dot yellow"></div><div class="mockup-dot green"></div>
-      <div class="mockup-url">app.hubspot.com/contacts/8180620</div>
+  <div class="sub-tabs-wrap">
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="hs-intro">Intro a HubSpot <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-contactos">Contactos y Listas <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-workflows">Workflows <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-emails">Emails <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-broadcasts">Broadcasts <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-quiz">Quiz <span class="check-icon"></span></button>
     </div>
-    <div class="mockup-body">
-      <div class="mockup-sidebar">
-        <div class="mockup-sidebar-nav">
-          <div class="mock-nav-item active">📧 Marketing → Email</div>
-          <div class="mock-nav-item">⚡ Automation → Workflows</div>
-          <div class="mock-nav-item">👤 Contacts → Contacts</div>
-          <div class="mock-nav-item">📋 Contacts → Lists</div>
-          <div class="mock-nav-item">📝 Marketing → Forms</div>
-          <div class="mock-nav-item">📊 Reports → Dashboards</div>
+  </div>
+
+  <!-- ─── Intro ─── -->
+  <div class="sub-page active" data-sub="hs-intro">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>HubSpot: El Motor del Sistema</h1>
+        <p class="subtitle">HubSpot no es solo "la herramienta donde mandamos emails". Es el CRM que conecta todo el sistema de nurturing.</p>
+
+        <p>Vos ya sabés tunear un broadcast en HubSpot y publicarlo. Eso está bien. Pero para pensar como estratega, necesitás entender <strong>cómo las piezas se conectan dentro de HubSpot</strong> — y por qué cada configuración importa.</p>
+
+        <h2>¿Qué hace HubSpot en nuestro sistema?</h2>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value coral">CRM</div>
+            <div class="stat-label">Base de datos de todos los contactos. Cada lead tiene un registro con propiedades, historial de emails y comportamiento web.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value teal">Workflows</div>
+            <div class="stat-label">Automatizaciones que mueven leads por el funnel. El Full-Funnel completo vive en workflows.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value coral">Email Marketing</div>
+            <div class="stat-label">Creación, envío y análisis de emails automatizados y broadcasts.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value teal">Analytics</div>
+            <div class="stat-label">Datos de apertura, clics, conversión y comportamiento web para cada contacto.</div>
+          </div>
         </div>
-        <div class="mockup-content">
-          <h4>Tus secciones clave</h4>
-          <p style="font-size:13px;color:#666;line-height:1.6">
-            <strong>Email:</strong> Donde creás, editás y monitoreás los emails de marketing.<br>
-            <strong>Workflows:</strong> Donde configurás las automatizaciones (deliverys, full-funnel, etc.).<br>
-            <strong>Contacts:</strong> La base de datos de todos los leads.<br>
-            <strong>Lists:</strong> Agrupaciones de contactos para segmentar envíos.<br>
-            <strong>Forms:</strong> Los formularios que captan leads en el sitio.<br>
-            <strong>Reports:</strong> Dashboards con métricas de rendimiento.
-          </p>
+
+        <h2>Cómo Pensar en HubSpot</h2>
+        <p>No pienses en HubSpot como "la herramienta". Pensalo como un ecosistema con 3 capas:</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Capa 1: Los datos (Contactos + Propiedades) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Cada contacto tiene <strong>propiedades</strong> que definen quién es: nombre, email, país, sales channel ("¿Cómo vendés?"), is new seller, último delivery descargado, etc.</p>
+              <p>Estas propiedades son la base de la segmentación. Sin propiedades bien configuradas, no podés segmentar. Sin segmentar, no podés personalizar.</p>
+              <p><strong>Ejemplo:</strong> La propiedad "Sales Channel" es la que permite que el BOFU se envíe en 3 versiones (online, físico, no vende). Si esa propiedad no existiera o estuviera vacía, todos recibirían el mismo email.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Capa 2: La lógica (Workflows + Listas) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Los <strong>workflows</strong> son las reglas que mueven leads. "Si visitó precio → mover a MOFU". "Si creó tienda → mover a BOFU". Los workflows leen las propiedades y ejecutan acciones.</p>
+              <p>Las <strong>listas</strong> son agrupaciones dinámicas. Una lista activa se actualiza sola: "Todos los contactos que abrieron un email en los últimos 30 días" se recalcula constantemente. Una lista estática es fija: "Contactos que importamos el 15/02".</p>
+              <p><strong>Ejemplo:</strong> El workflow del delivery verifica la propiedad "Ya recibió email de bienvenida?" para decidir si manda el Bienvenidos o lo skipea.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Capa 3: La comunicación (Emails + Broadcasts) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>HubSpot tiene 3 tipos de emails:</p>
+              <ul>
+                <li><strong>Automated:</strong> Los emails del full-funnel. Se envían cuando un workflow los dispara. No los mandás vos — el sistema los manda solo.</li>
+                <li><strong>Regular:</strong> Los broadcasts. Los creás, elegís la audiencia, programás fecha y hora, y se mandan una vez.</li>
+                <li><strong>Blog/RSS:</strong> Se disparan cuando se publica un blog post nuevo. Menos usados en nurturing.</li>
+              </ul>
+              <p><strong>Ejemplo:</strong> El MOFU Email 1 (Envíos) es un email Automated que vive dentro del workflow Full-Funnel. El broadcast "La Lapicera" fue un email Regular que mandaste una vez a un segmento específico.</p>
+            </div></div>
+          </div>
         </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>Cuando te pidan "mandá un email", la primera pregunta estratégica no es "¿qué escribo?" sino <strong>"¿es automated o broadcast? ¿A quién le llega? ¿Qué propiedad lo dispara? ¿En qué punto del funnel está el lead?"</strong> El copy viene después. Primero la arquitectura, después el contenido.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-intro" onclick="markAsRead('hs-intro')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <h2>Conceptos clave de HubSpot</h2>
+  <!-- ─── Contactos y Listas ─── -->
+  <div class="sub-page" data-sub="hs-contactos">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Contactos y Listas</h1>
+        <p class="subtitle">Los bloques de construcción de la segmentación.</p>
 
-  <p>Antes de entrar en los detalles operativos, necesitás entender algunos conceptos fundamentales:</p>
+        <h2>Propiedades Clave de un Contacto</h2>
+        <p>No necesitás conocer las 200+ propiedades de HubSpot. Estas son las que importan para nurturing:</p>
 
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-trigger">Marketing Contact vs. Non-Marketing Contact <span class="arrow">▼</span></button>
-      <div class="accordion-body"><div class="accordion-body-inner">
-        <p>HubSpot cobra por la cantidad de <strong>Marketing Contacts</strong> que tengas. Un contacto marcado como "marketing" puede recibir emails de marketing (newsletters, broadcasts, workflows). Un "non-marketing contact" está en la base de datos pero no puede recibir emails de marketing.</p>
-        <p>¿Por qué importa? Porque cada marketing contact cuesta dinero. Si tenés 100.000 contactos pero solo 50.000 son marketing contacts, pagás por 50.000. Por eso es importante limpiar la base regularmente y no marcar como marketing a contactos que no van a recibir emails.</p>
-      </div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger">Propiedades (Properties) <span class="arrow">▼</span></button>
-      <div class="accordion-body"><div class="accordion-body-inner">
-        <p>Cada contacto tiene <strong>propiedades</strong> — campos de información. Algunas son estándar de HubSpot (email, nombre, fecha de creación) y otras son personalizadas por el equipo:</p>
-        <ul>
-          <li><strong>Sales Channel:</strong> Cómo vende actualmente el lead (tienda online, redes, física, marketplace, aún no vende).</li>
-          <li><strong>Is New Seller:</strong> Si el contacto ya creó una tienda (trial) en Tiendanube.</li>
-          <li><strong>Country:</strong> País del contacto (Argentina, Colombia, México, Brasil).</li>
-          <li><strong>Last Delivery Downloaded:</strong> Último recurso descargado.</li>
-        </ul>
-        <p>Estas propiedades son las que permiten segmentar los flujos. Sin ellas, no podrías saber si un lead vende en tienda física o por redes.</p>
-      </div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger">UTMs y Tracking <span class="arrow">▼</span></button>
-      <div class="accordion-body"><div class="accordion-body-inner">
-        <p>Cada link en los emails de nurturing lleva parámetros UTM para poder rastrear de dónde vienen los clics. Por ejemplo:</p>
-        <p><code>tiendanube.com/crear-mi-tienda-online/?utm_source=email&amp;utm_campaign=delivery_stock&amp;utm_medium=cta</code></p>
-        <p>Esto permite saber en Tableau o Google Analytics si un payment vino de un delivery, un broadcast, o el full-funnel. Sin UTMs correctos, no se puede medir la conversión de cada flujo.</p>
-      </div></div>
-    </div>
-  </div>
+        <table class="data-table">
+          <thead><tr><th>Propiedad</th><th>Qué guarda</th><th>Para qué la usamos</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sales Channel</strong></td><td>Cómo vende el lead</td><td>Segmentación TOFU/BOFU. Define qué email recibe.</td></tr>
+            <tr><td><strong>Is New Seller</strong></td><td>Si ya creó tienda antes</td><td>Distinguir leads puros de re-entrantes.</td></tr>
+            <tr><td><strong>Country</strong></td><td>País del contacto</td><td>Argentina, Chile, Colombia, México — cada país tiene su funnel.</td></tr>
+            <tr><td><strong>Last Delivery Downloaded</strong></td><td>Último recurso descargado</td><td>Personalizar el follow-up post-delivery.</td></tr>
+            <tr><td><strong>Marketing Contact Status</strong></td><td>Si es contacto de marketing</td><td>Solo los "Marketing" reciben emails. Los "Non-marketing" no consumen envíos pagos.</td></tr>
+            <tr><td><strong>Lifecycle Stage</strong></td><td>En qué etapa está</td><td>Lead → MQL → SQL → Customer → Evangelist.</td></tr>
+          </tbody>
+        </table>
 
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="hs-intro" onclick="markAsRead('hs-intro')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- HS CONTACTOS -->
-<div class="sub-page" data-sub="hs-contactos">
-<div class="content-wrap">
-<div class="article">
-  <h1>Contactos y Listas</h1>
-  <p class="subtitle">La base de datos donde viven todos los leads — y cómo segmentarlos</p>
-
-  <p>La sección de <strong>Contacts</strong> es tu agenda de leads. Cada persona que completó un formulario en tiendanube.com tiene un registro acá con toda su información: email, nombre, teléfono, cómo vende, qué descargó, si ya creó trial, cuántos emails abrió, etc.</p>
-
-  <h2>Cómo buscar un contacto</h2>
-
-  <div class="mockup">
-    <div class="mockup-titlebar">
-      <div class="mockup-dot red"></div><div class="mockup-dot yellow"></div><div class="mockup-dot green"></div>
-      <div class="mockup-url">app.hubspot.com → Contacts → Contacts</div>
-    </div>
-    <div class="mockup-body" style="padding:16px">
-      <div style="display:flex;gap:8px;margin-bottom:12px">
-        <div style="flex:1;padding:8px 12px;border:1px solid #ddd;border-radius:4px;font-size:13px;color:#999">🔍 Buscar por nombre, email o teléfono...</div>
-        <div style="padding:8px 12px;border:1px solid #ddd;border-radius:4px;font-size:12px;color:#666">Filtros avanzados ▼</div>
-      </div>
-      <div style="border:1px solid #eee;border-radius:4px;overflow:hidden">
-        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:0;font-size:12px">
-          <div style="padding:8px 12px;background:#f5f5f5;font-weight:700;border-bottom:1px solid #eee">Email</div>
-          <div style="padding:8px 12px;background:#f5f5f5;font-weight:700;border-bottom:1px solid #eee">Sales Channel</div>
-          <div style="padding:8px 12px;background:#f5f5f5;font-weight:700;border-bottom:1px solid #eee">Is New Seller</div>
-          <div style="padding:8px 12px;background:#f5f5f5;font-weight:700;border-bottom:1px solid #eee">Last Delivery</div>
-          <div style="padding:8px 12px;border-bottom:1px solid #eee;color:#0091ae">maria@email.com</div>
-          <div style="padding:8px 12px;border-bottom:1px solid #eee">Redes Sociales</div>
-          <div style="padding:8px 12px;border-bottom:1px solid #eee">No</div>
-          <div style="padding:8px 12px;border-bottom:1px solid #eee">Planilla stock</div>
+        <h2>Listas Activas vs Estáticas</h2>
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <h5>Lista Activa</h5>
+              <p>Se actualiza sola según criterios. Ejemplo: "Contactos que abrieron un email en los últimos 30 días" → cada día, HubSpot agrega y saca contactos automáticamente.</p>
+              <p><strong>Uso:</strong> Audiencias de broadcasts, criterios de enrollment en workflows, segmentación dinámica.</p>
+            </div>
+            <div class="ba-after">
+              <h5>Lista Estática</h5>
+              <p>Se crea una vez y no cambia (a menos que edites manualmente). Ejemplo: "Asistentes al webinar del 15/11" → siempre son los mismos.</p>
+              <p><strong>Uso:</strong> Importaciones, eventos puntuales, exclusiones.</p>
+            </div>
+          </div>
         </div>
+
+        <h2>Marketing Contacts: La Regla Clave</h2>
+        <p>HubSpot cobra por contactos de marketing. Si tenés 125.000 contactos pero solo 80.000 son "Marketing", pagás por 80.000. Los "Non-marketing" están en la base pero no reciben emails ni consumen recursos.</p>
+        <p><strong>Por qué importa:</strong> Si marcás un lead como "Non-marketing" por error, no le llega ningún email del funnel. Si dejás leads muertos como "Marketing", estás pagando por contactos que no van a convertir nunca.</p>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>Conexión estratégica</strong>
+            <p>Cuando el sistema descarta un lead después del remarketing, una de las acciones posibles es pasarlo a "Non-marketing". Así se limpia la base y se ahorra plata. En 2025, solo el 0,1% de 125.703 leads estaba en flujos automatizados — eso también significa que mucha plata se gastaba en contactos que no recibían nada útil.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-contactos" onclick="markAsRead('hs-contactos')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <h2>Listas: activas vs. estáticas</h2>
+  <!-- ─── Workflows ─── -->
+  <div class="sub-page" data-sub="hs-workflows">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Workflows: La Automatización</h1>
+        <p class="subtitle">Cómo HubSpot decide qué hacer con cada lead, sin intervención manual.</p>
 
-  <p>Las listas son agrupaciones de contactos que usás para segmentar envíos y workflows. Hay dos tipos:</p>
+        <h2>Anatomía de un Workflow</h2>
+        <p>Un workflow tiene 3 partes esenciales:</p>
 
-  <p><strong>Lista activa:</strong> Se actualiza automáticamente. Definís criterios (ej: "Sales Channel = Redes sociales AND Country = Argentina") y HubSpot agrega o saca contactos en tiempo real cuando cumplen o dejan de cumplir esos criterios. Usá listas activas para workflows y segmentaciones que necesiten estar siempre al día.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. Trigger de Enrollment — ¿Quién entra? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Define qué condición activa el workflow. Ejemplos:</p>
+              <ul>
+                <li>"Completó el formulario de registro" → Entra al Full-Funnel TOFU</li>
+                <li>"Descargó recurso X" → Entra al Delivery Flow</li>
+                <li>"Se inscribió al webinar" → Entra al Journey Post-Evento</li>
+              </ul>
+              <p>También puede usar <strong>listas</strong> como trigger: "Es miembro de la lista 'Leads activos Argentina'" → Enrollment automático.</p>
+              <p><strong>Cuidado:</strong> Un trigger mal configurado puede meter al lead en 2 workflows a la vez, o no meterlo en ninguno. Por eso es importante entender las condiciones de exclusión.</p>
+            </div></div>
+          </div>
 
-  <p><strong>Lista estática:</strong> Se queda fija. Los contactos que estaban al momento de crearla se mantienen, no se agregan nuevos automáticamente. Usá listas estáticas para cosas puntuales: "asistentes al webinar del 10 de febrero", "leads del broadcast de Shein y Temu".</p>
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. Acciones — ¿Qué pasa adentro? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Las acciones más comunes en nuestros workflows:</p>
+              <ul>
+                <li><strong>Enviar email:</strong> El más obvio. El workflow manda un email automated en el momento justo.</li>
+                <li><strong>Delay (retraso):</strong> Esperar X días/horas antes de la siguiente acción. Ejemplo: "Esperar 3 días después del email 1 antes de mandar el email 2".</li>
+                <li><strong>If/then branch:</strong> Bifurcación condicional. "Si el lead visitó la página de precios → enviar MOFU. Si no → seguir en TOFU". Es la lógica que permite la segmentación dentro del workflow.</li>
+                <li><strong>Set property:</strong> Cambiar una propiedad del contacto. "Setear 'Lifecycle Stage' a 'MQL'" cuando el lead llega a MOFU.</li>
+                <li><strong>Enroll in another workflow:</strong> Meter al lead en otro workflow. Así se conectan los flujos: TOFU enrolla en MOFU, MOFU enrolla en BOFU.</li>
+              </ul>
+            </div></div>
+          </div>
 
-  <h3>Cómo crearte a vos mismo en todas las listas (para probar)</h3>
-
-  <p>Cuando tu jefe te pida probar un workflow o un email, necesitás estar en la lista correcta. El proceso es:</p>
-
-  <ol>
-    <li>Andá a <strong>Contacts → Contacts</strong> y buscá tu email.</li>
-    <li>Si no existís, creá un contacto nuevo con tu email.</li>
-    <li>Editá las propiedades del contacto para que cumpla los criterios de la lista (ej: ponete Sales Channel = "Redes Sociales", Country = "Argentina").</li>
-    <li>Si la lista es activa, te va a agregar automáticamente. Si es estática, andá a la lista y usá "Add contact" manualmente.</li>
-    <li><strong>Importante:</strong> Asegurate de estar marcado como Marketing Contact, si no, no vas a recibir los emails.</li>
-  </ol>
-
-  <div class="callout callout-tip">
-    <div class="callout-icon">💡</div>
-    <div class="callout-body">
-      <strong>Tip: creá un contacto de prueba</strong>
-      <p>En vez de usar tu email corporativo para todas las pruebas, creá un contacto con un email alternativo (ej: gmail). Así podés probarlo todo sin ensuciar tus métricas personales ni recibir un montón de emails en tu bandeja de trabajo.</p>
-    </div>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="hs-contactos" onclick="markAsRead('hs-contactos')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- HS WORKFLOWS -->
-<div class="sub-page" data-sub="hs-workflows">
-<div class="content-wrap">
-<div class="article">
-  <h1>Workflows: las automatizaciones</h1>
-  <p class="subtitle">Cómo funcionan los flujos automáticos que envían los emails del nurturing</p>
-
-  <p>Si los emails son los mensajes, los workflows son los carteros. Un workflow es una automatización: una secuencia de pasos que HubSpot ejecuta automáticamente cuando un contacto cumple cierta condición. Es lo que hace que todo el sistema funcione sin que alguien tenga que darle "enviar" a cada email a las 3 de la mañana.</p>
-
-  <h2>Anatomía de un workflow</h2>
-
-  <p>Todo workflow tiene estos componentes:</p>
-
-  <div class="flow">
-    <div class="flow-node coral">
-      <strong>1. Enrollment Trigger</strong>
-      <span>¿Qué hace que un contacto entre? Ej: "Completó el form de Planilla de Stock"</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node">
-      <strong>2. Acciones</strong>
-      <span>Lo que pasa después: enviar email, esperar X días, agregar a lista, etc.</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node teal">
-      <strong>3. If/Then Branches</strong>
-      <span>Ramificaciones condicionales: "¿Sales Channel = Tienda Física?" → Sí / No</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node navy">
-      <strong>4. Delays</strong>
-      <span>Tiempos de espera entre acciones: "Esperar 2 días" antes del siguiente email</span>
-    </div>
-  </div>
-
-  <h2>Ejemplo real: el workflow de Delivery</h2>
-
-  <p>Veamos cómo funciona el workflow del delivery de "Planilla de control de stock":</p>
-
-  <div class="mockup">
-    <div class="mockup-titlebar">
-      <div class="mockup-dot red"></div><div class="mockup-dot yellow"></div><div class="mockup-dot green"></div>
-      <div class="mockup-url">app.hubspot.com → Automation → Workflows → Delivery Stock</div>
-    </div>
-    <div class="mockup-body" style="padding:20px;font-size:13px">
-      <div style="text-align:center">
-        <div style="display:inline-block;background:#FFF3F0;border:2px solid #FF7A59;border-radius:8px;padding:10px 16px;margin-bottom:4px">
-          <strong>Trigger:</strong> Contact submitted form "Planilla control de stock"
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. Goal + Exit — ¿Cuándo sale? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>El <strong>goal</strong> define el resultado deseado. Ejemplo: "El lead creó una tienda". Si el lead logra el goal en cualquier punto del workflow, <strong>sale automáticamente</strong> — no necesita recibir todos los emails.</p>
+              <p>El <strong>exit criteria</strong> saca al lead si cumple cierta condición negativa. Ejemplo: "Se desuscribió" o "Ya es cliente".</p>
+              <p><strong>¿Por qué importa?</strong> Sin goal, un lead que creó tienda en el Email 2 del TOFU seguiría recibiendo los emails 3 y 4 del TOFU, luego todos los de MOFU, etc. — un desperdicio. Con goal, sale del TOFU y entra directo al BOFU (o al onboarding).</p>
+            </div></div>
+          </div>
         </div>
-        <div style="color:#ccc;font-size:18px;line-height:1">↓</div>
-        <div style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:8px;padding:10px 16px;margin:4px 0">
-          📧 Send email: "Tu planilla ya está lista" (1/3)
+
+        <h2>Ejemplo Real: Workflow del Delivery</h2>
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-entry"><strong>Trigger:</strong> Completó form de descarga</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-tofu"><strong>Acción:</strong> Enviar email con recurso descargable</div></div>
+          <div class="flow-arrow">▼ Delay 2 min</div>
+          <div class="flow-row"><div class="flow-box flow-mofu"><strong>If/then:</strong> ¿Ya recibió email de bienvenida?</div></div>
+          <div class="flow-arrow">▼ No</div>
+          <div class="flow-row"><div class="flow-box flow-mofu"><strong>If/then:</strong> ¿Es Evolución?</div></div>
+          <div class="flow-arrow">▼ No (es SMB)</div>
+          <div class="flow-row"><div class="flow-box flow-bofu"><strong>Acción:</strong> Enviar email de Bienvenidos</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-remark"><strong>Enroll:</strong> Full-Funnel TOFU</div></div>
         </div>
-        <div style="color:#ccc;font-size:18px;line-height:1">↓</div>
-        <div style="display:inline-block;background:#fff8e1;border:1px solid #ffd54f;border-radius:8px;padding:8px 16px;margin:4px 0">
-          ⏱️ Delay: 2 días
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>Un workflow no es solo "mandar emails en orden". Es una máquina de decisiones. Cada if/then, cada delay, cada goal tiene una razón estratégica. Cuando veas un workflow, preguntate: <strong>"¿Qué pasa si el lead hace algo inesperado?"</strong> Un buen workflow contempla los caminos alternativos.</p>
         </div>
-        <div style="color:#ccc;font-size:18px;line-height:1">↓</div>
-        <div style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:8px;padding:10px 16px;margin:4px 0">
-          📧 Send email: "Tips para controlar tu inventario" (2/3)
-        </div>
-        <div style="color:#ccc;font-size:18px;line-height:1">↓</div>
-        <div style="display:inline-block;background:#fff8e1;border:1px solid #ffd54f;border-radius:8px;padding:8px 16px;margin:4px 0">
-          ⏱️ Delay: 3 días
-        </div>
-        <div style="color:#ccc;font-size:18px;line-height:1">↓</div>
-        <div style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:8px;padding:10px 16px;margin:4px 0">
-          📧 Send email: "Empezá a vender online" (3/3)
-        </div>
-        <div style="color:#ccc;font-size:18px;line-height:1">↓</div>
-        <div style="display:inline-block;background:#E8F5E9;border:2px solid #4CAF50;border-radius:8px;padding:10px 16px;margin:4px 0">
-          <strong>If/Then:</strong> ¿Ya recibió email de Bienvenidos? → Sí/No
-        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-workflows" onclick="markAsRead('hs-workflows')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <h3>Cómo crear un workflow nuevo</h3>
+  <!-- ─── Emails ─── -->
+  <div class="sub-page" data-sub="hs-emails">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Emails en HubSpot</h1>
+        <p class="subtitle">Tipos de email, métricas clave y cómo pensar cada envío.</p>
 
-  <ol>
-    <li>Andá a <strong>Automation → Workflows</strong>.</li>
-    <li>Clic en <strong>"Create workflow"</strong> → elegí "From scratch" → "Contact-based".</li>
-    <li>Configurá el <strong>enrollment trigger</strong> (ej: "Contact submitted form X").</li>
-    <li>Agregá acciones: hacé clic en el <strong>"+"</strong> para agregar pasos (Send email, Delay, If/then branch, etc.).</li>
-    <li>Configurá los delays entre emails (ej: 2 días entre el email 1 y el 2).</li>
-    <li>Agregá branches si necesitás segmentar (ej: por sales channel).</li>
-    <li>Hacé clic en <strong>"Review"</strong> para verificar que todo esté bien.</li>
-    <li>Activá el workflow con <strong>"Turn on"</strong>.</li>
-  </ol>
+        <h2>Los 3 Tipos de Email</h2>
+        <table class="data-table">
+          <thead><tr><th>Tipo</th><th>Cuándo se usa</th><th>Quién lo manda</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Automated</strong></td><td>Dentro de un workflow</td><td>El sistema (automático)</td><td>TOFU Email 1, MOFU Email 3, Delivery</td></tr>
+            <tr><td><strong>Regular</strong></td><td>Campañas puntuales</td><td>Vos (manual)</td><td>Broadcasts, anuncios, eventos</td></tr>
+            <tr><td><strong>Blog/RSS</strong></td><td>Cuando se publica un blog</td><td>El sistema (automático)</td><td>Newsletter de blog</td></tr>
+          </tbody>
+        </table>
 
-  <div class="callout callout-warning">
-    <div class="callout-icon">⚠️</div>
-    <div class="callout-body">
-      <strong>Cuidado al activar</strong>
-      <p>Antes de activar un workflow, HubSpot te pregunta si querés enrolar a los contactos que ya cumplen el trigger. En general, la respuesta es <strong>No</strong> — solo querés que entren los nuevos. Si decís que sí, podés mandar emails a miles de personas que ya pasaron por el flujo.</p>
+        <h2>Métricas de Email — Qué Significan Realmente</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Open Rate (OR) — No es lo que parece <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>El OR mide qué porcentaje de los emails enviados fueron "abiertos". Pero desde iOS 15 (2021), Apple pre-carga las imágenes de los emails, lo que <strong>infla artificialmente</strong> el OR.</p>
+              <p>Nuestro OR promedio (34-35%) está por encima del benchmark (15-30%), pero hay que tomarlo con pinzas. Es útil para comparar entre nuestros propios emails (A vs B), pero no como métrica absoluta.</p>
+              <p><strong>Regla práctica:</strong> Si un email tiene OR <20%, hay un problema de deliverability o subject line. Si tiene OR >40%, probablemente es un email a una base muy engaged.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">CTR — La métrica que importa <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>El CTR mide clics sobre emails enviados. Es más confiable que el OR porque un clic es una acción real del usuario.</p>
+              <p>Nuestro CTR promedio es 2,23% (Q2 2025), dentro del benchmark (1,5-3%). Pero los deliverys tienen <strong>40-60% CTR</strong> — un orden de magnitud mayor. ¿Por qué? Porque el lead acaba de descargar algo y quiere su recurso. La intención es máxima.</p>
+              <p><strong>Regla práctica:</strong> CTR <1% = hay que repensar el CTA o el contenido. CTR >3% = muy buen email. CTR >10% = audiencia super engaged o email transaccional.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Bounce Rate — Salud de la base <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Bounces son emails que no llegaron. <strong>Hard bounce</strong> = email inválido (se elimina). <strong>Soft bounce</strong> = bandeja llena o problema temporal.</p>
+              <p>Nuestro bounce rate bajó de 1,16% (Q1) a 0,85% (Q2). Menos del 2% es saludable. Si sube, hay un problema de higiene de base.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Unsubscribe Rate — La señal de alerta <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Nuestro unsub rate bajó de 0,58% (Q1) a 0,44% (Q2). El benchmark es <0,5%. Estamos en el límite. Si sube, significa que estamos mandando demasiados emails o contenido no relevante.</p>
+              <p><strong>Regla práctica:</strong> Un pico de unsubs después de un broadcast específico indica que ese contenido no resonó con la audiencia. No es necesariamente malo — a veces limpiar la base es saludable.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <h2>Las Buenas Prácticas que Vos Definiste</h2>
+        <p>Estas son las reglas que sacaste del análisis de broadcasts 2024-2025:</p>
+        <table class="data-table">
+          <thead><tr><th>Elemento</th><th>Regla</th><th>Por qué</th></tr></thead>
+          <tbody>
+            <tr><td>Subject line</td><td>25-30 caracteres, orientado a emoción</td><td>Los subjects cortos tienen mejor OR en mobile</td></tr>
+            <tr><td>Preheader</td><td>40-100 caracteres, amplía el subject</td><td>El preheader es el "segundo title" en la inbox</td></tr>
+            <tr><td>Cuerpo</td><td>50-125 palabras, lo importante en los 2 primeros párrafos</td><td>El 88% solo "echa un vistazo" — si no enganchás rápido, perdiste</td></tr>
+            <tr><td>CTA</td><td>Claro en 3 segundos, describe la acción</td><td>"Creá tu tienda gratis" > "Descubrí tu potencial"</td></tr>
+            <tr><td>Emojis</td><td>Con moderación — máx 1-2</td><td>Muchos emojis = percepción de spam</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-emails" onclick="markAsRead('hs-emails')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="hs-workflows" onclick="markAsRead('hs-workflows')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
+  <!-- ─── Broadcasts ─── -->
+  <div class="sub-page" data-sub="hs-broadcasts">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Broadcasts: De Estrella a Motor</h1>
+        <p class="subtitle">Cómo se transforma el rol de los broadcasts en el sistema 2026.</p>
 
-<!-- HS EMAILS Y FORMULARIOS -->
-<div class="sub-page" data-sub="hs-emails">
-<div class="content-wrap">
-<div class="article">
-  <h1>Emails y Formularios</h1>
-  <p class="subtitle">Cómo se crean los emails, cómo funcionan los formularios, y los detalles que importan</p>
+        <h2>Tu Historia con los Broadcasts</h2>
+        <p>Vos escribiste 32 broadcasts en Q1-Q2 2025. Definiste las buenas prácticas. Generaste +1039% YoY en payments en enero. El broadcast "La Lapicera" fue un caso de estudio de creatividad y resultados.</p>
+        <p>Pero cuando Julián llegó, lo primero que hizo fue <strong>dejar de mandar broadcasts</strong>. ¿Por qué?</p>
 
-  <h2>Emails de marketing</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">El problema de los broadcasts como estrategia principal <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Un broadcast es un evento puntual. Tiene un pico de engagement (envías → abren → hacen clic → algunos convierten) y después… nada. El lead que no convirtió vuelve a la oscuridad hasta el próximo broadcast.</p>
+              <p>Datos del reporte de deliverys:</p>
+              <div class="stat-grid">
+                <div class="stat-card"><div class="stat-value coral">75</div><div class="stat-label">Usuarios broadcast (cruce)</div></div>
+                <div class="stat-card"><div class="stat-value danger">8%</div><div class="stat-label">Conversión broadcast</div></div>
+                <div class="stat-card"><div class="stat-value teal">6</div><div class="stat-label">Usuarios delivery (cruce)</div></div>
+                <div class="stat-card"><div class="stat-value teal">66,7%</div><div class="stat-label">Conversión delivery</div></div>
+              </div>
+              <p>Broadcast tiene volumen (75 usuarios) pero 8% conversión. Delivery tiene poco volumen (6) pero 66,7%. La estrategia obvia: <strong>usar el volumen de broadcasts para alimentar los deliverys</strong>.</p>
+            </div></div>
+          </div>
 
-  <p>Los emails de marketing en HubSpot se crean con un editor drag-and-drop. Podés diseñar el layout, agregar imágenes, botones, texto, y previsualizar cómo se ve en desktop y mobile.</p>
+          <div class="accordion-item">
+            <button class="accordion-trigger">El nuevo rol: Broadcasts como combustible <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>En 2026, los broadcasts no desaparecen. Se <strong>reconvierten</strong>:</p>
+              <ul>
+                <li><strong>Antes:</strong> Broadcast → CTA a registro → Lead crea tienda (o no) → Fin</li>
+                <li><strong>Ahora:</strong> Broadcast → CTA a descargar recurso → Lead entra al delivery → Delivery lo mete al full-funnel → El sistema lo nurturea automáticamente</li>
+              </ul>
+              <p>El broadcast ya no necesita "cerrar" la conversión por sí solo. Su trabajo es <strong>activar al lead</strong> y meterlo en el flujo que mejor convierte.</p>
+            </div></div>
+          </div>
 
-  <p>Cosas importantes para recordar:</p>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Cómo pensar un broadcast en 2026 <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Antes de escribir el copy, respondé estas preguntas:</p>
+              <ol>
+                <li><strong>¿A qué flujo alimenta?</strong> El broadcast debería promover la descarga de un recurso (delivery) que tiene un flujo automatizado detrás.</li>
+                <li><strong>¿A qué segmento va?</strong> No mandes el mismo broadcast a los que ya tienen tienda y a los que recién empiezan.</li>
+                <li><strong>¿Qué señal de intención genera?</strong> Si el lead hace clic, ¿qué propiedad se actualiza? ¿A qué workflow entra?</li>
+                <li><strong>¿Cuál es el CTA correcto?</strong> No es "Creá tu tienda" (eso lo hace el BOFU). Es "Descargá la guía" o "Inscribite al webinar" — acciones que activan un flujo.</li>
+              </ol>
+              <div class="callout-editorial">
+                <div class="ce-title">✏️ Tu Mirada Editorial</div>
+                <p>Tu expertise en copywriting es la que hace que los broadcasts funcionen. Lo que cambia es el <strong>objetivo</strong> del broadcast, no la calidad creativa. Seguís siendo el que escribe el subject que abre y el primer párrafo que engancha — pero ahora el CTA lleva a un flujo, no a una landing genérica.</p>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
 
-  <ul>
-    <li><strong>Subject line y preview text:</strong> Son lo primero que ve el lead. El subject line determina si abren o no el email. El preview text aparece al lado del subject en la bandeja.</li>
-    <li><strong>Personalización:</strong> Podés insertar variables como el nombre del contacto: "Hola {{contact.firstname}}". HubSpot las reemplaza automáticamente.</li>
-    <li><strong>A/B test:</strong> Podés crear dos versiones del mismo email (diferente subject, diferente CTA) y HubSpot manda cada versión a un porcentaje de la audiencia para ver cuál rinde mejor.</li>
-    <li><strong>Send or schedule:</strong> Podés enviar ya o programar para una fecha/hora específica. Para workflows, el email se envía automáticamente cuando el contacto llega a ese paso.</li>
-  </ul>
-
-  <h3>Tipos de email en HubSpot</h3>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Tipo</th><th>Uso</th><th>Ejemplo</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Regular</strong></td><td>Envío masivo a una lista</td><td>Broadcasts, newsletters</td></tr>
-        <tr><td><strong>Automated</strong></td><td>Se envía dentro de un workflow</td><td>Emails del delivery, TOFU, MOFU, BOFU</td></tr>
-        <tr><td><strong>Blog/RSS</strong></td><td>Se envía automáticamente con nuevos posts del blog</td><td>Newsletter semanal del blog</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Formularios</h2>
-
-  <p>Los formularios son la puerta de entrada de leads. Cada descargable tiene un formulario asociado que captura los datos del lead. Los formularios de Tiendanube AR tienen estos campos principales:</p>
-
-  <ul>
-    <li><strong>Nombre</strong></li>
-    <li><strong>Email</strong></li>
-    <li><strong>Teléfono</strong></li>
-    <li><strong>"¿Cómo vendés actualmente?"</strong> → Esta respuesta es la que alimenta la propiedad Sales Channel y determina el camino en el Full-Funnel.</li>
-  </ul>
-
-  <div class="callout callout-data">
-    <div class="callout-icon">📊</div>
-    <div class="callout-body">
-      <strong>Dato sobre los formularios</strong>
-      <p>Hubo un cambio importante en los formularios: antes se pedían más campos (empresa, rubro, etc.) y la tasa de conversión del form era más baja. Al simplificar a 4 campos, la conversión subió significativamente. Pero eso generó un trade-off: menos datos por lead significa menos capacidad de personalización. La pregunta "¿Cómo vendés?" es el campo que más valor aporta para segmentar.</p>
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-broadcasts" onclick="markAsRead('hs-broadcasts')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <h3>Tipos de formulario</h3>
+  <!-- ─── Quiz ─── -->
+  <div class="sub-page" data-sub="hs-quiz">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Quiz — HubSpot</h1>
 
-  <ul>
-    <li><strong>Embedded:</strong> Formulario incrustado en una landing page o blog post. El lead lo ve directamente en la página.</li>
-    <li><strong>Pop-up / Slide-in:</strong> Formulario que aparece como pop-up o deslizándose desde el costado. Se usa en artículos del blog para ofrecer deliverys relacionados.</li>
-    <li><strong>Standalone:</strong> Formulario en una página propia (URL dedicada). Se usa para eventos y webinars.</li>
-  </ul>
+        <div class="quiz-card" data-correct="b">
+          <h3>1. ¿Cuál es la diferencia clave entre una lista activa y una estática?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq1" value="a"><span>La activa tiene más contactos</span></label>
+            <label class="q-opt"><input type="radio" name="hq1" value="b"><span>La activa se actualiza automáticamente según criterios; la estática es fija</span></label>
+            <label class="q-opt"><input type="radio" name="hq1" value="c"><span>La estática es más vieja</span></label>
+          </div>
+          <div class="q-feedback q-right">Correcto. Las listas activas recalculan sus miembros constantemente según los criterios definidos.</div>
+          <div class="q-feedback q-wrong">La diferencia no es de tamaño ni antigüedad. Una lista activa se actualiza sola; una estática no cambia a menos que la edites manualmente.</div>
+        </div>
 
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="hs-emails" onclick="markAsRead('hs-emails')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
+        <div class="quiz-card" data-correct="a">
+          <h3>2. ¿Qué tipo de email es un broadcast en HubSpot?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq2" value="a"><span>Regular</span></label>
+            <label class="q-opt"><input type="radio" name="hq2" value="b"><span>Automated</span></label>
+            <label class="q-opt"><input type="radio" name="hq2" value="c"><span>Blog/RSS</span></label>
+          </div>
+          <div class="q-feedback q-right">Sí. Los broadcasts son emails "Regular" — los creás, elegís audiencia, programás y se mandan una vez.</div>
+          <div class="q-feedback q-wrong">Los Automated son los del full-funnel (disparados por workflows). Los broadcasts son "Regular".</div>
+        </div>
 
-<!-- HS QUIZ -->
-<div class="sub-page" data-sub="hs-quiz">
-<div class="content-wrap">
-<div class="article">
-  <h1>Quiz: HubSpot</h1>
-  <p class="subtitle">Escenarios prácticos del día a día en HubSpot.</p>
-</div>
-<div class="quiz-section" data-quiz-id="hs-quiz">
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 1 de 3</div>
-    <div class="q-text">Tu jefe te pide mandar un broadcast de seguimiento a los que abrieron el email sobre Shein y Temu, pero solo a los de Argentina que vendan por redes sociales. ¿Qué hacés primero?</div>
-    <div class="q-options">
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Correcto!</strong> Primero necesitás la audiencia. Creás una lista activa con los criterios: 'Opened email: Shein y Temu' AND 'Country = Argentina' AND 'Sales Channel = Redes Sociales'. Después usás esa lista como audiencia del broadcast. Sin la lista, no podés segmentar el envío.">Crear una lista activa con los criterios: abrió el email + Argentina + Redes Sociales</button>
-      <button class="q-opt" data-fb-wrong="<strong>No primero.</strong> El workflow es para automatizaciones que se repiten. Para un envío puntual de seguimiento, usás un email 'Regular' enviado a una lista específica. El workflow sería overkill para esto.">Ir a Workflows y crear un workflow nuevo con un enrollment trigger</button>
-      <button class="q-opt" data-fb-wrong="<strong>No exactamente.</strong> Los filtros dentro del editor de email son limitados. Lo correcto es crear una lista con todos los criterios combinados y después enviar el email a esa lista. Las listas te dan más flexibilidad y podés reutilizarlas.">Ir a Email, crear el broadcast, y usar los filtros dentro del editor de email</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
+        <div class="quiz-card" data-correct="c">
+          <h3>3. ¿Qué pasa cuando un lead cumple el "goal" de un workflow?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq3" value="a"><span>Recibe un email de felicitación</span></label>
+            <label class="q-opt"><input type="radio" name="hq3" value="b"><span>Se le resetean las propiedades</span></label>
+            <label class="q-opt"><input type="radio" name="hq3" value="c"><span>Sale automáticamente del workflow sin recibir los emails restantes</span></label>
+          </div>
+          <div class="q-feedback q-right">Exacto. El goal permite que un lead que ya convirtió no siga recibiendo emails innecesarios.</div>
+          <div class="q-feedback q-wrong">El goal es una condición de salida exitosa. Si el lead la cumple, sale del workflow inmediatamente.</div>
+        </div>
 
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 2 de 3</div>
-    <div class="q-text">Querés agregar tu email personal a un workflow de delivery para probarlo. Hiciste todo (creaste el contacto, pusiste las propiedades correctas, te agregaste a la lista) pero no recibís el email. ¿Qué puede estar pasando?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>Podría ser, pero hay algo más básico.</strong> Si el contacto no está marcado como Marketing Contact, directamente no puede recibir emails de marketing, sin importar las propiedades.">Las propiedades del contacto no coinciden con el enrollment trigger del workflow</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Exacto!</strong> Es el error más común. Si tu contacto no está marcado como Marketing Contact, HubSpot no le envía emails de marketing. Es lo primero que hay que verificar cuando un contacto 'no recibe' un email. Andá al contacto → About → Marketing Contact Status → cambialo a 'Marketing Contact'.">Tu contacto no está marcado como Marketing Contact</button>
-      <button class="q-opt" data-fb-wrong="<strong>Es posible pero improbable.</strong> Sí hay límites diarios, pero son altos (generalmente miles). Si un solo contacto no recibe el email, el problema casi siempre es de configuración del contacto, no de límites.">HubSpot tiene un límite de envíos diarios y ya lo superaste</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
+        <div class="quiz-card" data-correct="b">
+          <h3>4. ¿Cuál es el rol de los broadcasts en la estrategia 2026?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq4" value="a"><span>Cerrar conversiones directamente</span></label>
+            <label class="q-opt"><input type="radio" name="hq4" value="b"><span>Activar leads y alimentar los flujos automatizados que mejor convierten</span></label>
+            <label class="q-opt"><input type="radio" name="hq4" value="c"><span>Se eliminan completamente</span></label>
+          </div>
+          <div class="q-feedback q-right">Correcto. Los broadcasts pasan de "cerrar" a "activar" — su CTA lleva a flujos, no a conversión directa.</div>
+          <div class="q-feedback q-wrong">Los broadcasts no desaparecen ni buscan cerrar directamente. Se reconvierten en motor de activación para los flujos automatizados.</div>
+        </div>
+      </div>
 
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 3 de 3</div>
-    <div class="q-text">Vas a activar un workflow nuevo que envía 3 emails. HubSpot te pregunta: "¿Querés enrolar a los contactos existentes que ya cumplen el trigger?" ¿Qué respondés?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>Cuidado.</strong> Si decís que sí, todos los contactos que ya cumplieron el trigger (pueden ser miles) van a recibir los 3 emails. Muchos de ellos ya habrán pasado por flujos similares, y podrías generar spam o duplicar envíos.">Sí — así todos los que califican reciben los emails</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Correcto!</strong> En general, querés que solo los <em>nuevos</em> contactos que cumplan el trigger entren al workflow. Los existentes probablemente ya recibieron contenido similar por otros flujos. Decir 'No' es la opción segura. Si necesitás incluir a algunos existentes, es mejor crear una lista estática con los específicos que querés y enrolarlos manualmente.">No — solo quiero que entren los contactos nuevos que cumplan el trigger a partir de ahora</button>
-      <button class="q-opt" data-fb-wrong="<strong>Entiendo la precaución, pero no es necesario.</strong> HubSpot te da la opción directamente al activar. No necesitás un A/B test para esto — la buena práctica es siempre empezar con 'No' y enrolar manualmente si hace falta.">Primero haría un A/B test con un grupo pequeño para ver si funciona</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-results">
-    <div class="score">-/-</div>
-    <div class="score-text">¡Quiz completado! Tu progreso fue guardado.</div>
-  </div>
-</div>
-</div>
-</div>
-
-</div><!-- /hubspot page -->
-
-<!-- ======================== LOS NÚMEROS ======================== -->
-<div class="page" data-page="numeros">
-<div class="sub-tabs-wrap">
-  <div class="sub-tabs">
-    <button class="sub-tab active" data-sub="num-deliverys">Métricas de Deliverys</button>
-    <button class="sub-tab" data-sub="num-funnel">Funnel de Conversión</button>
-    <button class="sub-tab" data-sub="num-ql">Quality Leads</button>
-    <button class="sub-tab" data-sub="num-sales">Sales Channel &amp; Landings</button>
-    <button class="sub-tab" data-sub="num-quiz">Quiz <span class="check-icon"></span></button>
-  </div>
-</div>
-
-<!-- NUM DELIVERYS -->
-<div class="sub-page active" data-sub="num-deliverys">
-<div class="content-wrap">
-<div class="article">
-  <h1>Los números detrás de los Deliverys</h1>
-  <p class="subtitle">¿Qué nos dicen las métricas sobre lo que funciona y lo que no?</p>
-
-  <p>Los números no mienten, pero tampoco hablan solos. Necesitan que alguien los interprete, que les pregunte "¿por qué?" y "¿qué hacemos con esto?". En esta sección vamos a recorrer las métricas clave del reporte de deliverys de febrero 2026 y, sobre todo, vamos a aprender a leerlas como lo haría alguien del equipo.</p>
-
-  <h2>Los cuatro números que importan</h2>
-
-  <div class="stat-grid">
-    <div class="stat-card">
-      <div class="stat-value coral">1.052</div>
-      <div class="stat-label">Envíos totales</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">~65%</div>
-      <div class="stat-label">Open Rate promedio</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value teal">~45%</div>
-      <div class="stat-label">CTR promedio</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">10,8%</div>
-      <div class="stat-label">Conversión a payment (cruce)</div>
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-quiz" onclick="markAsRead('hs-quiz')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <p>¿Qué significan estos números?</p>
-
-  <p><strong>1.052 envíos</strong> es el volumen total de emails de delivery enviados. Suena como mucho, pero comparalo con los 120.137 del email de Bienvenidos. El delivery llega a menos del 1% de la base total. Esto es a la vez su fortaleza (alta personalización) y su debilidad (bajo alcance).</p>
-
-  <p><strong>~65% Open Rate</strong> significa que casi dos de cada tres personas que reciben el email lo abren. En la industria del email marketing, un buen Open Rate está entre 20% y 30%. El de los deliverys es más del doble. ¿Por qué? Porque el lead acaba de pedir el recurso — está esperando ese email. Es como enviarle un paquete que pidió: obvio que lo abre.</p>
-
-  <p><strong>~45% CTR</strong> es el dato más impresionante. La industria promedia entre 2% y 5%. Los deliverys tienen entre 9 y 12 veces más que el benchmark. Esto confirma que la estrategia funciona: entregar valor inmediato genera engagement real, no solo apertura.</p>
-
-  <p><strong>10,8% conversión a payment</strong> viene del cruce masivo: 74.508 contactos de HubSpot cruzados con 2.778 registros de Tableau. De los 139 que matchearon, 15 pagaron. Es una tasa alta para nurturing por email.</p>
-
-  <h2>El patrón de clics hasta el payment</h2>
-
-  <p>Uno de los hallazgos más sorprendentes del reporte es el análisis de cuántos clics necesita un lead para llegar al payment:</p>
-
-  <div class="stat-grid">
-    <div class="stat-card">
-      <div class="stat-value teal">1,5</div>
-      <div class="stat-label">Clics promedio (pagaron)</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">1,5</div>
-      <div class="stat-label">Clics promedio (no pagaron)</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value coral">67%</div>
-      <div class="stat-label">Pagaron con 1 solo clic</div>
-    </div>
-  </div>
-
-  <p>El 67% de los que pagaron lo hicieron con <strong>un solo clic</strong>. No necesitaron múltiples touchpoints, ni una secuencia larga de emails. Hicieron clic una vez y pagaron.</p>
-
-  <p>¿Qué implica esto? Que la conversión es <strong>rápida o no sucede</strong>. Si un lead va a pagar, lo decide rápido. Los que necesitan más clics no necesariamente convierten más — de hecho, el promedio de clics es igual para los que pagaron y los que no (1,5). La diferencia no está en la cantidad de clics sino en la <em>calidad del momento</em>: el primer clic tiene que llevar al lugar correcto.</p>
-
-  <div class="callout callout-insight">
-    <div class="callout-icon">🔑</div>
-    <div class="callout-body">
-      <strong>Implicación estratégica</strong>
-      <p>Si el 67% convierte con un solo clic, entonces el CTA del primer email es <em>todo</em>. Si ese CTA lleva a una página genérica como /tienda-gratis/, estás desperdiciando el momento de mayor intención. El CTA debería llevar a la landing page que mejor convierte (veremos cuáles son más adelante).</p>
-    </div>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="num-deliverys" onclick="markAsRead('num-deliverys')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
 </div>
-</div>
-</div>
-
-<!-- NUM FUNNEL -->
-<div class="sub-page" data-sub="num-funnel">
-<div class="content-wrap">
-<div class="article">
-  <h1>Funnel de Conversión</h1>
-  <p class="subtitle">Del delivery al payment: dónde se gana y dónde se pierde</p>
-
-  <p>El funnel de conversión es la historia de cómo un lead pasa de "descargó un recurso" a "pagó por Tiendanube". Cada paso es un filtro — y en cada filtro se pierde gente. Entender dónde se pierde más gente te dice dónde tenés la mayor oportunidad de mejora.</p>
-
-  <h2>El embudo del delivery</h2>
-
-  <div class="flow">
-    <div class="flow-node" style="border-color:var(--coral)">
-      <strong>142 contactos</strong>
-      <span>Leads puros (Is New Seller = No) que pasaron por delivery y están en Tableau</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node" style="border-color:var(--danger)">
-      <strong>-92% se pierden</strong>
-      <span>131 contactos no llegaron a pagar</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node teal">
-      <strong>11 pagaron</strong>
-      <span>~8% de conversión · Promedio 15 días hasta payment</span>
-    </div>
-  </div>
-
-  <p>De 142 contactos de delivery que están en Tableau, solo 11 pagaron. Una conversión del 8%. ¿Es bueno o malo?</p>
-
-  <p>Depende de con qué lo compares. Para email nurturing en SaaS, una conversión del 8% desde un recurso gratuito hasta payment es <strong>muy buena</strong>. Los benchmarks de la industria para opt-in free trials a paid están en el rango de 18% (según FirstPageSage), pero eso es desde trial a paid. Acá estamos midiendo desde un recurso descargable hasta paid, que es un funnel más largo.</p>
-
-  <h2>Flujos que convierten</h2>
-
-  <p>Uno de los análisis más reveladores es ver la tasa de conversión por flujo de email. No todos los flujos son iguales:</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Flujo</th><th>Total usuarios</th><th>Pagaron</th><th>Conversión</th><th>Evaluación</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Delivery</strong></td><td>6</td><td>4</td><td><span class="tag tag-green">66,7%</span></td><td>El mejor flujo</td></tr>
-        <tr><td>FullFunnel-bofu-online</td><td>2</td><td>1</td><td><span class="tag tag-green">50,0%</span></td><td>Bajo volumen</td></tr>
-        <tr><td>Flujo Remarketing SMB</td><td>3</td><td>1</td><td><span class="tag tag-blue">33,3%</span></td><td>Bajo volumen</td></tr>
-        <tr><td>Flujo Bienvenidos</td><td>11</td><td>1</td><td><span class="tag tag-orange">9,1%</span></td><td>Mucho potencial</td></tr>
-        <tr><td>Broadcast</td><td>75</td><td>6</td><td><span class="tag tag-orange">8,0%</span></td><td>Mayor volumen</td></tr>
-        <tr><td>FullFunnel-tofu-nn</td><td>27</td><td>1</td><td><span class="tag tag-red">3,7%</span></td><td>Baja conversión</td></tr>
-        <tr><td>FullFunnel-tofu-online</td><td>8</td><td>0</td><td><span class="tag tag-red">0%</span></td><td>Sin payments</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p><strong>Delivery convierte al 66,7%.</strong> De cada 6 leads que entran, 4 pagan. Es el flujo más eficiente por lejos — pero ojo: el volumen es muy bajo (6 usuarios en el cruce). No es estadísticamente robusto todavía, pero la tendencia es clara.</p>
-
-  <p><strong>Broadcast tiene el mayor volumen</strong> (75 usuarios) pero solo 8% de conversión. Es la pieza que más gente toca pero que menos convierte por contacto. Su valor está en el alcance, no en la eficiencia.</p>
-
-  <p><strong>El Flujo de Bienvenidos tiene 9,1% de conversión</strong> con 11 usuarios — mucho potencial si se mejora el CTR del email.</p>
-
-  <div class="callout callout-data">
-    <div class="callout-icon">📊</div>
-    <div class="callout-body">
-      <strong>Los 124 trials sin payment</strong>
-      <p>Hay 124 usuarios que crearon trial pero no pagaron. Todos los 139 usuarios cruzados tienen trial. El problema no es la activación (crear trial) sino el <strong>cierre a payment</strong>. Un flujo de remarketing/recupero enfocado en estos 124 trials podría ser el quick win más grande del área.</p>
-    </div>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="num-funnel" onclick="markAsRead('num-funnel')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- NUM QL -->
-<div class="sub-page" data-sub="num-ql">
-<div class="content-wrap">
-<div class="article">
-  <h1>Quality Leads: el modelo predictivo</h1>
-  <p class="subtitle">Cómo Tiendanube usa machine learning para predecir quién va a pagar</p>
-
-  <p>El modelo de Quality Leads (QL) es uno de los activos más sofisticados del equipo de Growth. Es un sistema de machine learning desarrollado internamente que analiza el comportamiento de un lead durante sus <strong>primeras 72 horas de trial</strong> y predice qué tan probable es que termine pagando.</p>
-
-  <p>¿Por qué 72 horas? Porque los datos muestran que la mayoría de las señales predictivas ocurren en los primeros 3 días: si un lead configura su tienda, sube productos, personaliza el diseño, y revisa las opciones de pago en esas primeras horas, es mucho más probable que pague que uno que solo creó el trial y nunca volvió.</p>
-
-  <h2>Los 8 perfiles de trial</h2>
-
-  <p>El modelo clasifica a cada trial en uno de 8 perfiles basados en su actividad:</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Perfil</th><th>Descripción</th><th>Probabilidad de pago</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Fantasma</strong></td><td>Creó el trial pero no hizo nada. No volvió a entrar.</td><td><span class="tag tag-red">Muy baja</span></td></tr>
-        <tr><td><strong>Curioso</strong></td><td>Entró un par de veces, miró por arriba, pero no configuró nada.</td><td><span class="tag tag-red">Baja</span></td></tr>
-        <tr><td><strong>Interesado</strong></td><td>Configuró algo (nombre de tienda, algunos productos) pero no completó pasos clave.</td><td><span class="tag tag-orange">Media</span></td></tr>
-        <tr><td><strong>Determinado</strong></td><td>Configuró tienda completa, subió productos, revisó pagos. Listo para pagar.</td><td><span class="tag tag-green">Alta</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>(Hay 8 perfiles en total con variaciones intermedias; los 4 principales son estos.)</p>
-
-  <p>¿Para qué sirve esto en nurturing? Para <strong>priorizar</strong>. Si un lead que vino del delivery tiene perfil "Determinado", no necesitás mandarle más emails educativos — necesitás facilitarle el pago. Si tiene perfil "Fantasma", quizás necesita un email de re-engagement con un incentivo para que vuelva a entrar al trial.</p>
-
-  <div class="callout callout-tip">
-    <div class="callout-icon">💡</div>
-    <div class="callout-body">
-      <strong>Conexión con el ecosistema</strong>
-      <p>El modelo QL actualmente no está integrado directamente con los workflows de nurturing. Los perfiles se calculan pero no se usan para segmentar los emails del Full-Funnel. Integrar el QL score con el nurturing es una oportunidad futura: imaginate mandar un email distinto a un "Fantasma" (re-engagement) vs. un "Determinado" (facilitar pago).</p>
-    </div>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="num-ql" onclick="markAsRead('num-ql')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- NUM SALES CHANNEL & LANDINGS -->
-<div class="sub-page" data-sub="num-sales">
-<div class="content-wrap">
-<div class="article">
-  <h1>Sales Channel &amp; Landing Pages</h1>
-  <p class="subtitle">Qué canales de venta convierten más y cuáles son las páginas donde se toma la decisión</p>
-
-  <h2>Conversión por canal de venta</h2>
-
-  <p>Cruzando los datos de HubSpot con Tableau, podemos ver cómo convierte cada canal de venta:</p>
-
-  <div class="bar-chart">
-    <div class="bar-chart-title">Tasa de Conversión a Payment por Sales Channel</div>
-    <div class="bar-row"><div class="bar-label">Tienda online</div><div class="bar-track"><div class="bar-fill teal" style="width:88.8%"><span class="bar-val">22,2%</span></div></div><span class="bar-val-outside">6 de 27</span></div>
-    <div class="bar-row"><div class="bar-label">Redes sociales</div><div class="bar-track"><div class="bar-fill" style="width:48.4%"><span class="bar-val">12,1%</span></div></div><span class="bar-val-outside">7 de 58</span></div>
-    <div class="bar-row"><div class="bar-label">Tienda física</div><div class="bar-track"><div class="bar-fill" style="width:36.4%"><span class="bar-val">9,1%</span></div></div><span class="bar-val-outside">3 de 33</span></div>
-    <div class="bar-row"><div class="bar-label">Aún no vendo</div><div class="bar-track"><div class="bar-fill navy" style="width:35.6%"><span class="bar-val">8,9%</span></div></div><span class="bar-val-outside">4 de 45</span></div>
-    <div class="bar-row"><div class="bar-label">Marketplace</div><div class="bar-track"><div class="bar-fill navy" style="width:20%"><span class="bar-val">5,0%</span></div></div><span class="bar-val-outside">1 de 20</span></div>
-  </div>
-
-  <p>Los que ya tienen <strong>tienda online convierten 2,5 veces más</strong> que los que aún no venden (22,2% vs. 8,9%). Tiene sentido: ya entienden el e-commerce y ven valor inmediato en Tiendanube. Los de <strong>Redes Sociales</strong> son el grupo con más payments absolutos (7) — es el segmento más grande y más activo.</p>
-
-  <p>Los de <strong>Marketplace convierten menos</strong> (5%). Probablemente porque ya tienen su canal (MercadoLibre, por ejemplo) y no ven tanto valor en una tienda propia.</p>
-
-  <h2>Landing pages que convierten</h2>
-
-  <p>No todas las landing pages son iguales. Algunas generan conversiones y otras no:</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Landing Page</th><th>Usuarios</th><th>Pagaron</th><th>Tasa</th></tr></thead>
-      <tbody>
-        <tr style="background:rgba(0,189,165,.04)"><td>/evolucion/</td><td>3</td><td>2</td><td><span class="tag tag-green">66,7%</span></td></tr>
-        <tr style="background:rgba(0,189,165,.04)"><td>/recursos/nubecommerce/</td><td>5</td><td>3</td><td><span class="tag tag-green">60,0%</span></td></tr>
-        <tr style="background:rgba(0,189,165,.04)"><td>/recursos/planificacion-estrategica/</td><td>6</td><td>3</td><td><span class="tag tag-green">50,0%</span></td></tr>
-        <tr><td>/crear-mi-tienda-online/</td><td>30</td><td>3</td><td><span class="tag tag-blue">10,0%</span></td></tr>
-        <tr><td>/tienda-gratis/</td><td>13</td><td>2</td><td><span class="tag tag-blue">15,4%</span></td></tr>
-        <tr style="background:rgba(242,84,91,.03)"><td>/recursos/ebooks/negocios-digitales-guia/</td><td>26</td><td>0</td><td><span class="tag tag-red">0%</span></td></tr>
-        <tr style="background:rgba(242,84,91,.03)"><td>/recursos/planillas/planilla-de-control-de-stock/</td><td>8</td><td>0</td><td><span class="tag tag-red">0%</span></td></tr>
-        <tr style="background:rgba(242,84,91,.03)"><td>/herramientas/analisis-foda-online/</td><td>7</td><td>0</td><td><span class="tag tag-red">0%</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>Las páginas de <strong>Evolución (66,7%), NubeCommerce (60%) y Planificación Estratégica (50%)</strong> son donde se toma la decisión de pagar. Las herramientas genéricas (FODA, buyer persona) y ebooks tienen <strong>0% de conversión</strong>.</p>
-
-  <div class="callout callout-alert">
-    <div class="callout-icon">🚨</div>
-    <div class="callout-body">
-      <strong>El problema del CTA actual</strong>
-      <p>El email de Bienvenidos actual manda al 70,7% de sus clics a <code>/tienda-gratis/</code> — una página con solo 15,4% de conversión. Si ese CTA apuntara a <code>/recursos/nubecommerce/</code> (60%) o <code>/evolucion/</code> (66,7%), la conversión podría multiplicarse.</p>
-    </div>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="num-sales" onclick="markAsRead('num-sales')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- NUM QUIZ -->
-<div class="sub-page" data-sub="num-quiz">
-<div class="content-wrap">
-<div class="article">
-  <h1>Quiz: Los Números</h1>
-  <p class="subtitle">¿Podés interpretar los datos como un growth marketer?</p>
-</div>
-<div class="quiz-section" data-quiz-id="num-quiz">
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 1 de 3</div>
-    <div class="q-text">El 67% de los que pagaron lo hicieron con un solo clic. ¿Cuál es la implicación más importante para la estrategia de emails?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>No necesariamente.</strong> No es que los emails sobren — cada email del delivery contribuye al engagement. Pero el dato sugiere que el primer CTA es el momento decisivo. Mandá menos emails no es la respuesta; hacé que el CTA principal lleve al lugar correcto.">Deberíamos mandar menos emails, ya que los leads deciden rápido</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Exacto!</strong> Si el primer clic es el momento de máxima intención, ese CTA tiene que llevar a una landing page con alta tasa de conversión (como /evolucion/ o /nubecommerce/), no a una página genérica. El primer contacto post-descarga es todo.">El primer CTA de cada email es crítico — tiene que apuntar a la landing page que mejor convierte</button>
-      <button class="q-opt" data-fb-wrong="<strong>No es eso.</strong> Los deliverys sí funcionan — tienen CTR de 40-60%. El dato de 1 clic confirma que cuando el lead está listo, no necesita mucha más persuasión. Pero necesitás el delivery para crear ese momento de receptividad.">Los deliverys no están funcionando porque la gente decide antes de recibir el email</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 2 de 3</div>
-    <div class="q-text">Los leads de Marketplace convierten al 5% vs. 22,2% de Tienda Online. ¿Qué harías con los leads de Marketplace?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>Demasiado drástico.</strong> Un 5% de conversión no es cero — cada payment cuenta. Además, algunos leads de Marketplace pueden querer diversificar canales. Lo que sí podés hacer es ajustar el <em>contenido</em> que reciben.">Dejar de enviarles emails de nurturing — no vale la pena el esfuerzo</button>
-      <button class="q-opt" data-fb-wrong="<strong>No es la mejor opción.</strong> Agruparlos con 'Aún no vendo' no refleja su realidad — sí venden, solo que por otro canal. Necesitan un mensaje distinto que aborde su situación específica.">Reclasificarlos como 'Aún no vendo' ya que la conversión es similar</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Muy bien!</strong> Los leads de Marketplace ya venden, pero por otro canal. No les podés hablar de 'empezar a vender' porque ya lo hacen. El mensaje debería ser sobre diversificación: 'No dependas solo de MercadoLibre — tené tu propia tienda para construir tu marca'. Adaptar el contenido al dolor real de ese segmento.">Adaptar el contenido MOFU/BOFU para que hable de diversificar canales, no de empezar a vender</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 3 de 3</div>
-    <div class="q-text">Un delivery tiene un Open Rate del 75% pero un CTR del 60,7% — o sea que una buena parte de los que abren, hacen clic. Sin embargo, solo tiene 30 envíos. ¿Esto es estadísticamente confiable?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>No tanto.</strong> Con 30 envíos, unos pocos clics más o menos cambian el porcentaje drásticamente. Si 2 personas menos hubieran hecho clic, el CTR baja de 60,7% a 50%. La tendencia es muy prometedora, pero no podés tomar decisiones grandes basándote solo en 30 envíos.">Sí — el 60,7% es muy alto y demuestra que el delivery funciona</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Correcto!</strong> Con 30 envíos, el margen de error es enorme. La tendencia es muy positiva (60,7% es impresionante), pero necesitás más volumen para confirmar. La estrategia correcta es darle más envíos (promocionarlo en broadcasts, por ejemplo) y ver si el CTR se mantiene con escala.">Es prometedor pero no confiable con solo 30 envíos — necesita más volumen para validar</button>
-      <button class="q-opt" data-fb-wrong="<strong>No es inútil.</strong> Es una señal temprana muy fuerte. No podés ignorar un 60,7% de CTR, incluso con bajo volumen. Lo que sí necesitás es darle más volumen para confirmar si se sostiene. No es para tomar grandes decisiones, pero sí para priorizar dónde poner más esfuerzo.">No — con tan pocos envíos el dato es básicamente inútil</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-results">
-    <div class="score">-/-</div>
-    <div class="score-text">¡Quiz completado! Tu progreso fue guardado.</div>
-  </div>
-</div>
-</div>
-</div>
-
-</div><!-- /numeros page -->
-
 </main>
 
-<footer class="app-footer">
-  Nurturing Academy — Growth AR · Datos: febrero 2026 · Fuentes: HubSpot, Tableau, documentos internos
-</footer>
+<!-- GLOSSARY -->
+<div class="glos-overlay" id="glos-overlay"></div>
+<div class="glos-panel" id="glos-panel">
+  <div class="glos-head"><h3>Glosario</h3><button class="glos-close">&times;</button></div>
+  <div class="glos-search"><input type="text" placeholder="Buscar término…"></div>
+  <div class="glos-list">
+    <div class="glos-item"><div class="glos-term">Workflow</div><div class="glos-def">Flujo automatizado con trigger, acciones y condiciones de salida.</div></div>
+    <div class="glos-item"><div class="glos-term">Enrollment Trigger</div><div class="glos-def">Condición que activa el ingreso de un contacto a un workflow.</div></div>
+    <div class="glos-item"><div class="glos-term">If/then Branch</div><div class="glos-def">Bifurcación condicional dentro de un workflow.</div></div>
+    <div class="glos-item"><div class="glos-term">Marketing Contact</div><div class="glos-def">Contacto que puede recibir emails de marketing. HubSpot cobra por estos.</div></div>
+    <div class="glos-item"><div class="glos-term">Lista Activa</div><div class="glos-def">Lista que se actualiza automáticamente según criterios definidos.</div></div>
+    <div class="glos-item"><div class="glos-term">Goal</div><div class="glos-def">Condición de salida exitosa de un workflow.</div></div>
+  </div>
+</div>
 
+<footer class="app-footer">Nurturing Academy — Growth AR — 2026</footer>
 <script src="app.js"></script>
 </body>
 </html>

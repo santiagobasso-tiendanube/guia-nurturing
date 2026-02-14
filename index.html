@@ -2,17 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nurturing Academy — Growth AR</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Nurturing Academy — De Creativo a Estratega</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
+<!-- ═══════════════ HEADER ═══════════════ -->
 <header class="app-header">
   <div class="header-logo">
     <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -20,759 +17,338 @@
   </div>
   <nav class="header-tabs">
     <a href="index.html" class="header-tab" data-page="inicio">Inicio</a>
-    <a href="index.html#ecosistema" class="header-tab" data-page="ecosistema">El Ecosistema</a>
-    <a href="herramientas.html#hubspot" class="header-tab">HubSpot</a>
-    <a href="herramientas.html#numeros" class="header-tab">Los Números</a>
-    <a href="estrategia.html#estrategia" class="header-tab">Estrategia</a>
-    <a href="estrategia.html#recursos" class="header-tab">Recursos</a>
+    <a href="sistema.html" class="header-tab">El Sistema</a>
+    <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="herramientas.html" class="header-tab">HubSpot</a>
+    <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
+    <a href="recursos.html" class="header-tab">Recursos</a>
   </nav>
   <div class="header-right">
-    <button class="glos-trigger" aria-label="Abrir glosario">📖 Glosario</button>
-    <div class="progress-mini">
-      <span class="progress-text">0/21</span>
-      <div class="progress-mini-bar"><div class="progress-mini-fill"></div></div>
-    </div>
+    <button class="glos-trigger" id="glos-btn">📖 Glosario</button>
+    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/24</span></div>
   </div>
 </header>
-<div class="progress-strip"><div class="progress-strip-fill"></div></div>
+<div class="progress-strip"><div class="progress-strip-fill" style="width:0%"></div></div>
 
-<!-- ============================================================
-     GLOSSARY PANEL
-     ============================================================ -->
-<div id="glos-overlay" class="glos-overlay"></div>
-<div id="glos-panel" class="glos-panel">
-  <div class="glos-head">
-    <h3>📖 Glosario</h3>
-    <button class="glos-close" aria-label="Cerrar">✕</button>
-  </div>
-  <div class="glos-search">
-    <input type="text" placeholder="Buscar término...">
-  </div>
-  <div class="glos-list">
-    <div class="glos-item"><div class="glos-term">Nurturing</div><div class="glos-def">Proceso de acompañar leads con contenido relevante por email hasta que estén listos para convertir (crear trial o pagar). Literalmente "nutrir" la relación.</div></div>
-    <div class="glos-item"><div class="glos-term">Lead</div><div class="glos-def">Persona que dejó sus datos (nombre, email, teléfono) a través de un formulario. Aún no es cliente, pero mostró interés.</div></div>
-    <div class="glos-item"><div class="glos-term">Trial</div><div class="glos-def">Período de prueba gratuito donde el lead crea una tienda en Tiendanube sin pagar. El objetivo es que active la tienda y eventualmente pague.</div></div>
-    <div class="glos-item"><div class="glos-term">Payment</div><div class="glos-def">El momento en que el lead paga su primer plan de Tiendanube. Es la métrica final de éxito del nurturing.</div></div>
-    <div class="glos-item"><div class="glos-term">Delivery</div><div class="glos-def">Mini-flujo de 3 emails asociado a un recurso descargable (planilla, calculadora, etc.). Es la pieza más eficiente del ecosistema, con CTR de 40-60%.</div></div>
-    <div class="glos-item"><div class="glos-term">Full-Funnel</div><div class="glos-def">Sistema de 52 emails (TOFU + MOFU + BOFU + Remarketing) segmentado por canal de venta. Es la columna vertebral del nurturing.</div></div>
-    <div class="glos-item"><div class="glos-term">TOFU (Top of Funnel)</div><div class="glos-def">Etapa de conocimiento. 4 emails × 3 segmentos = 12 emails. Presenta Tiendanube y sus beneficios generales.</div></div>
-    <div class="glos-item"><div class="glos-term">MOFU (Middle of Funnel)</div><div class="glos-def">Etapa de consideración. 7 emails × 3 segmentos = 21 emails. Profundiza en beneficios específicos según cómo vende el lead.</div></div>
-    <div class="glos-item"><div class="glos-term">BOFU (Bottom of Funnel)</div><div class="glos-def">Etapa de decisión. 5 emails × 3 segmentos = 15 emails. Empuja a la acción: crear tienda, activar trial, pagar.</div></div>
-    <div class="glos-item"><div class="glos-term">Broadcast</div><div class="glos-def">Email masivo enviado a una base grande de contactos, generalmente con contenido de valor, promociones o eventos. Alto volumen, menor personalización.</div></div>
-    <div class="glos-item"><div class="glos-term">Email de Bienvenidos</div><div class="glos-def">Email que se envía después de descargar un recurso (si no recibió bienvenida antes). Actualmente tiene 2,14% CTR — el mayor cuello de botella del sistema.</div></div>
-    <div class="glos-item"><div class="glos-term">Remarketing</div><div class="glos-def">Flujo de 4 emails (no segmentados) para re-enganchar leads que pasaron por todo el Full-Funnel sin convertir.</div></div>
-    <div class="glos-item"><div class="glos-term">Workflow</div><div class="glos-def">Automatización en HubSpot: una secuencia de acciones (enviar email, esperar X días, evaluar condición, ramificar) que se ejecuta cuando un contacto cumple cierto criterio.</div></div>
-    <div class="glos-item"><div class="glos-term">Open Rate (OR)</div><div class="glos-def">Porcentaje de personas que abrieron el email vs. las que lo recibieron. Buen benchmark: >35% en nurturing.</div></div>
-    <div class="glos-item"><div class="glos-term">CTR (Click-Through Rate)</div><div class="glos-def">Porcentaje de personas que hicieron clic en un enlace del email vs. las que lo recibieron. Buen benchmark: >3% en nurturing, >10% en deliverys.</div></div>
-    <div class="glos-item"><div class="glos-term">Sales Channel</div><div class="glos-def">Cómo vende actualmente el lead. Opciones del formulario: Tienda online, Redes sociales, Tienda física, Marketplace, Aún no vendo.</div></div>
-    <div class="glos-item"><div class="glos-term">Quality Lead (QL)</div><div class="glos-def">Modelo de machine learning de Tiendanube que predice, en las primeras 72 horas del trial, qué tan probable es que un lead pague. Clasifica en 8 perfiles.</div></div>
-    <div class="glos-item"><div class="glos-term">SMB</div><div class="glos-def">Small & Medium Business — segmento de Tiendanube para emprendedores y pymes. Los deliverys SMB son orgánicos (sin pauta).</div></div>
-    <div class="glos-item"><div class="glos-term">Evolución</div><div class="glos-def">Segmento mid-market de Tiendanube para tiendas más grandes. Los deliverys de Evolución (IA para e-commerce) vienen de pauta pagada.</div></div>
-    <div class="glos-item"><div class="glos-term">Is New Seller</div><div class="glos-def">Propiedad en HubSpot que indica si el contacto ya creó una tienda (trial). Si es "No", es un lead puro que aún no probó Tiendanube.</div></div>
-    <div class="glos-item"><div class="glos-term">Entrenamiento Nube</div><div class="glos-def">Eventos de capacitación de Tiendanube para usuarios y potenciales clientes. Tienen su propio flujo de nurturing post-evento.</div></div>
-    <div class="glos-item"><div class="glos-term">ICE Score</div><div class="glos-def">Framework de priorización: Impact (impacto potencial), Confidence (confianza en que funcione), Ease (facilidad de implementar). Cada criterio se puntúa 1-10.</div></div>
-    <div class="glos-item"><div class="glos-term">CTA (Call to Action)</div><div class="glos-def">El botón o enlace dentro de un email que busca que el lead haga clic. "Creá tu tienda gratis" es un CTA típico.</div></div>
-  </div>
-</div>
-
-<!-- ============================================================
-     MAIN CONTENT
-     ============================================================ -->
+<!-- ═══════════════ PAGE: INICIO ═══════════════ -->
 <main class="app-main">
-
-<!-- ======================== INICIO ======================== -->
 <div class="page active" data-page="inicio">
-<div class="content-wrap">
-  <div class="article">
-    <h1>Bienvenido a Nurturing Academy</h1>
-    <p class="subtitle">Tu guía completa para entender, operar y mejorar el ecosistema de nurturing de Growth AR</p>
 
-    <p>Si estás leyendo esto, probablemente acabás de entrar al área de nurturing y sentís que hay un mundo entero por descubrir. Es normal. El ecosistema de nurturing de Tiendanube Argentina es un sistema sofisticado con más de 50 emails automatizados, múltiples flujos de trabajo en HubSpot, segmentación por canal de venta, y un montón de métricas que hay que entender para poder tomar buenas decisiones.</p>
+  <!-- Sub-tabs -->
+  <div class="sub-tabs-wrap">
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="hist-dashboard">Dashboard</button>
+      <button class="sub-tab" data-sub="hist-historia">La Historia <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hist-filosofia">Pensar como Estratega <span class="check-icon"></span></button>
+    </div>
+  </div>
 
-    <p>Esta plataforma está diseñada para que recorras cada pieza del rompecabezas a tu ritmo. No es un resumen ni una referencia rápida: es una explicación detallada, con contexto, datos reales y los "por qué" detrás de cada decisión del equipo. Pensalo como el manual que te hubiera gustado tener el primer día.</p>
+  <!-- ─── Dashboard ─── -->
+  <div class="sub-page active" data-sub="hist-dashboard">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Nurturing Academy</h1>
+        <p class="subtitle">De Creativo a Estratega — Tu guía completa para entender el sistema de nurturing de Tiendanube</p>
+        <p>Vos ya sabés escribir emails que convierten. Definiste las buenas prácticas de copywriting, optimizaste los MOFU con datos y le corregiste los primeros emails a Julián cuando llegó al área. <strong>Acá vas a aprender por qué importa cada pieza y cómo conecta con el sistema.</strong></p>
 
-    <div class="callout callout-tip">
-      <div class="callout-icon">💡</div>
-      <div class="callout-body">
-        <strong>¿Cómo usar esta guía?</strong>
-        <p>Podés recorrer las secciones en orden (es el camino recomendado) o saltar a lo que más te interese. Cada sección tiene un botón "Marcar como leída" al final, y los quizzes refuerzan lo aprendido. Usá el Glosario (arriba a la derecha) cuando encuentres un término que no conozcas.</p>
+        <h2>Resultados 2025 — Lo que construimos</h2>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">154.887</div><div class="stat-label">Leads impactados</div></div>
+          <div class="stat-card"><div class="stat-value teal">1.038</div><div class="stat-label">Trials generados (+16% vs budget)</div></div>
+          <div class="stat-card"><div class="stat-value coral">102</div><div class="stat-label">Payments (+16% vs budget)</div></div>
+          <div class="stat-card"><div class="stat-value danger">0,1%</div><div class="stat-label">Leads en flujos automatizados</div></div>
+        </div>
+        <p>Ese 0,1% es el dato más importante. Significa que el 99,9% de los 125.703 leads activos <strong>no recibía ninguna secuencia planificada</strong>. Todo lo que construimos en 2025 fue para resolver eso.</p>
+
+        <h2>Tu recorrido por la guía</h2>
+        <div class="dash-grid">
+          <a class="dash-card" href="index.html#hist-historia" data-goto-page="inicio" data-goto-sub="hist-historia">
+            <div class="card-icon coral">📖</div>
+            <h3>La Historia</h3>
+            <p>De palanca cerrada en 2021 a área estratégica en 2026. Tu rol fundacional incluido.</p>
+            <div class="card-progress"><div class="card-progress-bar"><div class="card-progress-fill" data-sections="hist-historia" style="width:0%"></div></div></div>
+          </a>
+          <a class="dash-card" href="sistema.html">
+            <div class="card-icon teal">⚙️</div>
+            <h3>El Sistema</h3>
+            <p>Full-funnel completo: TOFU, MOFU, BOFU, Remarketing. Emails reales anotados y tus optimizaciones.</p>
+            <div class="card-progress"><div class="card-progress-bar"><div class="card-progress-fill" data-sections="sis-vision,sis-funnel,sis-puertas,sis-quiz" style="width:0%"></div></div></div>
+          </a>
+          <a class="dash-card" href="analisis.html">
+            <div class="card-icon navy">📊</div>
+            <h3>Caso de Estudio</h3>
+            <p>Cómo se piensa un problema de nurturing paso a paso. El reporte de deliverys como ejemplo real.</p>
+            <div class="card-progress"><div class="card-progress-bar"><div class="card-progress-fill" data-sections="ana-caso,ana-lecciones,ana-numeros,ana-quiz" style="width:0%"></div></div></div>
+          </a>
+          <a class="dash-card" href="herramientas.html">
+            <div class="card-icon info">🔧</div>
+            <h3>HubSpot</h3>
+            <p>Contactos, listas, workflows, emails. Lo operativo conectado con lo estratégico.</p>
+            <div class="card-progress"><div class="card-progress-bar"><div class="card-progress-fill" data-sections="hs-intro,hs-contactos,hs-workflows,hs-emails,hs-broadcasts,hs-quiz" style="width:0%"></div></div></div>
+          </a>
+          <a class="dash-card" href="estrategia.html">
+            <div class="card-icon coral">🚀</div>
+            <h3>Estrategia 2026</h3>
+            <p>Los 4 pilares, proyectos activos del Gantt, WhatsApp, onboarding y visión a futuro.</p>
+            <div class="card-progress"><div class="card-progress-bar"><div class="card-progress-fill" data-sections="est-vision,est-pilares,est-proyectos,est-riesgos,est-framework,est-quiz" style="width:0%"></div></div></div>
+          </a>
+          <a class="dash-card" href="recursos.html">
+            <div class="card-icon teal">🎓</div>
+            <h3>Recursos</h3>
+            <p>Ruta de aprendizaje, glosario expandido y lecturas recomendadas.</p>
+            <div class="card-progress"><div class="card-progress-bar"><div class="card-progress-fill" data-sections="rec-ruta,rec-glosario" style="width:0%"></div></div></div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <h2 style="font-size:20px;font-weight:700;color:var(--charcoal-dark);margin-bottom:18px">Mapa de aprendizaje</h2>
+  <!-- ─── La Historia ─── -->
+  <div class="sub-page" data-sub="hist-historia">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>La Historia de Nurturing en Argentina</h1>
+        <p class="subtitle">De palanca despriorzada a área estratégica — y tu rol en todo esto.</p>
 
-  <div class="dash-grid">
-    <a href="index.html#ecosistema" class="dash-card" data-goto-page="ecosistema">
-      <div class="card-icon coral">🗺️</div>
-      <h3>El Ecosistema</h3>
-      <p>Entendé cómo se conectan los deliverys, el full-funnel, los broadcasts, el email de bienvenidos y todo lo demás. Acá está la pintura completa.</p>
-      <div class="card-progress">
-        <div class="card-progress-bar"><div class="card-progress-fill" data-sections="eco-vision,eco-deliverys,eco-fullfunnel,eco-bienvenidos,eco-quiz"></div></div>
+        <p>Si te preguntaran "¿qué es nurturing en Tiendanube?", la respuesta cambió radicalmente en los últimos años. Esto es lo que pasó, paso a paso.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2021 — La palanca que no funcionó</div>
+            <h3>Argentina cierra nurturing</h3>
+            <p>Había una persona dedicada 100% a nurturing: broadcasts semanales, flujos específicos, todo el paquete. Pero los resultados no llegaron. La palanca no movió la aguja y la decisión fue cerrarla.</p>
+            <p>Se dejaron de enviar mails semanales. El sistema de flujos quedó abandonado. En México pasó algo similar — tenían una persona dedicada y tampoco funcionó como esperaban.</p>
+            <p><strong>Lección:</strong> Tener una persona dedicada no alcanza si no hay sistema, no hay segmentación y el contenido no conecta.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot teal"></div>
+            <div class="timeline-year teal">2024 — Cambio de guardia</div>
+            <h3>Tay a Brasil. Santiago asume.</h3>
+            <p>Tras la reestructura, Tay pasó a trabajar 100% para Brasil. Santiago quedó a cargo con una distribución de 70% blog y 30% nurturing. Tay había empezado con el proyecto de forma incipiente, "de prestada".</p>
+            <p>Pero algo empezó a pasar: <strong>se empezaron a ver resultados.</strong> Los números de nurturing mostraron señales de vida. Tiendanube, que no se rinde fácilmente, decidió apostar de nuevo.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot coral"></div>
+            <div class="timeline-year coral">2024–2025 — Santiago como catalizador</div>
+            <h3>El 20% que cambió todo</h3>
+            <p>Santiago entró como Content Strategist para el blog, con apenas un 20% de su tiempo dedicado a nurturing. El objetivo: analizar si se podía reactivar la palanca. Tay colaboró en el calendario y en la configuración de los mails.</p>
+            <p>Con ese 20%, Santiago hizo algo clave: <strong>definió buenas prácticas de copywriting</strong> basadas en qué funcionaba en mails anteriores y qué recomendaban expertos. Asuntos de 25-30 caracteres orientados a emoción. Preheaders de 40-100 caracteres que amplían el asunto. Cuerpos de 50-125 palabras que van al punto en los dos primeros párrafos.</p>
+            <p>Y empezó a escribir broadcasts que generaron resultados reales:</p>
+
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-value coral">6</div>
+                <div class="stat-label">Payments del broadcast "La Lapicera"</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value teal">40,63%</div>
+                <div class="stat-label">Open Rate del Hot Sale</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value coral">+1039%</div>
+                <div class="stat-label">YoY payments en enero</div>
+              </div>
+            </div>
+
+            <p>El broadcast "¿Podrías vender una sola lapicera?" — inspirado en Jordan Belfort — generó 37 trials y 6 payments. El de Hot Sale ("Preparate… ¡Que ya viene!") logró un OR de 40,63%. En Q1 2025, los broadcasts de Santiago generaron un crecimiento interanual de payments del <strong>1039%</strong> en enero.</p>
+
+            <div class="callout callout-insight">
+              <div class="callout-icon">💡</div>
+              <div class="callout-body">
+                <strong>La reflexión que cambió todo</strong>
+                <p>"Si con el 30% de una persona logramos esos resultados… ¿Qué pasaría si tenemos a alguien que se dedica el 100% a la palanca?"</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot navy"></div>
+            <div class="timeline-year navy">2025 — Julián y el sistema</div>
+            <h3>De campañas a sistema</h3>
+            <p>Tiendanube contrató a Julián, dedicado 100% a nurturing en Argentina. Su primera decisión fue sorprendente: <strong>dejar de mandar broadcasts.</strong></p>
+            <p>Suena contradictorio — los broadcasts habían generado los resultados que justificaron su contratación. Pero Julián tenía otra visión: en vez de campañas aisladas que generaban picos, construir un <strong>sistema automatizado</strong> que trabajara 24/7.</p>
+            <p>Lo que construyó:</p>
+            <ul>
+              <li><strong>Full-funnel:</strong> TOFU → MOFU → BOFU → Remarketing, con 22 emails segmentados</li>
+              <li><strong>Pasaje por comportamiento:</strong> No por tiempo ("lleva 30 días") sino por acciones reales ("vio precio", "vio 5+ páginas", "entró a crear tienda")</li>
+              <li><strong>Segmentación por canal de venta:</strong> No vende, Vende Online, Vende Físico — cada segmento con su propio messaging</li>
+            </ul>
+            <p>Mientras tanto, <strong>Santiago no quedó afuera:</strong> revisó y corrigió los primeros emails de Julián (los BOFU), aportando su expertise editorial. Después optimizó los MOFU con comparativas antes/después basadas en datos de performance.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot teal"></div>
+            <div class="timeline-year teal">Resultados 2025</div>
+            <h3>El sistema entregó</h3>
+            <div class="stat-grid">
+              <div class="stat-card"><div class="stat-value coral">154.887</div><div class="stat-label">Leads impactados</div></div>
+              <div class="stat-card"><div class="stat-value teal">1.038</div><div class="stat-label">Trials (+16% vs budget)</div></div>
+              <div class="stat-card"><div class="stat-value coral">102</div><div class="stat-label">Payments (+16% vs budget)</div></div>
+              <div class="stat-card"><div class="stat-value teal">9,83%</div><div class="stat-label">CVR Trial → Payment</div></div>
+            </div>
+            <p>Los trials superaron el budget en 16%. Los payments también. La CVR de trial a payment fue de 9,83%, casi idéntica al 9,84% presupuestado. El sistema no solo atrajo más leads — los convirtió eficientemente.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot coral"></div>
+            <div class="timeline-year coral">2026 — El área se transforma</div>
+            <h3>Presentación al Country Manager</h3>
+            <p>Julián presentó la estrategia 2026 al Country Manager. El área pasó de "ordenar recorridos" a <strong>"acelerar la toma de decisiones"</strong>. Cuatro pilares estratégicos, WhatsApp como canal de cierre, onboarding diferenciado por nicho, eventos como generadores de revenue.</p>
+            <p>Santiago ya no es "el chico del blog que manda broadcasts". Es parte de un área estratégica con más de 30 proyectos activos en el Gantt, adaptaciones a Chile y Colombia, y una visión de futuro que incluye IA predictiva y orquestación multicanal.</p>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>La historia de nurturing en Argentina demuestra algo fundamental: <strong>el volumen sin sistema no funciona</strong> (2021), pero <strong>el sistema sin contenido de calidad tampoco</strong> (Julián necesitó tu corrección editorial para que los BOFU funcionaran). La combinación de ambos — sistema + contenido — es lo que generó los resultados de 2025.</p>
+          <p class="cs-question">Vos aportaste el contenido. Ahora te toca entender el sistema. Y cuando domines ambos, vas a poder proponer mejoras que conecten las dos puntas.</p>
+        </div>
       </div>
-    </a>
-    <a href="herramientas.html#hubspot" class="dash-card">
-      <div class="card-icon teal">⚙️</div>
-      <h3>HubSpot en la Práctica</h3>
-      <p>Guía operativa: cómo crear workflows, manejar contactos, enviar emails y usar formularios. Con mockups del interfaz real.</p>
-      <div class="card-progress">
-        <div class="card-progress-bar"><div class="card-progress-fill" data-sections="hs-intro,hs-contactos,hs-workflows,hs-emails,hs-quiz"></div></div>
-      </div>
-    </a>
-    <a href="herramientas.html#numeros" class="dash-card">
-      <div class="card-icon navy">📊</div>
-      <h3>Los Números</h3>
-      <p>Métricas del delivery report, funnel de conversión, Quality Leads, y qué nos dicen los datos sobre lo que funciona y lo que no.</p>
-      <div class="card-progress">
-        <div class="card-progress-bar"><div class="card-progress-fill" data-sections="num-deliverys,num-funnel,num-ql,num-sales,num-quiz"></div></div>
-      </div>
-    </a>
-    <a href="estrategia.html#estrategia" class="dash-card">
-      <div class="card-icon coral">🎯</div>
-      <h3>Estrategia</h3>
-      <p>Los problemas que hay que resolver, el plan de acción del equipo, y un framework para que aprendas a pensar experimentos como Julián.</p>
-      <div class="card-progress">
-        <div class="card-progress-bar"><div class="card-progress-fill" data-sections="est-problemas,est-plan,est-framework,est-quiz"></div></div>
-      </div>
-    </a>
-    <a href="estrategia.html#recursos" class="dash-card">
-      <div class="card-icon info">📚</div>
-      <h3>Recursos</h3>
-      <p>Ruta de aprendizaje, cursos gratuitos, certificaciones HubSpot, lecturas recomendadas y podcasts para seguir creciendo.</p>
-      <div class="card-progress">
-        <div class="card-progress-bar"><div class="card-progress-fill" data-sections="rec-ruta,rec-cursos"></div></div>
-      </div>
-    </a>
-  </div>
 
-  <hr style="margin:36px 0">
-
-  <h2 style="font-size:20px;font-weight:700;color:var(--charcoal-dark);margin-bottom:18px">El ecosistema en números (febrero 2026)</h2>
-
-  <div class="stat-grid">
-    <div class="stat-card">
-      <div class="stat-value coral">52</div>
-      <div class="stat-label">Emails en el Full-Funnel</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value teal">~45%</div>
-      <div class="stat-label">CTR promedio en Deliverys</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value danger">2,14%</div>
-      <div class="stat-label">CTR del Email Bienvenidos</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">1.052</div>
-      <div class="stat-label">Envíos de Deliverys</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value teal">66,7%</div>
-      <div class="stat-label">Conversión del mejor flujo</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">15 días</div>
-      <div class="stat-label">Promedio hasta payment</div>
-    </div>
-  </div>
-
-  <div class="callout callout-data" style="margin-top:32px">
-    <div class="callout-icon">📅</div>
-    <div class="callout-body">
-      <strong>Fuentes de datos</strong>
-      <p>Los datos de esta guía provienen del Reporte de Deliverys (feb. 2026), el Full-Funnel Email Report, y los documentos internos del equipo de Growth AR. Fuentes: HubSpot (hasta 13/02), Tableau (hasta 11/02).</p>
-    </div>
-  </div>
-
-</div>
-</div>
-
-<!-- ======================== ECOSISTEMA ======================== -->
-<div class="page" data-page="ecosistema">
-<div class="sub-tabs-wrap">
-  <div class="sub-tabs">
-    <button class="sub-tab active" data-sub="eco-vision">Visión General</button>
-    <button class="sub-tab" data-sub="eco-deliverys">Deliverys</button>
-    <button class="sub-tab" data-sub="eco-fullfunnel">Full-Funnel</button>
-    <button class="sub-tab" data-sub="eco-bienvenidos">Bienvenidos &amp; Broadcasts</button>
-    <button class="sub-tab" data-sub="eco-quiz">Quiz <span class="check-icon"></span></button>
-  </div>
-</div>
-
-<!-- ---- VISIÓN GENERAL ---- -->
-<div class="sub-page active" data-sub="eco-vision">
-<div class="content-wrap">
-<div class="article">
-  <h1>El Ecosistema de Nurturing</h1>
-  <p class="subtitle">Cómo Tiendanube Argentina convierte desconocidos en clientes, email por email</p>
-
-  <p>Imaginá que sos emprendedor. Vendés bijouterie por Instagram, te va más o menos bien, pero sentís que necesitás dar el salto: tener tu propia tienda online. Un día, googleás "cómo calcular costos de productos" y llegás a un artículo del blog de Tiendanube. Al final del artículo, te ofrecen una planilla gratuita de cálculo de costos a cambio de tu email. La descargás.</p>
-
-  <p>Lo que no sabés es que acabás de entrar en uno de los sistemas de nurturing más sofisticados de la región. A partir de ese momento, vas a recibir una secuencia de emails cuidadosamente diseñada que te va a acompañar desde "me interesa organizar mi negocio" hasta "quiero crear mi tienda en Tiendanube y empezar a vender en serio".</p>
-
-  <p>Ese sistema tiene muchas piezas que trabajan juntas. El objetivo de esta sección es que entiendas cada una, cómo se conectan entre sí, y por qué existen.</p>
-
-  <h2>Las piezas del rompecabezas</h2>
-
-  <p>El ecosistema de nurturing de Argentina tiene estos componentes principales:</p>
-
-  <ol>
-    <li><strong>Deliverys</strong> — Mini-flujos de 3 emails asociados a un recurso descargable. Son la puerta de entrada más potente: tienen CTR de 40-60%, muy por encima de cualquier otra pieza. <a href="#" data-goto-sub="eco-deliverys">Leer más →</a></li>
-    <li><strong>Full-Funnel</strong> — El sistema central con 52 emails divididos en TOFU, MOFU, BOFU y Remarketing, segmentado por cómo vende el lead (online, físico, aún no vende). <a href="#" data-goto-sub="eco-fullfunnel">Leer más →</a></li>
-    <li><strong>Email de Bienvenidos</strong> — El email que se manda después del delivery si el lead es nuevo. Actualmente es el mayor cuello de botella del sistema (2,14% CTR). <a href="#" data-goto-sub="eco-bienvenidos">Leer más →</a></li>
-    <li><strong>Broadcasts</strong> — Emails masivos enviados a toda la base. Tienen el mayor volumen (75+ usuarios en el cruce) pero solo 8% de conversión. <a href="#" data-goto-sub="eco-bienvenidos">Leer más →</a></li>
-    <li><strong>Remarketing</strong> — 4 emails genéricos (sin segmentar) para re-enganchar a los que pasaron por todo el funnel sin convertir.</li>
-    <li><strong>Entrenamiento Nube y Webinars</strong> — Flujos asociados a eventos presenciales y online de capacitación.</li>
-  </ol>
-
-  <h2>Cómo se conectan: el recorrido de un lead</h2>
-
-  <p>Cuando un lead entra al ecosistema, sigue un camino que depende de por dónde entró y qué hizo. El recorrido más común (y el más importante para vos) es el del lead que descarga un recurso:</p>
-
-  <div class="flow">
-    <div class="flow-node coral">
-      <strong>Lead descarga un recurso</strong>
-      <span>Completa formulario: nombre, email, teléfono, "¿Cómo vendés?"</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node">
-      <strong>Delivery: 3 emails del recurso</strong>
-      <span>Email 1: entrega el archivo · Email 2: follow-up · Email 3: CTA a crear tienda</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node danger">
-      <strong>¿Ya recibió Bienvenidos antes?</strong>
-      <span>Bifurcación condicional en el workflow</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-branch">
-      <div class="flow-node" style="border-color:var(--warning)">
-        <strong>SÍ → Salta al TOFU</strong>
-        <span>Ya fue bienvenido, va directo al funnel</span>
-      </div>
-      <div class="flow-node danger">
-        <strong>NO → Email Bienvenidos</strong>
-        <span>CTR 2,14% — acá se pierde el 95% del engagement</span>
-      </div>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node navy">
-      <strong>Full-Funnel: TOFU → MOFU → BOFU</strong>
-      <span>48 emails segmentados por canal de venta (3 caminos)</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node">
-      <strong>Remarketing</strong>
-      <span>4 emails de recuperación si no convirtió</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node teal">
-      <strong>Trial → Payment</strong>
-      <span>Promedio: 15 días · 70% convierte con 1 solo clic</span>
-    </div>
-  </div>
-
-  <h2>Lo que hace especial a este sistema</h2>
-
-  <p>Hay tres cosas que hacen que el nurturing de Tiendanube AR sea particularmente interesante:</p>
-
-  <p><strong>1. La segmentación por canal de venta.</strong> Cuando un lead completa el formulario, le preguntan "¿Cómo vendés actualmente?" con opciones: Tienda online, Redes sociales, Tienda física, Marketplace, Aún no vendo. Esa respuesta determina qué camino sigue en el Full-Funnel. Un lead que vende en tienda física recibe emails distintos a uno que vende por Instagram. Esto existe en TOFU, MOFU y BOFU — son 3 caminos paralelos con contenido diferente.</p>
-
-  <p><strong>2. Los deliverys como aceleradores.</strong> Los deliverys no son parte del Full-Funnel; son una puerta de entrada paralela que "precalienta" al lead antes de meterlo en el funnel. La idea es: si alguien descargó una planilla de costos, ya mostró intención activa. No necesita que le expliquen qué es el e-commerce — ya está pensando en su negocio. El delivery capitaliza ese momento.</p>
-
-  <p><strong>3. El cuello de botella conocido.</strong> El equipo sabe exactamente dónde se rompe el sistema: en el email de Bienvenidos, que baja de 40-60% CTR (delivery) a 2,14% CTR. Perder el 95% del engagement en un solo paso es grave, pero también es una oportunidad enorme — si lo arreglás, el impacto puede ser masivo.</p>
-
-  <div class="callout callout-insight">
-    <div class="callout-icon">🔑</div>
-    <div class="callout-body">
-      <strong>La clave para entender este ecosistema</strong>
-      <p>No pienses en cada pieza por separado. Pensá en el <em>flujo de atención</em> del lead: llega con interés alto (descargó algo), ese interés se mantiene o se pierde según lo que le mandemos después. Cada email es un eslabón. Si uno falla, se rompe la cadena.</p>
-    </div>
-  </div>
-
-  <div class="summary-box">
-    <h4>📋 Resumen rápido</h4>
-    <ul>
-      <li>El ecosistema tiene <strong>6 componentes principales</strong>: Deliverys, Full-Funnel (TOFU/MOFU/BOFU), Bienvenidos, Broadcasts, Remarketing, y flujos de eventos.</li>
-      <li>El Full-Funnel tiene <strong>52 emails</strong> segmentados en 3 caminos por canal de venta.</li>
-      <li>Los deliverys son la pieza más eficiente (<strong>40-60% CTR</strong>), el email de Bienvenidos es el mayor cuello de botella (<strong>2,14% CTR</strong>).</li>
-      <li>El recorrido completo: Descarga → Delivery (3 emails) → Bienvenidos → TOFU → MOFU → BOFU → Remarketing → Trial → Payment.</li>
-    </ul>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="eco-vision" onclick="markAsRead('eco-vision')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- ---- DELIVERYS ---- -->
-<div class="sub-page" data-sub="eco-deliverys">
-<div class="content-wrap">
-<div class="article">
-  <h1>Deliverys: la puerta de entrada más eficiente</h1>
-  <p class="subtitle">Mini-flujos de 3 emails que acompañan al lead justo cuando más receptivo está</p>
-
-  <p>Si hay algo que aprendés rápido cuando entrás al área de nurturing, es que no todos los emails se crean iguales. Hay una diferencia enorme entre mandar un broadcast a 10.000 personas y enviar un delivery personalizado a alguien que acaba de descargar una planilla de costos. La primera es como gritar en un estadio; la segunda es como sentarte al lado de alguien y decirle exactamente lo que necesita escuchar.</p>
-
-  <p>Los deliverys nacieron de una idea simple pero poderosa: cuando alguien se toma el trabajo de completar un formulario con su nombre, email y teléfono para descargar un recurso gratuito —una planilla de control de stock, una calculadora de rentabilidad, un calendario de contenidos para redes sociales—, está demostrando algo que en marketing llamamos <strong>intención activa</strong>. No es un visitante casual. Es alguien que tiene un problema concreto ("necesito controlar mi inventario", "quiero saber cuánto estoy ganando realmente") y está buscando una solución.</p>
-
-  <p>Ese momento de atención es oro. Y el equipo lo sabe: diseñó un sistema de 3 emails que acompañan al lead justo cuando más receptivo está.</p>
-
-  <h2>¿Cómo funciona un delivery?</h2>
-
-  <p>Cada recurso descargable tiene su propia secuencia de 3 emails. El patrón es siempre el mismo, pero el contenido se adapta al tema del recurso:</p>
-
-  <div class="flow">
-    <div class="flow-node coral">
-      <strong>Email 1/3: "Tu planilla ya está lista"</strong>
-      <span>Entrega el recurso. CTA directo al archivo. El lead recibe lo que pidió al instante.</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node">
-      <strong>Email 2/3: Follow-up temático</strong>
-      <span>Contenido relacionado al recurso. Ej: si descargó planilla de stock, le cuentan tips de inventario.</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node teal">
-      <strong>Email 3/3: CTA a crear tienda</strong>
-      <span>"Ya tenés los datos organizados, ahora empezá a vender online". Transición natural al producto.</span>
-    </div>
-  </div>
-
-  <p>Lo brillante de esta secuencia es la transición natural. No es un salto brusco de "acá tenés tu planilla" a "comprá Tiendanube". Es un proceso gradual: primero te doy lo que pediste, después te doy más valor relacionado con eso, y recién al final te invito a dar el siguiente paso. Cada email prepara el terreno para el siguiente.</p>
-
-  <h2>Los deliverys SMB (nuevos, orgánicos)</h2>
-
-  <p>Los deliverys SMB son los que creó el equipo el <strong>27 de enero de 2026</strong>, así que al momento de este reporte tienen apenas 2-3 semanas de vida. Son recursos dirigidos a emprendedores y pymes que llegan de forma orgánica (sin pauta). En total hay 8 descargables activos:</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Descargable</th><th>Enviados</th><th>Open Rate</th><th>Clics</th><th>CTR</th><th>Estado</th></tr></thead>
-      <tbody>
-        <tr><td>Planilla de control de stock</td><td>391</td><td>68,7%</td><td>181</td><td>46,9%</td><td><span class="tag tag-blue">Top volumen</span></td></tr>
-        <tr><td>Planilla para calcular costos</td><td>247</td><td>63,5%</td><td>114</td><td>47,3%</td><td><span class="tag tag-green">Buen balance</span></td></tr>
-        <tr><td>Plantilla de plan de negocios</td><td>143</td><td>69,5%</td><td>74</td><td>52,5%</td><td><span class="tag tag-green">Alto CTR</span></td></tr>
-        <tr><td>Calendario de contenidos RRSS</td><td>80</td><td>71,8%</td><td>41</td><td>52,6%</td><td><span class="tag tag-green">Mejor OR</span></td></tr>
-        <tr><td>Calculadora de rentabilidad</td><td>74</td><td>56,8%</td><td>30</td><td>40,5%</td><td><span class="tag tag-orange">Bajo volumen</span></td></tr>
-        <tr><td>Checklist para crear tienda online</td><td>64</td><td>48,4%</td><td>6</td><td>9,4%</td><td><span class="tag tag-red">Revisar urgente</span></td></tr>
-        <tr><td>Generador de SKU</td><td>30</td><td>75,0%</td><td>17</td><td>60,7%</td><td><span class="tag tag-green">Mejor CTR</span></td></tr>
-        <tr><td>Agenda digital 2026</td><td>23</td><td>52,2%</td><td>9</td><td>39,1%</td><td><span class="tag tag-orange">Menor volumen</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>¿Qué nos dice esta tabla?</h3>
-
-  <p>Varias cosas interesantes:</p>
-
-  <p><strong>El engagement es excepcional.</strong> Los CTR van de 40% a 60% en la mayoría de los deliverys. Para que dimensiones: el promedio de la industria de email marketing está entre 2% y 5%. Estamos hablando de <em>10 a 20 veces</em> por encima del benchmark. Esto confirma que la hipótesis del delivery funciona: entregar algo de valor inmediato genera una conexión fuerte.</p>
-
-  <p><strong>Hay un outlier negativo.</strong> El "Checklist para crear tienda online" tiene un CTR de 9,4% — pésimo comparado con el resto. Y es irónico: es el recurso más directamente relacionado con crear una tienda, pero es el que peor funciona. ¿Por qué? Puede ser el contenido del email, el CTA, o que el recurso no es lo que el lead esperaba. Es una de las prioridades de optimización.</p>
-
-  <p><strong>El Generador de SKU es una joya escondida.</strong> Tiene el mejor CTR (60,7%) pero apenas 30 envíos. Es como tener un delantero goleador que juega solo 10 minutos por partido. Si se le da más volumen (promocionarlo en broadcasts, en la página de recursos), podría ser un canal de entrada muy potente.</p>
-
-  <p><strong>El volumen es el problema.</strong> 1.052 envíos totales puede sonar como mucho, pero comparalo con los 120.000 del email de Bienvenidos. El delivery es extremadamente eficiente, pero llega a poca gente. Es como tener una tasa de conversión del 60% pero solo 10 visitas a la tienda.</p>
-
-  <div class="bar-chart">
-    <div class="bar-chart-title">CTR por Descargable</div>
-    <div class="bar-row"><div class="bar-label">Generador de SKU</div><div class="bar-track"><div class="bar-fill teal" style="width:60.7%"><span class="bar-val">60,7%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Calendario RRSS</div><div class="bar-track"><div class="bar-fill" style="width:52.6%"><span class="bar-val">52,6%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Plan de negocios</div><div class="bar-track"><div class="bar-fill" style="width:52.5%"><span class="bar-val">52,5%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Calcular costos</div><div class="bar-track"><div class="bar-fill" style="width:47.3%"><span class="bar-val">47,3%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Control de stock</div><div class="bar-track"><div class="bar-fill" style="width:46.9%"><span class="bar-val">46,9%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Rentabilidad</div><div class="bar-track"><div class="bar-fill" style="width:40.5%"><span class="bar-val">40,5%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Agenda 2026</div><div class="bar-track"><div class="bar-fill" style="width:39.1%"><span class="bar-val">39,1%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Checklist tienda</div><div class="bar-track"><div class="bar-fill" style="width:9.4%;background:var(--danger)"><span class="bar-val" style="color:#fff">9,4%</span></div></div><span class="bar-val-outside">⚠️</span></div>
-  </div>
-
-  <h2>SMB vs. Evolución: dos mundos distintos</h2>
-
-  <p>Hay otra categoría de deliverys que es importante entender: los de <strong>Evolución</strong>. Mientras que los deliverys SMB son orgánicos y ofrecen herramientas genéricas (planillas, calculadoras), los de Evolución vienen de pauta pagada (Ads) y ofrecen contenido más sofisticado como "IA para e-commerce".</p>
-
-  <p>La diferencia clave está en la <strong>intención del lead</strong>:</p>
-
-  <ul>
-    <li><strong>Lead SMB descarga "Planilla de stock":</strong> "Quiero organizar mi negocio". No necesariamente busca una tienda online — busca resolver un problema operativo. Es intención indirecta.</li>
-    <li><strong>Lead Evolución descarga "IA para e-commerce":</strong> "Quiero optimizar mi e-commerce". Ya tiene tienda o piensa tener una. La intención conecta directamente con lo que Tiendanube ofrece.</li>
-  </ul>
-
-  <p>¿El resultado? Los deliverys de Evolución generaron <strong>6 payments con ~9% de conversión</strong>. Los SMB, por ser nuevos (27/01/2026), aún no tienen data suficiente de payments — pero el insight es claro: los temas de alta intención que conectan con el producto convierten mejor.</p>
-
-  <div class="callout callout-insight">
-    <div class="callout-icon">💡</div>
-    <div class="callout-body">
-      <strong>Insight para recordar</strong>
-      <p>Un lead puede descargar una planilla de stock sin tener intención de abrir una tienda online. Pero un lead que descarga "IA para e-commerce" probablemente ya está pensando en vender online. El tema del recurso determina la calidad del lead. Por eso se propuso crear un delivery SMB con tema de alta intención: "Cómo usar IA para crear tu tienda online" — adaptar el éxito de Evolución al mercado orgánico.</p>
-    </div>
-  </div>
-
-  <div class="summary-box">
-    <h4>📋 Resumen rápido: Deliverys</h4>
-    <ul>
-      <li>Secuencia de 3 emails: entrega → follow-up temático → CTA a crear tienda.</li>
-      <li>CTR excepcional: 40-60% (la industria promedia 2-5%).</li>
-      <li>El mayor delivery por volumen es Planilla de stock (391 envíos), el mejor por CTR es Generador de SKU (60,7%).</li>
-      <li>El Checklist para tienda online está roto (9,4% CTR). Revisarlo es prioridad.</li>
-      <li>Los deliverys de Evolución (IA) convierten más porque el tema conecta con el producto.</li>
-      <li>El volumen es bajo: 1.052 envíos totales vs. 120.000 del Bienvenidos. Hay que dar más volumen a los deliverys.</li>
-    </ul>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="eco-deliverys" onclick="markAsRead('eco-deliverys')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- ---- FULL-FUNNEL ---- -->
-<div class="sub-page" data-sub="eco-fullfunnel">
-<div class="content-wrap">
-<div class="article">
-  <h1>El Full-Funnel: la columna vertebral</h1>
-  <p class="subtitle">52 emails, 3 caminos paralelos, y la lógica detrás del sistema central de nurturing</p>
-
-  <p>Si los deliverys son la puerta de entrada, el Full-Funnel es la autopista. Es el sistema central de nurturing de Tiendanube Argentina: una secuencia estructurada de 52 emails que guía al lead desde "no sé bien qué es Tiendanube" hasta "quiero crear mi tienda y pagar". Todo lead que entra al ecosistema — ya sea por un delivery, un blog, un webinar o una landing — eventualmente termina acá.</p>
-
-  <p>Entender el Full-Funnel es entender la columna vertebral del área. Cada vez que alguien dice "el MOFU de vende online" o "el BOFU 3/5 de no vende", se está refiriendo a este sistema. Así que vamos a recorrerlo en detalle.</p>
-
-  <h2>Estructura: 3 etapas × 3 segmentos</h2>
-
-  <p>El Full-Funnel tiene tres etapas (TOFU, MOFU, BOFU) y cada etapa tiene tres variantes según el canal de venta del lead. Más una cuarta etapa de Remarketing que es igual para todos:</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Etapa</th><th>No vende / No se sabe</th><th>Vende Online</th><th>Vende Físico</th><th>Total</th></tr></thead>
-      <tbody>
-        <tr><td><strong>TOFU</strong> (conocimiento)</td><td>4 emails</td><td>4 emails</td><td>4 emails</td><td>12</td></tr>
-        <tr><td><strong>MOFU</strong> (consideración)</td><td>7 emails</td><td>7 emails</td><td>7 emails</td><td>21</td></tr>
-        <tr><td><strong>BOFU</strong> (decisión)</td><td>5 emails</td><td>5 emails</td><td>5 emails</td><td>15</td></tr>
-        <tr><td><strong>Remarketing</strong></td><td colspan="3" style="text-align:center">4 emails (igual para todos)</td><td>4</td></tr>
-        <tr style="background:rgba(255,122,89,.04)"><td><strong>TOTAL</strong></td><td colspan="3"></td><td><strong>52</strong></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>Son 52 emails en total. Diseñar, escribir, configurar y monitorear 52 emails es un trabajo enorme. Por eso es tan importante entender la lógica detrás de cada etapa.</p>
-
-  <h2>TOFU: "Conocé Tiendanube"</h2>
-
-  <p>TOFU significa <em>Top of Funnel</em> — la parte más ancha del embudo. Acá el lead recién está conociendo Tiendanube. Los emails de TOFU presentan la marca, los beneficios generales y las posibilidades del e-commerce. Son 4 emails por segmento.</p>
-
-  <p>Lo interesante es que <strong>el TOFU ya está segmentado</strong>. No todos reciben lo mismo:</p>
-
-  <ul>
-    <li><strong>"No vende / No se sabe":</strong> Emails que hablan de empezar a vender online desde cero. Tono motivacional. "¿Tenés un producto pero no sabés por dónde empezar?"</li>
-    <li><strong>"Vende Online" (redes, web):</strong> Emails que hablan de profesionalizar la venta online. "Ya vendés, pero ¿tenés tu propia tienda?" Asumen que el lead ya sabe qué es el e-commerce.</li>
-    <li><strong>"Vende Físico":</strong> Emails que hablan de expandir al mundo digital. "Tu tienda física puede vender 24/7 si la llevás a internet." Conectan lo físico con lo digital.</li>
-  </ul>
-
-  <h2>MOFU: "Así funciona esto"</h2>
-
-  <p>MOFU (<em>Middle of Funnel</em>) es donde se profundiza. El lead ya sabe que Tiendanube existe; ahora necesita entender por qué es la mejor opción. Son 7 emails por segmento — la etapa más larga del funnel — porque es donde se construye la confianza.</p>
-
-  <p>Los emails de MOFU hablan de beneficios concretos: costos de envío, medios de pago, diseño de tienda, logística, integraciones. Todo adaptado al segmento. Por ejemplo:</p>
-
-  <ul>
-    <li>Para "Vende Online": "Reducí tus costos de envío un 20%" — porque ya envían y saben que es un dolor.</li>
-    <li>Para "Vende Físico": "Conectá tu tienda física con el mundo online" — porque el salto digital es su mayor fricción.</li>
-    <li>Para "No vende": "Hacé tus primeros envíos fáciles" — porque necesitan que todo sea simple.</li>
-  </ul>
-
-  <h2>BOFU: "Creá tu tienda ahora"</h2>
-
-  <p>BOFU (<em>Bottom of Funnel</em>) es la hora de la verdad. 5 emails diseñados para empujar a la acción. Acá los CTA son directos: "Creá tu tienda gratis", "Probá Tiendanube 30 días sin compromiso", "Esto es lo que incluye tu plan".</p>
-
-  <p>Los emails de BOFU usan tácticas de urgencia y prueba social: historias de emprendedores exitosos, testimonios, comparaciones con competidores, y ofertas de trial gratuito. Es la etapa donde el lead decide si da el salto o no.</p>
-
-  <div class="callout callout-data">
-    <div class="callout-icon">📊</div>
-    <div class="callout-body">
-      <strong>Dato clave sobre el BOFU</strong>
-      <p>El flujo "Delivery" tiene una tasa de conversión del 66,7% — de cada 6 leads que entran, 4 pagan. Es el mejor flujo de todo el sistema. El reporte propone que, en vez de meter a los leads de delivery en el TOFU genérico, se los salte directo a clones de los BOFU segmentados, porque ya vienen "calientes".</p>
-    </div>
-  </div>
-
-  <h2>Remarketing: la segunda oportunidad</h2>
-
-  <p>Si un lead pasó por las 3 etapas sin convertir, entra en Remarketing: 4 emails de recuperación. A diferencia del resto del funnel, estos emails <strong>no están segmentados</strong> por canal de venta — son iguales para todos. Es un flujo de "último recurso" antes de que el lead se considere frío.</p>
-
-  <p>¿Por qué no están segmentados? Probablemente por una cuestión de costo-beneficio: segmentar 4 emails más requiere crear 12 variantes adicionales, y a esta altura del funnel el volumen de leads es mucho menor. Pero es una oportunidad de optimización futura.</p>
-
-  <h2>La cuestión de la segmentación</h2>
-
-  <p>Uno de los insights más importantes del análisis de datos es que <strong>la segmentación por canal de venta impacta directamente en la conversión</strong>:</p>
-
-  <div class="bar-chart">
-    <div class="bar-chart-title">Conversión a Payment por Canal de Venta</div>
-    <div class="bar-row"><div class="bar-label">Tienda online</div><div class="bar-track"><div class="bar-fill teal" style="width:88.8%"><span class="bar-val">22,2%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Redes sociales</div><div class="bar-track"><div class="bar-fill" style="width:48.4%"><span class="bar-val">12,1%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Tienda física</div><div class="bar-track"><div class="bar-fill" style="width:36.4%"><span class="bar-val">9,1%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Aún no vendo</div><div class="bar-track"><div class="bar-fill navy" style="width:35.6%"><span class="bar-val">8,9%</span></div></div></div>
-    <div class="bar-row"><div class="bar-label">Marketplace</div><div class="bar-track"><div class="bar-fill navy" style="width:20%"><span class="bar-val">5,0%</span></div></div></div>
-  </div>
-
-  <p>Los leads que ya tienen tienda online convierten <strong>2,5 veces más</strong> que los que aún no venden (22,2% vs. 8,9%). Los de redes sociales son el grupo con más payments absolutos (7). Los de Marketplace convierten menos (5%) — probablemente porque ya tienen su canal y no ven tanto valor en una tienda propia.</p>
-
-  <div class="callout callout-alert">
-    <div class="callout-icon">⚠️</div>
-    <div class="callout-body">
-      <strong>Lo que no se usa (y debería)</strong>
-      <p>El formulario pregunta "¿Cómo vendés actualmente?" pero esa información solo se usa para segmentar el Full-Funnel. No se usa para personalizar el delivery, ni el email de Bienvenidos, ni los broadcasts. Un lead que vende en tienda física recibe el mismo delivery y el mismo Bienvenidos que uno que vende por Instagram. Ahí hay una oportunidad enorme de personalización.</p>
-    </div>
-  </div>
-
-  <div class="summary-box">
-    <h4>📋 Resumen rápido: Full-Funnel</h4>
-    <ul>
-      <li><strong>52 emails</strong> divididos en TOFU (12), MOFU (21), BOFU (15), Remarketing (4).</li>
-      <li>Cada etapa (excepto Remarketing) tiene <strong>3 variantes</strong> por canal de venta.</li>
-      <li>TOFU: conocimiento. MOFU: consideración (la más larga). BOFU: decisión. Remarketing: recuperación.</li>
-      <li>La segmentación por canal de venta impacta en la conversión: tienda online (22,2%) vs. aún no vendo (8,9%).</li>
-      <li>El Remarketing no está segmentado — oportunidad futura.</li>
-    </ul>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="eco-fullfunnel" onclick="markAsRead('eco-fullfunnel')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- ---- BIENVENIDOS & BROADCASTS ---- -->
-<div class="sub-page" data-sub="eco-bienvenidos">
-<div class="content-wrap">
-<div class="article">
-  <h1>El Email de Bienvenidos y los Broadcasts</h1>
-  <p class="subtitle">El mayor cuello de botella del sistema y la pieza con más volumen</p>
-
-  <h2>El email de Bienvenidos: donde se rompe todo</h2>
-
-  <p>De todas las piezas del ecosistema, el email de Bienvenidos es probablemente la más frustrante de analizar. No porque sea malo en sí mismo — tiene un Open Rate de 37,71%, que no está mal — sino por lo que representa en el flujo: es el punto exacto donde se pierde el 95% del engagement que los deliverys generaron.</p>
-
-  <p>Pensalo así: un lead acaba de descargar una planilla de control de stock. Recibió el email del delivery con un CTR de 46,9%. Está enganchado, activo, interesado. Y entonces, 2 minutos después (antes eran 30 minutos; tu jefe Julián propuso bajarlo), recibe un email genérico de Bienvenidos que dice algo como "Conocé Tiendanube, creá tu tienda gratis" y lo manda a <code>tiendanube.com/tienda-gratis</code> — una página genérica que no tiene nada que ver con la planilla de stock que el lead acaba de descargar.</p>
-
-  <p>El resultado es devastador:</p>
-
-  <div class="stat-grid">
-    <div class="stat-card">
-      <div class="stat-value">120.137</div>
-      <div class="stat-label">Enviados (acumulado)</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">37,71%</div>
-      <div class="stat-label">Tasa de apertura</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value danger">2,14%</div>
-      <div class="stat-label">Tasa de clics</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value danger">3,46%</div>
-      <div class="stat-label">Cancelaciones</div>
-    </div>
-  </div>
-
-  <p>Solo el 10,2% de las personas que abren el email realmente lo <em>leen</em>. El 88% apenas le echa un vistazo y sigue de largo. Y el 70,7% de los pocos clics que hay van a <code>tiendanube.com/tienda-gratis</code> — una página genérica que no conecta con el recurso que descargaron.</p>
-
-  <div class="callout callout-alert">
-    <div class="callout-icon">🚨</div>
-    <div class="callout-body">
-      <strong>El salto de intención</strong>
-      <p>Un lead descargó una planilla para organizar su inventario. Estaba pensando en stock, en productos, en organización. Y de repente le llega un email que le habla de crear una tienda. Hay un <strong>salto de intención</strong>: el lead pasó de "quiero resolver un problema operativo" a "comprá nuestro producto" sin ningún puente intermedio. Es como si un vendedor de autos te ofreciera financiación cuando vos solo preguntaste por el color.</p>
-    </div>
-  </div>
-
-  <h2>¿Qué propone el equipo?</h2>
-
-  <p>El reporte de deliverys propone algo elegante: <strong>reemplazar el email de Bienvenidos genérico por 3 clones de los emails BOFU del Full-Funnel</strong>, segmentados por canal de venta. La belleza de esta solución es que no requiere crear nada nuevo — los emails BOFU ya existen y ya tienen conversión comprobada. Solo hay que clonarlos, cambiar los CTAs, y ramificar el workflow.</p>
-
-  <p>La lógica es:</p>
-
-  <div class="flow">
-    <div class="flow-node">
-      <strong>Email del Descargable</strong>
-      <span>Se mantiene como está (CTR 40-60%)</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-node coral">
-      <strong>If/then: ¿Cómo vendés?</strong>
-      <span>Ramificación por Sales Channel del formulario</span>
-    </div>
-    <div class="flow-arrow"></div>
-    <div class="flow-branch">
-      <div class="flow-node teal">
-        <strong>Redes / Online / Mktplace</strong>
-        <span>BOFU "vende online" → CTA a /emprendedores/redes-sociales</span>
-      </div>
-      <div class="flow-node teal">
-        <strong>Tienda física</strong>
-        <span>BOFU "vende físico" → CTA a landing tienda física</span>
-      </div>
-      <div class="flow-node teal">
-        <strong>Aún no vende</strong>
-        <span>BOFU "nn" → CTA a landing empezar a vender</span>
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hist-historia" onclick="markAsRead('hist-historia')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <p>¿Por qué funciona? Porque en vez de empezar desde el principio del funnel (TOFU genérico), saltea directo al BOFU — que es donde está la conversión real. Y además, personaliza según cómo vende el lead, usando información que <em>ya tenemos</em> del formulario.</p>
+  <!-- ─── Pensar como Estratega ─── -->
+  <div class="sub-page" data-sub="hist-filosofia">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>5 Principios Estratégicos que Cambiaron el Área</h1>
+        <p class="subtitle">No es aprender a ser Julián. Es complementar tu expertise creativa con visión sistémica.</p>
 
-  <p>Los targets son ambiciosos pero alcanzables:</p>
+        <p>Estos son los 5 principios que Julián trajo al área — extraídos de su presentación de estrategia 2026, los resultados de 2025 y los datos del reporte de deliverys. Cada uno tiene data real que lo respalda.</p>
 
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Métrica</th><th>Bienvenidos actual</th><th>Target BOFU segmentados</th></tr></thead>
-      <tbody>
-        <tr><td>Open Rate</td><td>37,71%</td><td>Mantener o mejorar</td></tr>
-        <tr><td>CTR</td><td>2,14%</td><td>&gt;5%</td></tr>
-        <tr><td>Tasa de lectura</td><td>10,2%</td><td>&gt;20%</td></tr>
-        <tr><td>Cancelaciones</td><td>3,46%</td><td>&lt;2%</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. "El nurturing funciona como sistema, no como campañas aisladas" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Por qué Julián dejó de mandar broadcasts cuando llegó:</strong> No porque no funcionaran (vos habías demostrado que sí), sino porque sin un sistema detrás, cada broadcast era un esfuerzo aislado. Un lead que abría un broadcast no tenía un camino para seguir. Recibia un email, quizás hacía clic, y después… nada. No había secuencia planificada, no había criterio de avance, no había remarketing.</p>
+              <p>Ahora, el sistema automatizado guía a cada lead desde que entra hasta que paga (o se descarta). Los broadcasts vuelven en 2026 como <strong>combustible del sistema</strong>, no como la estrella.</p>
+              <div class="callout callout-data">
+                <div class="callout-icon">📊</div>
+                <div class="callout-body">
+                  <strong>El dato que justifica todo</strong>
+                  <p>Solo el <strong>0,1%</strong> de los 125.703 leads activos estaba en un flujo automatizado. Eso significaba que el 99,9% de los leads no recibía ninguna secuencia planificada. Ni TOFU, ni MOFU, ni nada.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
 
-  <hr>
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. "La señal correcta vale más que el volumen" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>En el reporte de deliverys, se cruzaron <strong>74.508 contactos</strong> de HubSpot con 2.778 registros de Tableau. Solo 139 matchearon. Pero de esos 139, <strong>15 pagaron</strong> (10,8% de conversión).</p>
+              <p>¿Qué nos dice esto? Que buscar la señal de intención real — "vio precio", "entró a crear tienda", "visitó 5+ páginas" — es más valioso que enviar 120.000 emails genéricos. Los criterios de pasaje del funnel se basan en <strong>comportamiento</strong>, no en tiempo.</p>
+              <p>El 67% de los que pagaron lo hicieron con <strong>un solo clic</strong>. La conversión es rápida o no sucede. No necesitás 15 touchpoints — necesitás el touchpoint correcto.</p>
+              <div class="callout-strategy">
+                <div class="cs-title">🧠 Pregunta para vos</div>
+                <p class="cs-question">Cuando escribís un broadcast, ¿pensás en qué señal de intención va a disparar? ¿O solo pensás en que abra y haga clic?</p>
+              </div>
+            </div></div>
+          </div>
 
-  <h2>Broadcasts: volumen sin dirección</h2>
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. "El usuario no quiere features, quiere saber cómo se le soluciona un problema" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Mirá los MOFU del full-funnel: no dicen "Tiendanube tiene envíos integrados". Dicen <strong>"Hacé tus envíos más fáciles y rápidos"</strong>. No dicen "Tenemos +150 aplicaciones". Dicen <strong>"Es momento de que tu negocio dé el salto"</strong>.</p>
+              <p>La diferencia es sutil pero decisiva: hablar desde el <strong>problema del usuario</strong>, no desde el producto. Problema → Solución, nunca Feature → CTA.</p>
+              <p>Esto aplica a TODO: broadcasts, deliverys, landing pages. Si el lead tiene tienda física y le escribís "Tiendanube tiene 65 plantillas", no le importa. Si le escribís "Tu local ya tiene estilo, ahora tu tienda online también", conectás con su realidad.</p>
+              <p>Julián lo aprendió esto de la presentación de resultados 2025: <em>"El usuario no quiere features; quiere saber cómo se le soluciona un problema."</em></p>
+            </div></div>
+          </div>
 
-  <p>Los broadcasts son el otro gran pilar del nurturing, pero por razones muy distintas a los deliverys. Mientras que un delivery llega a 30-400 personas con engagement altísimo, un broadcast llega a miles con engagement moderado.</p>
+          <div class="accordion-item">
+            <button class="accordion-trigger">4. "No todos los trials deben cerrarse igual: la madurez importa" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Un lead que vende por redes sociales necesita un mensaje distinto al que tiene tienda física o al que aún no vende. Los datos del reporte de deliverys lo confirman:</p>
+              <div class="stat-grid">
+                <div class="stat-card"><div class="stat-value teal">22,2%</div><div class="stat-label">Conversión: Ya tiene tienda online</div></div>
+                <div class="stat-card"><div class="stat-value coral">12,1%</div><div class="stat-label">Conversión: Vende por redes</div></div>
+                <div class="stat-card"><div class="stat-value">9,1%</div><div class="stat-label">Conversión: Tienda física</div></div>
+                <div class="stat-card"><div class="stat-value danger">8,9%</div><div class="stat-label">Conversión: Aún no vende</div></div>
+              </div>
+              <p>Los que ya tienen tienda online convierten <strong>2,5x más</strong> que los que aún no venden. Esto justifica los flujos diferenciados de 2026: Social Sellers, Migradores, Tienda Física, Dropshippers.</p>
+              <div class="callout-editorial">
+                <div class="ce-title">✏️ Tu Mirada Editorial</div>
+                <p>Cuando Julián escribió los BOFU, los hizo genéricos. Vos le marcaste: <em>"Personalizar como un desarrollador queda alejado del emprendedor promedio."</em> Esa mirada editorial que vos tenés es la que debe alimentar los flujos diferenciados de 2026. Cada segmento necesita su propio tono.</p>
+              </div>
+            </div></div>
+          </div>
 
-  <p>En el cruce de datos de febrero 2026, los broadcasts tuvieron <strong>75 usuarios</strong> en el análisis pero solo <strong>8% de conversión a payment</strong> (6 payments). Comparalo con el delivery que convierte al 66,7%. La diferencia es abismal.</p>
+          <div class="accordion-item">
+            <button class="accordion-trigger">5. "Los eventos traen volumen pero exigen sistema punta a punta" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Caso real — Webinar de Adquisición (noviembre 2025):</p>
+              <div class="stat-grid">
+                <div class="stat-card"><div class="stat-value coral">4.143</div><div class="stat-label">Inscriptos</div></div>
+                <div class="stat-card"><div class="stat-value teal">136</div><div class="stat-label">Tiendas creadas</div></div>
+                <div class="stat-card"><div class="stat-value danger">4</div><div class="stat-label">Payments</div></div>
+              </div>
+              <p>136 tiendas de un solo webinar vs 279 tiendas en <strong>todo</strong> Entrenamiento Nube 2025. El volumen está, pero solo 4 payments. ¿Por qué? Porque no había un journey post-evento dedicado. Los leads entraban al sistema genérico y se perdían.</p>
+              <p>Julián lo resume así: <em>"Los eventos generan picos de intención difíciles de capitalizar."</em> Sin sistema de punta a punta — journey post-evento, separación por estado del usuario, WhatsApp como cierre — el volumen es desperdicio.</p>
+              <p>En 2026: journeys post-evento dedicados, WhatsApp post-evento, Zoom conectado al CRM.</p>
+            </div></div>
+          </div>
+        </div>
 
-  <p>Pero el broadcast tiene algo que el delivery no tiene: <strong>volumen</strong>. Llega a mucha más gente. Y eso le da un rol estratégico claro: no es el que convierte, sino el que alimenta al flujo que sí convierte.</p>
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Tu Mirada Editorial</div>
+          <p>Estos 5 principios son el marco estratégico. Pero acordate: Julián necesitó que vos le corrijas el tono, el copy, los CTAs. <strong>Un sistema perfecto con emails genéricos no convierte.</strong> Tu expertise creativa es lo que le da vida al sistema. Los dos se necesitan.</p>
+        </div>
+      </div>
 
-  <div class="callout callout-insight">
-    <div class="callout-icon">🔑</div>
-    <div class="callout-body">
-      <strong>La estrategia propuesta</strong>
-      <p>Usar los broadcasts para promover la descarga de recursos. Así, el broadcast mete gente en el flujo de delivery (que convierte al 66,7%) en vez de intentar convertir directamente. Es combinar el volumen de uno con la eficiencia del otro. Cada broadcast debería incluir un CTA a un recurso descargable relevante al tema del email.</p>
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hist-filosofia" onclick="markAsRead('hist-filosofia')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <h3>Tipos de broadcasts que se mandan</h3>
-
-  <p>Los broadcasts de febrero 2026 incluyen contenido variado: artículos sobre tendencias (como el de Shein y Temu), guías prácticas, invitaciones a eventos de Entrenamiento Nube, y promociones estacionales. Son contenido de valor — no son spam — pero su CTA generalmente apunta a un blog post o a la tienda-gratis, no a un delivery.</p>
-
-  <h2>¿Y el flujo de Remarketing?</h2>
-
-  <p>Una nota breve sobre el Remarketing: son 4 emails que se envían a los leads que completaron todo el Full-Funnel sin convertir. Son un último intento de re-enganchar. Importante: no están segmentados por canal de venta (a diferencia del TOFU, MOFU y BOFU), así que todos reciben lo mismo.</p>
-
-  <p>Dato: el flujo de Remarketing SMB tiene 33,3% de conversión en el cruce, pero con muy bajo volumen (3 usuarios, 1 payment). No es estadísticamente significativo pero sugiere que el re-engagement funciona cuando se hace bien.</p>
-
-  <div class="summary-box">
-    <h4>📋 Resumen rápido: Bienvenidos &amp; Broadcasts</h4>
-    <ul>
-      <li>El email de Bienvenidos tiene <strong>2,14% CTR</strong> — se pierde el 95% del engagement del delivery. Es el mayor cuello de botella.</li>
-      <li>El problema: manda a todos a una página genérica sin conectar con el recurso descargado. Hay un salto de intención.</li>
-      <li>La solución propuesta: reemplazarlo por <strong>3 clones de BOFU segmentados</strong> por canal de venta. No requiere crear contenido nuevo.</li>
-      <li>Los broadcasts tienen alto volumen pero baja conversión (8%). Su rol estratégico es <strong>alimentar el flujo de delivery</strong>, no convertir directamente.</li>
-      <li>El Remarketing (4 emails, sin segmentar) es la última oportunidad antes de que el lead se enfríe.</li>
-    </ul>
-  </div>
-
-  <div class="mark-read-wrap">
-    <button class="mark-read-btn" data-section="eco-bienvenidos" onclick="markAsRead('eco-bienvenidos')">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Marcar como leída</span>
-    </button>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- ---- QUIZ ECOSISTEMA ---- -->
-<div class="sub-page" data-sub="eco-quiz">
-<div class="content-wrap">
-<div class="article">
-  <h1>Quiz: El Ecosistema</h1>
-  <p class="subtitle">Poné a prueba lo que aprendiste. No son preguntas de memoria — son escenarios reales.</p>
-</div>
-
-<div class="quiz-section" data-quiz-id="eco-quiz">
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 1 de 5</div>
-    <div class="q-text">Un delivery tiene 60,7% de CTR pero solo 30 envíos. Otro tiene 46,9% de CTR pero 391 envíos. Si tuvieras que elegir uno para promocionar en el próximo broadcast, ¿cuál elegirías y por qué?</div>
-    <div class="q-options">
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Exacto!</strong> El Generador de SKU tiene el mejor CTR de todos (60,7%) pero su volumen es mínimo. Promocionarlo en un broadcast le daría la exposición que necesita, y si mantiene ese CTR con más volumen, sería el delivery más eficiente del sistema. La planilla de stock ya tiene buen volumen por sí sola.">El de 60,7% CTR — porque tiene mejor engagement y necesita más volumen para demostrar su potencial</button>
-      <button class="q-opt" data-fb-wrong="<strong>No exactamente.</strong> La planilla de stock ya tiene buen volumen orgánicamente (391 envíos). El Generador de SKU, con 60,7% CTR, es la joya que necesita exposición. Promocionarlo en un broadcast sería un mejor uso del alcance.">El de 46,9% CTR — porque ya demostró que funciona con más gente</button>
-      <button class="q-opt" data-fb-wrong="<strong>Entiendo el razonamiento, pero no es la mejor opción.</strong> Los dos deliverys ya funcionan. El punto es que uno tiene engagement sobresaliente pero llega a poca gente. Darle volumen al que ya convierte bien es un quick win claro.">Ninguno — primero habría que arreglar el de 9,4% CTR que está roto</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 2 de 5</div>
-    <div class="q-text">Tu jefe te pide mejorar el email de Bienvenidos (2,14% CTR). Tenés dos opciones: A) Reescribir el email con mejor copy y un CTA más atractivo, o B) Reemplazarlo con clones de los BOFU segmentados que ya existen. ¿Qué elegís?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>No es mala idea, pero hay una mejor.</strong> Reescribir el email podría mejorar algo el CTR, pero seguirías mandando a todos al mismo lugar genérico. El problema no es solo el copy — es que no hay conexión con el recurso descargado y no hay segmentación.">A — Reescribir el email con mejor copy mantiene la simpleza del flujo actual</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Bien pensado!</strong> Los BOFU segmentados ya existen y ya tienen conversión comprobada. Solo hay que clonarlos, cambiar 3 CTAs, y agregar un if/then en el workflow. Es más rápido, más seguro (usás emails que ya funcionan), y resuelve los dos problemas: la falta de segmentación y la desconexión con el recurso.">B — Los BOFU segmentados ya tienen conversión comprobada, es más rápido y seguro</button>
-      <button class="q-opt" data-fb-wrong="<strong>El A/B test es una buena práctica, pero en este caso perdés tiempo.</strong> Ya sabés que el problema es estructural (falta de segmentación y salto de intención), no de copy. Los BOFU segmentados atacan la raíz del problema, no los síntomas.">Haría un A/B test entre ambas opciones antes de decidir</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 3 de 5</div>
-    <div class="q-text">Tenés 124 usuarios que crearon trial pero no pagaron. Todos pasaron por el flujo de delivery. ¿Cuál es la conclusión más importante de este dato?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>No necesariamente.</strong> Que no pagaron no significa que el delivery no funciona — el delivery los trajo hasta el trial, que es su objetivo. El problema está <em>después</em> del trial, en el cierre a payment.">El flujo de delivery no funciona para generar payments</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Exacto!</strong> Si todos crearon trial, el delivery sí está cumpliendo su función de activación. El cuello de botella no es llegar al trial, sino convertir el trial en payment. Un flujo de remarketing/recupero enfocado en estos 124 trials podría ser el quick win más grande del área.">El problema no es la activación sino el cierre — necesitan un flujo de recupero post-trial</button>
-      <button class="q-opt" data-fb-wrong="<strong>No es lo más relevante.</strong> Los deliverys SMB son nuevos (27/01/2026) y aún no tienen data suficiente de payments. Pero el dato clave ya está: el 100% activó trial, lo que significa que el delivery funciona para activar. Falta un flujo que los empuje de trial a payment.">Los deliverys son demasiado nuevos para sacar conclusiones</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 4 de 5</div>
-    <div class="q-text">¿Por qué el Full-Funnel tiene 3 caminos paralelos pero el Remarketing es igual para todos?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>No es eso.</strong> Segmentar 4 emails más sí requiere esfuerzo (12 variantes), pero no es técnicamente difícil — el equipo ya lo hizo 48 veces. La razón es más práctica.">Porque HubSpot no permite segmentar flujos de remarketing</button>
-      <button class="q-opt" data-fb-wrong="<strong>No exactamente.</strong> Sí necesitan datos, y los tienen — la segmentación viene del formulario original. La razón es de prioridad y volumen.">Porque los leads de remarketing ya perdieron su segmentación original</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Correcto!</strong> Segmentar 4 emails más implica crear 12 variantes adicionales. A esa altura del funnel, el volumen de leads es mucho menor (ya se filtraron por TOFU, MOFU y BOFU), así que el retorno de segmentar es menor. Es una decisión de costo-beneficio razonable, aunque también es una oportunidad de optimización futura.">Probablemente por costo-beneficio: a esa altura del funnel hay menos leads, así que segmentar rinde menos</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-card">
-    <div class="q-num">Pregunta 5 de 5</div>
-    <div class="q-text">Los broadcasts convierten al 8% y los deliverys al 66,7%. ¿Cuál sería la mejor estrategia para combinar ambos?</div>
-    <div class="q-options">
-      <button class="q-opt" data-fb-wrong="<strong>No necesariamente.</strong> Dejar de mandar broadcasts sería perder el canal con más alcance. El broadcast tiene valor — solo hay que redirigir su poder.">Dejar de mandar broadcasts y concentrarse solo en deliverys</button>
-      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Perfecto!</strong> El broadcast tiene volumen (llega a miles) pero baja conversión directa. El delivery tiene conversión altísima pero poco volumen. Si el broadcast promociona la descarga de recursos, mete más gente en el flujo de delivery — combinando el alcance de uno con la eficiencia del otro. Es la estrategia que propone el reporte.">Usar los broadcasts para promover la descarga de recursos y meter más gente en el flujo de delivery</button>
-      <button class="q-opt" data-fb-wrong="<strong>El A/B test podría dar información útil, pero el problema no es cuál es mejor.</strong> Ya sabemos cuál convierte más. La estrategia es hacerlos trabajar juntos: el broadcast alimenta al delivery. Volumen + eficiencia.">Hacer un A/B test: mandar el mismo contenido como broadcast y como delivery, y comparar</button>
-    </div>
-    <div class="q-feedback"></div>
-  </div>
-
-  <div class="quiz-results">
-    <div class="score">-/-</div>
-    <div class="score-text">¡Quiz completado! Tu progreso fue guardado.</div>
-  </div>
-</div>
-
-</div>
-</div>
-
-</div><!-- /ecosistema page -->
-
+</div><!-- /page inicio -->
 </main>
 
+<!-- ═══════════════ GLOSSARY PANEL ═══════════════ -->
+<div class="glos-overlay" id="glos-overlay"></div>
+<div class="glos-panel" id="glos-panel">
+  <div class="glos-head"><h3>Glosario</h3><button class="glos-close">&times;</button></div>
+  <div class="glos-search"><input type="text" placeholder="Buscar término…"></div>
+  <div class="glos-list">
+    <div class="glos-item"><div class="glos-term">TOFU (Top of Funnel)</div><div class="glos-def">Primera etapa del funnel. Objetivo: educar y segmentar al lead. 4 emails por segmento.</div></div>
+    <div class="glos-item"><div class="glos-term">MOFU (Middle of Funnel)</div><div class="glos-def">Etapa de evaluación. 7 emails que resuelven objeciones: envíos, pagos, diseño, precios, IA, apps.</div></div>
+    <div class="glos-item"><div class="glos-term">BOFU (Bottom of Funnel)</div><div class="glos-def">Etapa de conversión. 5 emails orientados a que el lead cree su tienda o pague.</div></div>
+    <div class="glos-item"><div class="glos-term">Remarketing</div><div class="glos-def">7 emails para leads que pasaron por MOFU/BOFU pero no convirtieron. Última oportunidad antes de descarte.</div></div>
+    <div class="glos-item"><div class="glos-term">Lead</div><div class="glos-def">Contacto que dejó sus datos (email, teléfono) a través de un formulario, descarga o inscripción.</div></div>
+    <div class="glos-item"><div class="glos-term">Trial</div><div class="glos-def">Lead que creó una tienda en Tiendanube. Tiene un período de prueba gratuito.</div></div>
+    <div class="glos-item"><div class="glos-term">Payment</div><div class="glos-def">Trial que activó un plan pago. Es la métrica final de conversión.</div></div>
+    <div class="glos-item"><div class="glos-term">CVR (Conversion Rate)</div><div class="glos-def">Tasa de conversión. Se mide Trial→Payment, Lead→Trial, etc. El CVR 2025 fue 9,83%.</div></div>
+    <div class="glos-item"><div class="glos-term">OR (Open Rate)</div><div class="glos-def">Porcentaje de personas que abrieron el email. Benchmark nurturing: 15-30%. Q2 2025: 34,91%.</div></div>
+    <div class="glos-item"><div class="glos-term">CTR (Click-Through Rate)</div><div class="glos-def">Porcentaje de clics sobre emails enviados. Benchmark: 1,5-3%. Promedio 2025: 2,23%.</div></div>
+    <div class="glos-item"><div class="glos-term">Broadcast</div><div class="glos-def">Email masivo enviado manualmente a toda la base o a un segmento. Motor de activación. Santiago los creó y definió las buenas prácticas.</div></div>
+    <div class="glos-item"><div class="glos-term">Delivery</div><div class="glos-def">Secuencia de 3 emails que se activa cuando un lead descarga un recurso gratuito. CTR excepcional: 40-60%.</div></div>
+    <div class="glos-item"><div class="glos-term">Workflow</div><div class="glos-def">Flujo automatizado en HubSpot. Define qué emails se envían, cuándo y bajo qué condiciones.</div></div>
+    <div class="glos-item"><div class="glos-term">Sales Channel</div><div class="glos-def">Cómo vende el lead: tienda física, online, redes sociales, marketplace o aún no vende. Define la segmentación.</div></div>
+    <div class="glos-item"><div class="glos-term">Full-Funnel</div><div class="glos-def">El sistema completo de nurturing: ENTRADA → TOFU → MOFU → BOFU → REMARKETING. Con criterios de pasaje por comportamiento.</div></div>
+    <div class="glos-item"><div class="glos-term">Segmentación</div><div class="glos-def">Dividir la base en grupos según comportamiento o perfil. Los 3 segmentos principales: No vende, Vende Online, Vende Físico.</div></div>
+    <div class="glos-item"><div class="glos-term">Quality Lead (QL)</div><div class="glos-def">Modelo de 8 perfiles de trial según comportamiento: Fantasma, Curioso, Interesado, Determinado, etc.</div></div>
+    <div class="glos-item"><div class="glos-term">Win-back</div><div class="glos-def">Flujo para recuperar trials vencidos que no pagaron. Proyecto activo en Q1 2026.</div></div>
+    <div class="glos-item"><div class="glos-term">Onboarding</div><div class="glos-def">Flujo post-trial que guía al usuario según su perfil (social seller, migrador, tienda física, dropshipper).</div></div>
+    <div class="glos-item"><div class="glos-term">Journey</div><div class="glos-def">Recorrido automatizado del lead a través de múltiples touchpoints (emails, WhatsApp, landing pages).</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="app-footer">
-  Nurturing Academy — Growth AR · Datos: febrero 2026 · Fuentes: HubSpot, Tableau, documentos internos
+  Nurturing Academy — Growth AR — 2026 | Fuentes: HubSpot, Tableau, Estrategia 2026, Análisis Q1-Q2, Reporte Deliverys
 </footer>
 
 <script src="app.js"></script>
