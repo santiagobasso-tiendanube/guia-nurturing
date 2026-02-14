@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrategia &amp; Recursos — Nurturing Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-logo">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    Nurturing <span>Academy</span>
+  </div>
+  <nav class="header-tabs">
+    <a href="index.html" class="header-tab">Inicio</a>
+    <a href="index.html#ecosistema" class="header-tab">El Ecosistema</a>
+    <a href="herramientas.html#hubspot" class="header-tab">HubSpot</a>
+    <a href="herramientas.html#numeros" class="header-tab">Los Números</a>
+    <a href="estrategia.html#estrategia" class="header-tab" data-page="estrategia">Estrategia</a>
+    <a href="estrategia.html#recursos" class="header-tab" data-page="recursos">Recursos</a>
+  </nav>
+  <div class="header-right">
+    <button class="glos-trigger">📖 Glosario</button>
+    <div class="progress-mini">
+      <span class="progress-text">0/21</span>
+      <div class="progress-mini-bar"><div class="progress-mini-fill"></div></div>
+    </div>
+  </div>
+</header>
+<div class="progress-strip"><div class="progress-strip-fill"></div></div>
+
+<!-- GLOSSARY -->
+<div id="glos-overlay" class="glos-overlay"></div>
+<div id="glos-panel" class="glos-panel">
+  <div class="glos-head"><h3>📖 Glosario</h3><button class="glos-close">✕</button></div>
+  <div class="glos-search"><input type="text" placeholder="Buscar término..."></div>
+  <div class="glos-list">
+    <div class="glos-item"><div class="glos-term">ICE Score</div><div class="glos-def">Framework de priorización: Impact × Confidence × Ease. Cada criterio 1-10. Se multiplican para obtener el score total.</div></div>
+    <div class="glos-item"><div class="glos-term">A/B Test</div><div class="glos-def">Experimento donde mandás dos versiones de un email (A y B) a grupos distintos para ver cuál rinde mejor. HubSpot lo soporta nativamente.</div></div>
+    <div class="glos-item"><div class="glos-term">Hipótesis</div><div class="glos-def">Predicción comprobable: "Si hacemos X, esperamos Y porque Z". Es la base de todo experimento.</div></div>
+    <div class="glos-item"><div class="glos-term">Quick Win</div><div class="glos-def">Mejora de alto impacto que se puede implementar rápido (días, no semanas). Generalmente usa recursos que ya existen.</div></div>
+    <div class="glos-item"><div class="glos-term">Baseline</div><div class="glos-def">El valor actual de una métrica antes de hacer cambios. Sirve para comparar el "antes y después" de un experimento.</div></div>
+    <div class="glos-item"><div class="glos-term">Conversión</div><div class="glos-def">Cuando un lead hace la acción deseada: abrir email (OR), hacer clic (CTR), crear trial, o pagar (payment).</div></div>
+    <div class="glos-item"><div class="glos-term">Segmentación</div><div class="glos-def">Dividir la base de contactos en grupos con características similares para enviarles contenido más relevante.</div></div>
+    <div class="glos-item"><div class="glos-term">Personalización</div><div class="glos-def">Adaptar el contenido de un email o flujo según las características del lead: nombre, canal de venta, recurso descargado, etc.</div></div>
+  </div>
+</div>
+
+<main class="app-main">
+
+<!-- ======================== ESTRATEGIA ======================== -->
+<div class="page active" data-page="estrategia">
+<div class="sub-tabs-wrap">
+  <div class="sub-tabs">
+    <button class="sub-tab active" data-sub="est-problemas">Problemas Identificados</button>
+    <button class="sub-tab" data-sub="est-plan">Plan de Acción</button>
+    <button class="sub-tab" data-sub="est-framework">Framework de Experimentación</button>
+    <button class="sub-tab" data-sub="est-quiz">Quiz <span class="check-icon"></span></button>
+  </div>
+</div>
+
+<!-- EST PROBLEMAS -->
+<div class="sub-page active" data-sub="est-problemas">
+<div class="content-wrap">
+<div class="article">
+  <h1>Los problemas que hay que resolver</h1>
+  <p class="subtitle">7 problemas concretos, explicados con su contexto, sus datos, y por qué importan</p>
+
+  <p>Una de las habilidades más valiosas que podés desarrollar en growth es la capacidad de <strong>ver problemas donde otros ven normalidad</strong>. Julián, tu jefe, tiene esa cabeza: mira un 2,14% de CTR y ve una oportunidad enorme. Mira un delivery con 30 envíos y piensa "¿por qué no le damos más volumen?". Mira el formulario y se pregunta "¿estamos usando esa data?".</p>
+
+  <p>Vamos a recorrer los 7 problemas principales que el equipo tiene identificados. Para cada uno, vas a entender el problema, los datos que lo respaldan, y la oportunidad que representa.</p>
+
+  <div class="accordion">
+    <div class="accordion-item open">
+      <button class="accordion-trigger"><strong>1. El engagement es excelente, el volumen es el problema</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>CTR de 40-60% en los descargables es excepcional. La industria promedia 2-5%. Pero solo 1.052 envíos totales es muy poco comparado con los 120.000 del email de Bienvenidos o los broadcasts que tienen mucho más alcance.</p>
+        <p>Es como tener una tienda con una tasa de conversión del 60% pero solo 10 visitas por día. El producto es excelente, pero nadie lo conoce.</p>
+        <p><strong>Oportunidad:</strong> Alimentar los deliverys desde los broadcasts (que tienen mucho más alcance). Promover la descarga de recursos en cada broadcast. Si un broadcast sobre tendencias e-commerce incluye un CTA a "Descargá nuestra planilla de costos", estás metiendo más gente en el flujo que mejor convierte.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger"><strong>2. El email de Bienvenidos es el mayor cuello de botella</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>Se pierde el <strong>95% del engagement</strong> entre el descargable (40-60% CTR) y el Bienvenidos (2,14% CTR). El 88% solo echa un vistazo al email. El subject line no genera curiosidad y el CTA no conecta con el recurso descargado.</p>
+        <p>Además, el 70,7% de los clics van a <code>/tienda-gratis/</code> — una página genérica que no conecta con nada de lo que el lead descargó.</p>
+        <p><strong>Oportunidad:</strong> Reemplazar el Bienvenidos por 3 BOFU segmentados (por canal de venta). Los emails ya existen, las landing pages ya existen. Solo hay que clonar, cambiar 3 links, y agregar un if/then en el workflow. Es el quick win principal.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger"><strong>3. El Checklist para crear tienda online no funciona</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>CTR de 9,4% vs. 40-60% del resto. Es el recurso más directamente relacionado con crear una tienda, pero tiene el peor rendimiento. Paradójicamente, debería ser el delivery más alineado con el producto.</p>
+        <p>¿Qué puede estar pasando? Hipótesis: 1) El contenido del email no genera expectativa. 2) El CTA no es claro. 3) El recurso en sí no es lo que el lead esperaba (un checklist puede sentirse "aburrido" comparado con una calculadora interactiva).</p>
+        <p><strong>Oportunidad:</strong> Revisar el contenido del email, el CTA, y el recurso. Testear un nuevo approach: en vez de "checklist", ofrecer una "guía paso a paso" con tono más emprendedor y visual.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger"><strong>4. Los deliverys SMB son muy nuevos para medir conversión</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>Creados el 27/01/2026, solo tienen 2-3 semanas de vida al momento del reporte. El promedio de días hasta payment es 15, con mediana de 9. Aún no hay data suficiente para medir conversión real.</p>
+        <p><strong>Oportunidad:</strong> Esperar hasta primera semana de marzo para tener baseline significativa. Mientras tanto, monitorear engagement y ajustar lo que se pueda (subject lines, CTAs).</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger"><strong>5. Los temas de alta intención convierten más a payment</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>"IA para e-commerce" (Evolución) generó 6 payments con ~9% de conversión. Los recursos genéricos (planillas, calendarios) tienen buen engagement pero no necesariamente intención de compra.</p>
+        <p>El tema del recurso determina la calidad del lead. Un lead que descarga "IA para e-commerce" probablemente ya tiene tienda o piensa tener una — conecta directamente con Tiendanube.</p>
+        <p><strong>Oportunidad:</strong> Crear un delivery SMB con tema de alta intención. Ejemplo: "Cómo usar IA para crear tu tienda online" — adaptar el éxito de Evolución al mercado orgánico.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger"><strong>6. No se usa la segmentación del formulario post-delivery</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>El formulario pregunta "¿Cómo vendés actualmente?" con opciones: Tienda física, Tienda online, Marketplace, Redes Sociales, Aún no vendo. Pero esa respuesta solo se usa para el Full-Funnel — <strong>no se usa para personalizar el delivery ni el Bienvenidos</strong>.</p>
+        <p>Un lead que vende en tienda física necesita un mensaje diferente al que aún no vende. Pero ambos reciben exactamente los mismos emails de delivery y de bienvenida.</p>
+        <p><strong>Oportunidad:</strong> Personalizar el nurturing post-delivery según la respuesta. Esto podría mejorar significativamente la conversión a trial y a payment.</p>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger"><strong>7. La página de Evolución es el punto de conversión final</strong> <span class="arrow">▼</span></button>
+      <div class="accordion-body"><div class="accordion-body-inner">
+        <p>Varios leads que pagaron visitaron <code>/evolucion/</code> como último clic antes del payment. La página tiene 66,7% de conversión (3 usuarios, 2 pagaron). El email de Bienvenidos no tiene CTA hacia esta página.</p>
+        <p><strong>Oportunidad:</strong> Incluir un CTA hacia Evolución/pricing en el flujo post-delivery. Si esa es la página donde se toma la decisión, hay que facilitar ese camino.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="mark-read-wrap">
+    <button class="mark-read-btn" data-section="est-problemas" onclick="markAsRead('est-problemas')">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Marcar como leída</span>
+    </button>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- EST PLAN -->
+<div class="sub-page" data-sub="est-plan">
+<div class="content-wrap">
+<div class="article">
+  <h1>Plan de Acción</h1>
+  <p class="subtitle">Del quick win principal a las acciones complementarias, priorizadas por impacto</p>
+
+  <h2>⚡ Quick Win Principal: Reemplazar el Bienvenidos</h2>
+
+  <p>De todas las acciones posibles, esta es la que tiene mejor relación impacto/esfuerzo. Se puede implementar en una semana y ataca el mayor cuello de botella del sistema.</p>
+
+  <div class="callout callout-data">
+    <div class="callout-icon">⚡</div>
+    <div class="callout-body">
+      <strong>Reemplazar el email de Bienvenidos por 3 BOFU segmentados</strong>
+      <p>El email de Bienvenidos actual tiene 2,14% CTR y manda a todos a <code>/tienda-gratis/</code>. Reemplazarlo por clones de los emails BOFU del Full-Funnel, que ya están segmentados por canal de venta y tienen conversión real.</p>
+    </div>
+  </div>
+
+  <h3>Paso 1: Clonar 3 emails BOFU</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Email a clonar</th><th>Para quién</th><th>Leads aprox.</th></tr></thead>
+      <tbody>
+        <tr><td>BOFU "vende online" (1/5)</td><td>Redes / Tienda online / Marketplace</td><td>105 leads</td></tr>
+        <tr><td>BOFU "vende físico" (1/5)</td><td>Tienda física</td><td>33 leads</td></tr>
+        <tr><td>BOFU "nn" (1/5)</td><td>Aún no vende / vacío</td><td>45 leads</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Paso 2: Cambiar los CTAs</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Clon BOFU</th><th>CTA actual</th><th>CTA nuevo</th></tr></thead>
+      <tbody>
+        <tr><td>Vende online</td><td>/site/pagina-web-de-ventas-ar/</td><td>/emprendedores/redes-sociales</td></tr>
+        <tr><td>Vende físico</td><td>/site/pagina-web-de-ventas-ar/</td><td>Landing "Para tienda física"</td></tr>
+        <tr><td>No vende</td><td>/site/pagina-web-de-ventas-ar/</td><td>Landing "Empezar a vender"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Paso 3: Ramificar en el workflow</h3>
+
+  <div class="flow">
+    <div class="flow-node">
+      <strong>Email del Descargable</strong>
+      <span>Se mantiene como está (no se toca)</span>
+    </div>
+    <div class="flow-arrow"></div>
+    <div class="flow-node coral">
+      <strong>If/then: Sales Channel</strong>
+      <span>Ramificación por "¿Cómo vendés?"</span>
+    </div>
+    <div class="flow-arrow"></div>
+    <div class="flow-branch">
+      <div class="flow-node teal"><strong>Online / Redes / Mktplace</strong><span>→ BOFU "vende online"</span></div>
+      <div class="flow-node teal"><strong>Tienda física</strong><span>→ BOFU "vende físico"</span></div>
+      <div class="flow-node teal"><strong>No vende / vacío</strong><span>→ BOFU "nn"</span></div>
+    </div>
+  </div>
+
+  <h3>Paso 4: Desactivar el Bienvenidos genérico</h3>
+  <p>Los BOFU originales del Full-Funnel <strong>no se tocan</strong> — se usan los clones. El email de Bienvenidos genérico se desactiva y se reemplaza por la ramificación.</p>
+
+  <hr>
+
+  <h2>Acciones complementarias (por prioridad)</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Acción</th><th>Impacto</th><th>Esfuerzo</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Revisar y optimizar el Checklist para tienda online (9,4% CTR)</td><td><span class="tag tag-green">Alto</span></td><td><span class="tag tag-green">Bajo</span></td></tr>
+        <tr><td>2</td><td>Usar broadcasts para alimentar el flujo de Delivery</td><td><span class="tag tag-green">Alto</span></td><td><span class="tag tag-orange">Medio</span></td></tr>
+        <tr><td>3</td><td>Dar más volumen al Generador de SKU (60,7% CTR, 30 envíos)</td><td><span class="tag tag-blue">Medio</span></td><td><span class="tag tag-green">Bajo</span></td></tr>
+        <tr><td>4</td><td>Crear delivery SMB de "IA para empezar a vender online"</td><td><span class="tag tag-green">Alto</span></td><td><span class="tag tag-orange">Medio</span></td></tr>
+        <tr><td>5</td><td>Medir payments de deliverys SMB en primera semana de marzo</td><td><span class="tag tag-blue">Medio</span></td><td><span class="tag tag-green">Bajo</span></td></tr>
+        <tr><td>6</td><td>Si BOFU segmentados funcionan, aplicar la lógica al Full-Funnel</td><td><span class="tag tag-green">Alto</span></td><td><span class="tag tag-orange">Medio</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Métricas a monitorear</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Métrica</th><th>Valor actual</th><th>Target</th><th>Frecuencia</th></tr></thead>
+      <tbody>
+        <tr><td>Envíos totales deliverys/mes</td><td>~1.052</td><td>2.000+</td><td>Semanal</td></tr>
+        <tr><td>CTR promedio descargables</td><td>~45%</td><td>Mantener &gt;40%</td><td>Semanal</td></tr>
+        <tr><td>CTR email Bienvenidos</td><td>2,14%</td><td>&gt;5%</td><td>Semanal</td></tr>
+        <tr><td>Tasa lectura email Bienvenidos</td><td>10,2%</td><td>&gt;25%</td><td>Semanal</td></tr>
+        <tr><td>Payments desde Delivery (SMB)</td><td>Por medir</td><td>—</td><td>Quincenal</td></tr>
+        <tr><td>Días promedio hasta payment</td><td>15 días</td><td>&lt;15 días</td><td>Mensual</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mark-read-wrap">
+    <button class="mark-read-btn" data-section="est-plan" onclick="markAsRead('est-plan')">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Marcar como leída</span>
+    </button>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- EST FRAMEWORK -->
+<div class="sub-page" data-sub="est-framework">
+<div class="content-wrap">
+<div class="article">
+  <h1>Framework de Experimentación</h1>
+  <p class="subtitle">Cómo empezar a pensar como Julián: del "se me ocurre que..." al "si hacemos X, esperamos Y porque Z"</p>
+
+  <p>Vos venís del periodismo y del blog. Tenés una cabeza creativa, narrativa, con buen ojo para el contenido. Eso es una ventaja enorme — la mayoría de los growth marketers escriben emails que parecen instrucciones de electrodomésticos. Vos podés escribir emails que la gente quiera leer.</p>
+
+  <p>Pero para sugerir proyectos y pensar experimentos, necesitás agregar una capa: el <strong>pensamiento científico aplicado al marketing</strong>. No hace falta un doctorado — es un framework simple que Julián usa (quizás sin darse cuenta) cada vez que propone algo.</p>
+
+  <h2>El método científico para growth</h2>
+
+  <p>Todo experimento sigue estos 8 pasos:</p>
+
+  <div class="path-steps">
+    <div class="path-step">
+      <div class="path-step-num">1</div>
+      <div class="path-step-body">
+        <h4>Observar un problema o patrón</h4>
+        <p>"El email de Bienvenidos tiene 2,14% CTR mientras que los deliverys tienen 40-60%."</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num">2</div>
+      <div class="path-step-body">
+        <h4>Preguntarse ¿por qué?</h4>
+        <p>"¿Por qué cae tanto? ¿Es el subject? ¿El CTA? ¿La falta de conexión con el recurso?"</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num teal">3</div>
+      <div class="path-step-body">
+        <h4>Formular una hipótesis</h4>
+        <p>"Si reemplazamos el Bienvenidos por BOFU segmentados, el CTR va a subir de 2,14% a &gt;5% porque los leads recibirán contenido relevante a cómo venden."</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num">4</div>
+      <div class="path-step-body">
+        <h4>Definir la métrica de éxito</h4>
+        <p>"CTR &gt; 5%. Tasa de lectura &gt; 20%. Cancelaciones &lt; 2%."</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num">5</div>
+      <div class="path-step-body">
+        <h4>Diseñar el experimento</h4>
+        <p>"Clonar 3 BOFU, cambiar CTAs, ramificar workflow. Control: Bienvenidos actual."</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num navy">6</div>
+      <div class="path-step-body">
+        <h4>Ejecutar (mínimo viable)</h4>
+        <p>"Implementar la semana que viene. Medir durante 2 semanas."</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num">7</div>
+      <div class="path-step-body">
+        <h4>Analizar resultados</h4>
+        <p>"Después de 2 semanas: ¿subió el CTR? ¿Bajaron las cancelaciones? ¿Hubo payments?"</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num teal">8</div>
+      <div class="path-step-body">
+        <h4>Decidir: escalar, iterar o descartar</h4>
+        <p>"Si funcionó → aplicarlo al Full-Funnel completo. Si no → ¿qué ajustamos?"</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>ICE: cómo priorizar ideas</h2>
+
+  <p>Cuando tenés 10 ideas y tiempo para implementar 2, necesitás priorizarlas. El framework ICE te ayuda:</p>
+
+  <div class="stat-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="stat-card">
+      <div class="stat-value coral">I</div>
+      <div class="stat-label"><strong>Impact</strong><br>¿Cuánto puede mover la aguja? (1-10)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value teal">C</div>
+      <div class="stat-label"><strong>Confidence</strong><br>¿Cuánta confianza tenés en que funcione? (1-10)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">E</div>
+      <div class="stat-label"><strong>Ease</strong><br>¿Qué tan fácil es de implementar? (1-10)</div>
+    </div>
+  </div>
+
+  <p>Se multiplican los tres: <strong>Score = I × C × E</strong>. El score más alto se hace primero.</p>
+
+  <h3>Ejemplo con nuestros datos</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Idea</th><th>I</th><th>C</th><th>E</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td>Reemplazar Bienvenidos por BOFU segmentados</td><td>9</td><td>8</td><td>8</td><td><strong>576</strong></td></tr>
+        <tr><td>Arreglar Checklist tienda online (9,4% CTR)</td><td>6</td><td>7</td><td>9</td><td><strong>378</strong></td></tr>
+        <tr><td>Promocionar Generador de SKU en broadcasts</td><td>5</td><td>6</td><td>9</td><td><strong>270</strong></td></tr>
+        <tr><td>Crear delivery "IA para empezar a vender"</td><td>8</td><td>6</td><td>5</td><td><strong>240</strong></td></tr>
+        <tr><td>Remarketing para 124 trials sin payment</td><td>8</td><td>5</td><td>5</td><td><strong>200</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>3 lentes para generar ideas</h2>
+
+  <p>Cuando te sentás a pensar "¿qué puedo proponer?", usá estas tres lentes:</p>
+
+  <div class="callout callout-tip">
+    <div class="callout-icon">🔍</div>
+    <div class="callout-body">
+      <strong>Lente 1: Motivación</strong>
+      <p>"¿El lead tiene suficiente motivación para hacer lo que le pido?" Si le pedís que cree una tienda pero no le mostraste el valor, falta motivación. Los emails de MOFU trabajan la motivación.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-icon">🔍</div>
+    <div class="callout-body">
+      <strong>Lente 2: Capacidad</strong>
+      <p>"¿Es fácil para el lead hacer lo que le pido?" Si el CTA lo lleva a una página donde tiene que scrollear 20 minutos antes de encontrar el botón de "crear tienda", falta capacidad. Simplificá el camino.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-icon">🔍</div>
+    <div class="callout-body">
+      <strong>Lente 3: Trigger</strong>
+      <p>"¿Le estoy dando el empujón en el momento correcto?" El delivery capitaliza el momento de descarga (trigger perfecto). El Bienvenidos llega cuando el lead ya se olvidó (trigger desfasado). El timing importa tanto como el contenido.</p>
+    </div>
+  </div>
+
+  <h2>Tu ventaja: la cabeza creativa</h2>
+
+  <p>Julián piensa en tests, en segmentación, en números. Eso es imprescindible. Pero vos traés algo que él probablemente no tiene tanto: la capacidad de <strong>escribir contenido que conecte emocionalmente</strong>. En nurturing, eso es clave.</p>
+
+  <p>Los emails que escribiste para los broadcasts y las optimizaciones de MOFU demuestran que sabés contar historias. Eso se traduce directamente a mejores subject lines, mejores CTAs, mejor copy de emails. La combinación de pensamiento analítico (framework) + capacidad narrativa (tu background) es exactamente lo que necesita un equipo de growth.</p>
+
+  <div class="summary-box">
+    <h4>📋 Tu kit para proponer proyectos</h4>
+    <ul>
+      <li><strong>Observá las métricas</strong> — buscá anomalías, caídas, oportunidades.</li>
+      <li><strong>Preguntate "¿por qué?"</strong> — no te quedes en el dato, buscá la causa.</li>
+      <li><strong>Formulá una hipótesis</strong> — "Si hago X, espero Y porque Z".</li>
+      <li><strong>Priorizá con ICE</strong> — Impact × Confidence × Ease.</li>
+      <li><strong>Proponé un mínimo viable</strong> — algo que se pueda implementar y medir rápido.</li>
+      <li><strong>Usá tus lentes</strong> — Motivación, Capacidad, Trigger.</li>
+    </ul>
+  </div>
+
+  <div class="mark-read-wrap">
+    <button class="mark-read-btn" data-section="est-framework" onclick="markAsRead('est-framework')">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Marcar como leída</span>
+    </button>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- EST QUIZ -->
+<div class="sub-page" data-sub="est-quiz">
+<div class="content-wrap">
+<div class="article">
+  <h1>Quiz: Estrategia</h1>
+  <p class="subtitle">Poné en práctica el framework. Son escenarios reales.</p>
+</div>
+<div class="quiz-section" data-quiz-id="est-quiz">
+
+  <div class="quiz-card">
+    <div class="q-num">Pregunta 1 de 3</div>
+    <div class="q-text">Tenés dos ideas: A) Crear un delivery nuevo sobre "IA para empezar a vender" (ICE: 8×6×5 = 240) y B) Arreglar el Checklist de tienda online que tiene 9,4% CTR (ICE: 6×7×9 = 378). ¿Cuál hacés primero?</div>
+    <div class="q-options">
+      <button class="q-opt" data-fb-wrong="<strong>El impacto potencial es mayor, sí, pero el ICE total es menor (240 vs. 378).</strong> Crear un delivery nuevo requiere escribir contenido, diseñar 3 emails, crear el formulario, configurar el workflow... Es más esfuerzo y menos certeza. El Checklist ya existe — arreglarlo es más rápido y seguro.">A — Tiene más impacto potencial y conecta con lo que funcionó en Evolución</button>
+      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Correcto!</strong> El ICE score prioriza al Checklist (378 vs. 240) porque aunque tiene menos impacto potencial, es mucho más fácil de implementar (ya existe, solo hay que arreglar el email y/o el recurso) y tenés más confianza en que mejorará (porque el resto de los deliverys anda bien). Arreglá primero lo que está roto, después creá lo nuevo.">B — El ICE score es mayor porque es más fácil de implementar y más seguro</button>
+      <button class="q-opt" data-fb-wrong="<strong>Ojo con la parálisis por análisis.</strong> Los dos tienen data: el Checklist tiene 64 envíos y 9,4% CTR, y el delivery de IA de Evolución tiene 6 payments. No necesitás más data para decidir — el ICE score ya te da el orden.">Ninguna — necesito más data antes de decidir</button>
+    </div>
+    <div class="q-feedback"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="q-num">Pregunta 2 de 3</div>
+    <div class="q-text">Reformulá este "proyecto" como una hipótesis correcta: "Vamos a cambiar el subject line del email de Bienvenidos para que sea más atractivo."</div>
+    <div class="q-options">
+      <button class="q-opt" data-fb-wrong="<strong>Falta el 'porque Z'.</strong> Una buena hipótesis tiene tres partes: Si (acción), entonces (resultado esperado), porque (razón). Sin el 'porque', no sabés qué estás testeando ni podés aprender si falla.">Si cambiamos el subject line, el Open Rate va a subir</button>
+      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Excelente!</strong> Esta es una hipótesis completa: tiene la acción (cambiar el subject line), el resultado esperado con métrica (OR sube de 37% a 45%), y la razón teórica (el actual no genera curiosidad y los que descargan esperan un follow-up). Si falla, aprendés que el problema no era el subject line.">Si personalizamos el subject con el nombre del recurso descargado, el OR va a subir de 37% a 45%, porque el subject actual es genérico y los leads esperan un follow-up sobre lo que descargaron</button>
+      <button class="q-opt" data-fb-wrong="<strong>Tiene la estructura, pero la métrica está equivocada.</strong> Cambiar el subject line afecta el Open Rate (OR), no el CTR. El CTR depende del contenido <em>dentro</em> del email. Es importante medir la métrica correcta para cada cambio.">Si cambiamos el subject line, el CTR va a subir de 2,14% a 5%, porque el subject actual no genera interés</button>
+    </div>
+    <div class="q-feedback"></div>
+  </div>
+
+  <div class="quiz-card">
+    <div class="q-num">Pregunta 3 de 3</div>
+    <div class="q-text">Usando las 3 lentes (Motivación, Capacidad, Trigger), ¿cuál es el principal problema del email de Bienvenidos actual?</div>
+    <div class="q-options">
+      <button class="q-opt" data-fb-wrong="<strong>La motivación no es el problema principal.</strong> El lead acaba de descargar un recurso — la motivación es alta. El email no falla por falta de motivación sino porque no capitaliza la motivación que ya existe.">Falta de motivación — el email no da suficientes razones para crear una tienda</button>
+      <button class="q-opt" data-fb-wrong="<strong>Es parte del problema, pero no la raíz.</strong> El CTA va a /tienda-gratis/ que no es difícil de navegar. El problema real es de timing: el email llega con un mensaje desconectado del momento de atención del lead.">Falta de capacidad — el CTA lleva a una página confusa con demasiados pasos</button>
+      <button class="q-opt" data-correct="true" data-fb-correct="<strong>¡Perfecto!</strong> El trigger está desfasado. El lead descargó una planilla de stock y está pensando en inventario. El email de Bienvenidos le habla de crear una tienda — salto de intención. Es como si alguien preguntara la hora y le contestaras con el pronóstico del tiempo. El contenido puede estar bien, pero <em>no conecta con lo que el lead está pensando en ese momento</em>.">Trigger desfasado — el email no conecta con lo que el lead acaba de hacer (descargar un recurso específico)</button>
+    </div>
+    <div class="q-feedback"></div>
+  </div>
+
+  <div class="quiz-results">
+    <div class="score">-/-</div>
+    <div class="score-text">¡Quiz completado! Tu progreso fue guardado.</div>
+  </div>
+</div>
+</div>
+</div>
+
+</div><!-- /estrategia page -->
+
+<!-- ======================== RECURSOS ======================== -->
+<div class="page" data-page="recursos">
+<div class="sub-tabs-wrap">
+  <div class="sub-tabs">
+    <button class="sub-tab active" data-sub="rec-ruta">Ruta de Aprendizaje</button>
+    <button class="sub-tab" data-sub="rec-cursos">Cursos y Lecturas</button>
+  </div>
+</div>
+
+<!-- REC RUTA -->
+<div class="sub-page active" data-sub="rec-ruta">
+<div class="content-wrap">
+<div class="article">
+  <h1>Tu ruta de aprendizaje</h1>
+  <p class="subtitle">Un plan de 6 semanas para ir de "recién entro" a "puedo proponer mejoras con confianza"</p>
+
+  <p>Esta ruta está pensada para alguien que viene de contenidos/blog, entiende los conceptos generales de marketing, y necesita profundizar en nurturing, HubSpot y growth. Todo lo que recomiendo acá es gratuito o menor a $20 USD.</p>
+
+  <div class="path-steps">
+    <div class="path-step">
+      <div class="path-step-num coral">1</div>
+      <div class="path-step-body">
+        <h4>Semana 1-2: Fundamentos de HubSpot</h4>
+        <p><strong>HubSpot Academy — Email Marketing Certification</strong> (gratuito, ~3 horas). Cubre todo lo básico: crear emails, segmentar listas, analizar métricas, deliverability. Es el curso más relevante para tu día a día. → <a href="https://academy.hubspot.com/courses/email-marketing" target="_blank">academy.hubspot.com</a></p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num teal">2</div>
+      <div class="path-step-body">
+        <h4>Semana 2-3: Lead Nurturing</h4>
+        <p><strong>HubSpot Academy — Lead Management & Nurturing</strong> (gratuito, ~2 horas). Específico sobre nurturing: workflows, lead scoring, ciclo de vida del lead. → <a href="https://academy.hubspot.com/" target="_blank">academy.hubspot.com</a></p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num">3</div>
+      <div class="path-step-body">
+        <h4>Semana 3-4: Growth y Experimentación</h4>
+        <p><strong>"Hacking Growth" de Sean Ellis</strong> (libro, ~$12 en Kindle). Es EL libro de growth hacking. Explica el framework de experimentación, ICE scoring, y cómo pensar como un equipo de growth. Lectura obligada. También: <strong>GrowthHackers.com</strong> (gratuito) — blog con casos de estudio reales.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num navy">4</div>
+      <div class="path-step-body">
+        <h4>Semana 4-5: Copywriting para Emails</h4>
+        <p><strong>"Everybody Writes" de Ann Handley</strong> (libro, ~$15). Escribir para marketing es diferente a escribir para blog — este libro cubre las bases del copywriting aplicado a emails, landing pages y CTAs. Vos ya tenés talento narrativo; esto le agrega estructura.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num coral">5</div>
+      <div class="path-step-body">
+        <h4>Semana 5-6: Analytics y Datos</h4>
+        <p><strong>Google Analytics Academy</strong> (gratuito). No para volverte analista, sino para entender los reportes que te mandan. <strong>HubSpot Academy — Reporting</strong> (gratuito) te enseña a crear dashboards en HubSpot.</p>
+      </div>
+    </div>
+    <div class="path-step">
+      <div class="path-step-num teal">6</div>
+      <div class="path-step-body">
+        <h4>Ongoing: Newsletters y Podcasts</h4>
+        <p><strong>Lenny's Newsletter</strong> (gratuito / $15/mes premium) — el newsletter de growth más popular. <strong>Growth.Design</strong> (gratuito) — casos de estudio visuales sobre UX y growth. <strong>"Marketing Against the Grain"</strong> (podcast, gratuito) — de los fundadores de HubSpot.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mark-read-wrap">
+    <button class="mark-read-btn" data-section="rec-ruta" onclick="markAsRead('rec-ruta')">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Marcar como leída</span>
+    </button>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- REC CURSOS -->
+<div class="sub-page" data-sub="rec-cursos">
+<div class="content-wrap">
+<div class="article">
+  <h1>Cursos, Lecturas y Más</h1>
+  <p class="subtitle">Todo gratuito o menor a $20 USD</p>
+
+  <h2>Certificaciones HubSpot (gratuitas)</h2>
+  <p>Todas en <a href="https://academy.hubspot.com/" target="_blank">academy.hubspot.com</a>. Son gratuitas y te dan un certificado.</p>
+  <ul>
+    <li><strong>Email Marketing Certification</strong> — la más relevante para tu rol.</li>
+    <li><strong>Inbound Marketing Certification</strong> — fundamentos de inbound.</li>
+    <li><strong>Marketing Software Certification</strong> — cómo usar HubSpot en profundidad.</li>
+    <li><strong>Content Marketing Certification</strong> — conecta con tu background de blog.</li>
+  </ul>
+
+  <h2>Libros recomendados (&lt;$20)</h2>
+  <ul>
+    <li><strong>"Hacking Growth"</strong> — Sean Ellis &amp; Morgan Brown ($12 Kindle). Framework de growth hacking.</li>
+    <li><strong>"Everybody Writes"</strong> — Ann Handley ($15). Copywriting para marketing.</li>
+    <li><strong>"Hooked"</strong> — Nir Eyal ($11 Kindle). Cómo crear hábitos en productos digitales.</li>
+    <li><strong>"Influence"</strong> — Robert Cialdini ($14 Kindle). Psicología de la persuasión aplicada a marketing.</li>
+  </ul>
+
+  <h2>Newsletters (gratuitas)</h2>
+  <ul>
+    <li><strong>Lenny's Newsletter</strong> — Growth, producto, UX. Casos de estudio de empresas top.</li>
+    <li><strong>Growth.Design</strong> — Casos de estudio visuales. Excelente para entender UX.</li>
+    <li><strong>Marketing Brew</strong> — Noticias de marketing digital.</li>
+    <li><strong>The Hustle</strong> — Noticias de tech y negocios, tono accesible.</li>
+  </ul>
+
+  <h2>Podcasts</h2>
+  <ul>
+    <li><strong>"Marketing Against the Grain"</strong> — HubSpot. Estrategia de marketing moderna.</li>
+    <li><strong>"Lenny's Podcast"</strong> — Entrevistas con growth leaders de Airbnb, Spotify, etc.</li>
+    <li><strong>"How I Built This"</strong> — NPR. Historias de emprendedores. Inspiracional.</li>
+  </ul>
+
+  <h2>Recursos gratuitos online</h2>
+  <ul>
+    <li><a href="http://callboxinc.com/lead-generation/saas-lead-nurturing-touchpoints/" target="_blank"><strong>Callbox — SaaS Lead Nurturing Touchpoints</strong></a> — artículo que te pasó tu jefe sobre touchpoints de nurturing.</li>
+    <li><a href="https://thecfoclub.com/operational-finance/free-to-paid-conversion-strategy/" target="_blank"><strong>The CFO Club — Free to Paid Conversion Strategies</strong></a> — benchmarks de conversión free-to-paid en SaaS.</li>
+    <li><a href="https://growthhackers.com/" target="_blank"><strong>GrowthHackers.com</strong></a> — comunidad y blog de growth. Casos de estudio, frameworks, herramientas.</li>
+  </ul>
+
+  <div class="callout callout-insight">
+    <div class="callout-icon">🔑</div>
+    <div class="callout-body">
+      <strong>Mi recomendación</strong>
+      <p>Empezá por la certificación de Email Marketing de HubSpot y el libro "Hacking Growth". Esos dos recursos te dan la base operativa (HubSpot) y la base estratégica (growth) que necesitás. Todo lo demás es complementario.</p>
+    </div>
+  </div>
+
+  <div class="mark-read-wrap">
+    <button class="mark-read-btn" data-section="rec-cursos" onclick="markAsRead('rec-cursos')">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Marcar como leída</span>
+    </button>
+  </div>
+</div>
+</div>
+</div>
+
+</div><!-- /recursos page -->
+
+</main>
+
+<footer class="app-footer">
+  Nurturing Academy — Growth AR · Datos: febrero 2026 · Fuentes: HubSpot, Tableau, documentos internos
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
