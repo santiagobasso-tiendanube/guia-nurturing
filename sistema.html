@@ -38,6 +38,7 @@
       <button class="sub-tab active" data-sub="sis-vision">Vista General <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="sis-funnel">El Funnel Email x Email <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="sis-puertas">Puertas de Entrada <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="sis-ql">Quality Leads <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="sis-quiz">Quiz <span class="check-icon"></span></button>
     </div>
   </div>
@@ -655,6 +656,168 @@
 
       <div class="mark-read-wrap">
         <button class="mark-read-btn" data-section="sis-puertas" onclick="markAsRead('sis-puertas')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Quality Leads ─── -->
+  <div class="sub-page" data-sub="sis-ql">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Quality Leads: Los 8 Perfiles de Usuario</h1>
+        <p class="subtitle">El modelo predictivo de ADVISIA Analytics que define la calidad de cada trial en las primeras 72 horas.</p>
+
+        <h2>Por qué esto importa para Nurturing</h2>
+        <p>Cada lead que crea un trial no es igual. El modelo de Quality Leads clasifica a cada trial en uno de <strong>8 perfiles</strong> basados en su comportamiento real, no en lo que dice un formulario. Esto tiene implicancias directas para nurturing: <strong>no tiene sentido mandarle 16 emails a alguien que nunca va a pagar</strong>.</p>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>El modelo de Quality Leads responde la pregunta más importante: <strong>"¿A quién le estamos escribiendo?"</strong> Si el 44% de los trials son "Fantasmas Freemium" que nunca van a convertir, cada email que les mandamos es un desperdicio de capacidad de envío. Nurturing debería priorizar a los perfiles con mayor probabilidad de pago.</p>
+        </div>
+
+        <h2>Los 8 Perfiles</h2>
+        <p>El modelo cruza 2 ejes: <strong>nivel de actividad</strong> (qué tanto usa la plataforma) y <strong>tipo de registro</strong> (CPF = persona física, CNPJ = empresa). El CNPJ es la señal más fuerte de intención real.</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Fantasma Freemium — 44% de trials, CVR 7% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Crearon la tienda y no hicieron nada más. No subieron productos, no configuraron nada, no volvieron. Son casi la mitad de todos los trials.</p>
+              <p><strong>CVR 7%:</strong> Bajo, pero en volumen absoluto son muchos. 7% de un grupo enorme sigue siendo relevante.</p>
+              <p><strong>Implicancia para nurturing:</strong> No vale la pena mandarles toda la secuencia completa del full-funnel. Un approach más eficiente: 2-3 emails cortos de activación y, si no responden, moverlos a una lista de bajo engagement y reducir la frecuencia.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Fantasma Trials — 10% de trials, CVR 10% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Hicieron algo mínimo (una o dos acciones) pero después desaparecieron. Mostraron intención inicial pero no la sostuvieron.</p>
+              <p><strong>CVR 10%:</strong> Mejor que Fantasma Freemium. La diferencia es que estos al menos intentaron.</p>
+              <p><strong>Implicancia para nurturing:</strong> Son candidatos para remarketing. Ya tuvieron contacto con la plataforma — un email que les recuerde lo que dejaron a medio hacer puede reactivarlos.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Curiosos Freemium CPF — 25% de trials, CVR 5% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Personas físicas (CPF) que exploran la plataforma, miran funcionalidades, pero no dan señales claras de intención de pago. Son "turistas".</p>
+              <p><strong>CVR 5%:</strong> El más bajo. Mucho volumen (25% de trials) pero poquísima conversión.</p>
+              <p><strong>Implicancia para nurturing:</strong> El contenido educativo (TOFU) funciona bien acá — necesitan entender el valor antes de considerar pagar. Pero hay que ser eficientes: no gastar 7 emails de MOFU en alguien que probablemente no va a convertir.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Curiosos Freemium CNPJ — 13% de trials, CVR 13% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Empresas (CNPJ) que exploran pero no se comprometen aún. A diferencia de los CPF, ya tienen un negocio detrás.</p>
+              <p><strong>CVR 13%:</strong> Más del doble que los CPF curiosos. El CNPJ es un indicador de seriedad.</p>
+              <p><strong>Implicancia para nurturing:</strong> Estos merecen la secuencia completa. Son empresas reales evaluando la plataforma. El contenido de MOFU (casos de éxito, comparativas, objection handling) les habla directamente.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Interesados Trials CPF — 9% de trials, CVR 2% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Personas físicas que muestran interés (configuran cosas, suben productos) pero no convierten. Están activos pero indecisos.</p>
+              <p><strong>CVR 2%:</strong> Paradójicamente bajo. Están activos pero no pagan. Puede ser que les falta un empujón económico, o que la plataforma no resuelve su necesidad real.</p>
+              <p><strong>Implicancia para nurturing:</strong> Son candidatos para BOFU agresivo: descuentos, urgencia, casos de éxito de personas similares. También para el test de WhatsApp como canal de cierre personal.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Interesados Trials CNPJ — 2% de trials, CVR 40% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Empresas que muestran interés activo. Configuran, suben productos, exploran funcionalidades avanzadas.</p>
+              <p><strong>CVR 40%:</strong> Altísimo. 4 de cada 10 pagan. Son el perfil más valioso después de los Determinados CNPJ.</p>
+              <p><strong>Implicancia para nurturing:</strong> <strong>No los molestes con TOFU.</strong> Estos necesitan ir directo a BOFU: pricing, planes, soporte personalizado. Cada email TOFU que reciben es un email que retrasa su conversión.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Determinados Trials CPF — 7% de trials, CVR 2% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Personas físicas muy activas. Configuran todo, suben productos, personalizan la tienda. Están determinados pero no convierten.</p>
+              <p><strong>CVR 2%:</strong> El mismo problema que Interesados CPF: alta actividad, baja conversión. Posiblemente el precio es una barrera para individuos.</p>
+              <p><strong>Implicancia para nurturing:</strong> Estos son los mejores candidatos para descuentos y ofertas especiales. Si ya hicieron todo el trabajo de configurar la tienda, lo único que falta es el trigger económico.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Determinados Trials CNPJ — 2% de trials, CVR 66% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Quiénes son:</strong> Empresas que van con todo. Configuran, suben catálogo completo, integran pagos. Son el perfil ideal.</p>
+              <p><strong>CVR 66%:</strong> Dos de cada tres pagan. Este es el norte al que apunta todo el sistema de nurturing: generar más Determinados CNPJ.</p>
+              <p><strong>Implicancia para nurturing:</strong> No necesitan nurturing — necesitan <strong>onboarding</strong>. Que no se traben en ningún paso técnico. Que tengan soporte inmediato. Un email de nurturing acá sobra; un mensaje de WhatsApp con soporte directo convierte.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <h2>Las 15 Variables que Predicen la Conversión</h2>
+        <p>El modelo de ADVISIA identificó las variables más importantes para predecir si un trial va a pagar:</p>
+
+        <table class="data-table">
+          <thead><tr><th>#</th><th>Variable</th><th>Por qué importa</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Hora de la última acción</td><td>Si la última acción fue hace 3+ días, el trial está fríomuerto</td></tr>
+            <tr><td>2</td><td>Plan pago seleccionado</td><td>Si ya eligió plan, la intención de pago es real</td></tr>
+            <tr><td>3</td><td>CNPJ registrado</td><td>Empresa > Persona. CNPJ convierte 3-8x más</td></tr>
+            <tr><td>4</td><td>Accesos al admin</td><td>Más accesos = más engagement = más probabilidad de pago</td></tr>
+            <tr><td>5</td><td>Períodos con acción</td><td>Actividad sostenida en el tiempo, no un solo pico</td></tr>
+            <tr><td>6</td><td>Acciones realizadas</td><td>Volumen total de interacciones con la plataforma</td></tr>
+            <tr><td>7</td><td>Acceso al checkout</td><td>Si visitó el checkout, está considerando pagar</td></tr>
+            <tr><td>8</td><td>Customización de la tienda</td><td>Personalizar = sentir la tienda como propia</td></tr>
+            <tr><td>9</td><td>Productos cargados</td><td>Subir productos es la señal #1 de intención real</td></tr>
+            <tr><td>10</td><td>Integración de pagos</td><td>Configurar pagos = prepararse para vender</td></tr>
+            <tr><td>11-15</td><td>Configuración de envíos, dominio, diseño, apps, SEO</td><td>Cada configuración adicional refuerza el compromiso</td></tr>
+          </tbody>
+        </table>
+
+        <h2>El Dato Clave: Las Primeras 72 Horas</h2>
+
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Activo solo en la 1era hora</div>
+              <div class="ba-result">3% CVR</div>
+              <p>Crea la tienda, mira 2 cosas, se va. Si no vuelve en 72hs, probablemente no vuelve nunca.</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Activo al 3er día</div>
+              <div class="ba-result">27% CVR</div>
+              <p>Vuelve, configura, sube productos. La actividad sostenida multiplica x9 la probabilidad de pago.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 La implicancia para Nurturing</div>
+          <p>Si un trial no hace nada al 3er día, tiene 3% de chance de pagar. Esto cambia todo:</p>
+          <p><strong>1. El onboarding de los primeros 3 días es el momento más crítico</strong> — es donde se gana o se pierde la conversión. El email de bienvenida actual llega tarde y es genérico. Debería llegar en los primeros minutos, personalizado según el perfil.</p>
+          <p><strong>2. Después del día 3, cambiar de estrategia.</strong> Si el trial sigue activo → BOFU agresivo (pricing, descuentos). Si desapareció → remarketing suave (recordatorio, caso de éxito), no bombardeo.</p>
+          <p><strong>3. WhatsApp como canal de cierre.</strong> Para los Interesados y Determinados CNPJ (CVR 40-66%), un mensaje de WhatsApp personalizado al día 2 puede ser más efectivo que 5 emails automatizados.</p>
+          <p><strong>4. El full-funnel necesita "fast lanes".</strong> Un Determinado CNPJ no debería recibir 4 emails de TOFU + 7 de MOFU antes de llegar al BOFU. Necesita un camino directo.</p>
+        </div>
+
+        <h2>Cómo Conectar Quality Leads con la Segmentación del Full-Funnel</h2>
+        <table class="data-table">
+          <thead><tr><th>Perfil QL</th><th>Flujo recomendado</th><th>Canal</th><th>Tono</th></tr></thead>
+          <tbody>
+            <tr><td>Fantasma (ambos)</td><td>2-3 emails de activación → si no responde, bajar frecuencia</td><td>Email</td><td>Directo, breve</td></tr>
+            <tr><td>Curioso CPF</td><td>TOFU completo → MOFU reducido (3 emails, no 7)</td><td>Email</td><td>Educativo</td></tr>
+            <tr><td>Curioso CNPJ</td><td>TOFU + MOFU completo + BOFU</td><td>Email + WhatsApp</td><td>Profesional</td></tr>
+            <tr><td>Interesado CPF</td><td>BOFU directo (descuentos, urgencia)</td><td>Email</td><td>Push económico</td></tr>
+            <tr><td>Interesado CNPJ</td><td>BOFU directo + soporte personalizado</td><td>WhatsApp + Email</td><td>Consultor</td></tr>
+            <tr><td>Determinado CPF</td><td>Descuento + remarketing post-trial</td><td>Email</td><td>Urgencia</td></tr>
+            <tr><td>Determinado CNPJ</td><td>Onboarding + soporte directo</td><td>WhatsApp</td><td>VIP</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="sis-ql" onclick="markAsRead('sis-ql')">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>Marcar como leída</span>
         </button>

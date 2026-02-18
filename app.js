@@ -11,7 +11,7 @@ const ALL_SECTIONS = [
   /* index.html — Inicio + Historia */
   'hist-historia','hist-filosofia',
   /* sistema.html — El Sistema */
-  'sis-vision','sis-funnel','sis-puertas','sis-quiz',
+  'sis-vision','sis-funnel','sis-puertas','sis-ql','sis-quiz',
   /* analisis.html — Caso de Estudio + Numeros */
   'ana-caso','ana-lecciones','ana-numeros','ana-quiz',
   /* herramientas.html — HubSpot */

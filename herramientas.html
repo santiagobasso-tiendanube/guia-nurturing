@@ -245,6 +245,49 @@
           <div class="flow-row"><div class="flow-box flow-remark"><strong>Enroll:</strong> Full-Funnel TOFU</div></div>
         </div>
 
+        <h2>Cómo se ve un Workflow en HubSpot (Real)</h2>
+        <p>Esto es lo que ves cuando abrís un workflow de broadcast en HubSpot. Lo describimos paso a paso para que puedas reconocer cada elemento:</p>
+
+        <div class="email-showcase">
+          <div class="es-header"><span class="es-tag tofu">HUBSPOT REAL</span><span class="es-num">Workflow de Broadcast</span></div>
+          <div class="es-body" style="background:var(--surface2);padding:20px 24px;">
+            <h4 style="margin-top:0;">Workflow: "[Growth AR] Broadcast - Que Shein y Temu no te ganen"</h4>
+            <div class="flow-diagram" style="text-align:left;">
+              <div class="flow-row"><div class="flow-box flow-entry" style="text-align:left;"><strong>1. Enrollment Trigger</strong><br>Condición: "Es miembro de la lista [AR] Segmento Broadcasts" <strong>O</strong> "Es miembro de la lista ARGENTINAS".<br><small>Esto define quién entra: solo contactos argentinos activos en la lista de broadcasts.</small></div></div>
+              <div class="flow-arrow">▼</div>
+              <div class="flow-row"><div class="flow-box flow-tofu" style="text-align:left;"><strong>2. Delay (retraso de tiempo)</strong><br>Esperar hasta la fecha/hora programada de envío.<br><small>Esto permite crear el workflow con anticipación y que el broadcast se dispare a la hora exacta.</small></div></div>
+              <div class="flow-arrow">▼</div>
+              <div class="flow-row"><div class="flow-box flow-mofu" style="text-align:left;"><strong>3. Notificación interna</strong><br>Se envía una notificación al equipo (Derby status check).<br><small>Permite monitorear que el broadcast se disparó correctamente.</small></div></div>
+              <div class="flow-arrow">▼</div>
+              <div class="flow-row"><div class="flow-box flow-bofu" style="text-align:left;"><strong>4. If/then Branch: Horario</strong><br>Bifurcación por hora del día (ej: "antes de las 10AM" vs "después de las 10AM").<br><small>Permite testear envío en diferentes horarios para optimizar open rate.</small></div></div>
+              <div class="flow-arrow">▼ Rama A / Rama B</div>
+              <div class="flow-row"><div class="flow-box flow-remark" style="text-align:left;"><strong>5. Enviar email (2 versiones)</strong><br>Cada rama envía una versión del mismo email.<br><small>Esto es un A/B test de horario. Mismo contenido, diferente momento de envío. Después comparás cuál tuvo mejor OR.</small></div></div>
+            </div>
+            <p style="margin-top:16px;font-size:14px;"><strong>Lo que esto te muestra:</strong> Un broadcast no es "escribir un email y darle Send". Es un workflow con trigger de audiencia, delay programado, monitoreo, bifurcación por horario y posibilidad de A/B test. Todo automatizado.</p>
+          </div>
+        </div>
+
+        <div class="email-showcase" style="margin-top:28px;">
+          <div class="es-header"><span class="es-tag mofu">HUBSPOT REAL</span><span class="es-num">Dashboard de Broadcast</span></div>
+          <div class="es-body" style="background:var(--surface2);padding:20px 24px;">
+            <h4 style="margin-top:0;">Pantalla de Performance — Broadcast "Columna de Shein"</h4>
+            <p>Cuando abrís el reporte de un email en HubSpot, ves estos datos:</p>
+            <table class="data-table" style="margin:12px 0;">
+              <thead><tr><th>Métrica</th><th>Valor</th><th>Qué significa</th></tr></thead>
+              <tbody>
+                <tr><td>Enviados</td><td>22.127</td><td>Cantidad de contactos a los que se intentó enviar</td></tr>
+                <tr><td>Entregados</td><td>21.943</td><td>Los que efectivamente recibieron el email (sin bounces)</td></tr>
+                <tr><td>Open Rate</td><td>22,42%</td><td>Porcentaje que abrió el email (incluye bot opens)</td></tr>
+                <tr><td>OR sin bots</td><td>21,79%</td><td>El número real, excluyendo aperturas automáticas de Apple Mail</td></tr>
+                <tr><td>Click Rate</td><td>0,49%</td><td>Porcentaje de TODOS los enviados que hicieron clic</td></tr>
+                <tr><td>Clickthrough</td><td>2,17%</td><td>Porcentaje de los que ABRIERON que hicieron clic</td></tr>
+                <tr><td>Aperturas únicas</td><td>4.920</td><td>Personas distintas que abrieron (no re-aperturas)</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:14px;"><strong>Click Rate vs Clickthrough:</strong> Esta distinción es clave. Click Rate (0,49%) mide contra todos los envíos. Clickthrough (2,17%) mide contra los que abrieron. Si tu OR es bajo pero tu Clickthrough es alto, el problema es el subject line (no convence a abrir). Si tu OR es alto pero Clickthrough es bajo, el problema es el contenido del email (no convence a hacer clic).</p>
+          </div>
+        </div>
+
         <div class="callout-strategy">
           <div class="cs-title">🧠 Pensar como Estratega</div>
           <p>Un workflow no es solo "mandar emails en orden". Es una máquina de decisiones. Cada if/then, cada delay, cada goal tiene una razón estratégica. Cuando veas un workflow, preguntate: <strong>"¿Qué pasa si el lead hace algo inesperado?"</strong> Un buen workflow contempla los caminos alternativos.</p>
@@ -342,8 +385,123 @@
         <p class="subtitle">Cómo se transforma el rol de los broadcasts en el sistema 2026.</p>
 
         <h2>Tu Historia con los Broadcasts</h2>
-        <p>Vos escribiste 32 broadcasts en Q1-Q2 2025. Definiste las buenas prácticas. Generaste +1039% YoY en payments en enero. El broadcast "La Lapicera" fue un caso de estudio de creatividad y resultados.</p>
+        <p>Vos escribiste más de 40 broadcasts entre Q1 y Q3 2025. Definiste las buenas prácticas. Generaste +1039% YoY en payments en enero. El broadcast "La Lapicera" fue un caso de estudio de creatividad y resultados.</p>
         <p>Pero cuando Julián llegó, lo primero que hizo fue <strong>dejar de mandar broadcasts</strong>. ¿Por qué?</p>
+
+        <h2>Tus Mejores Broadcasts — Anotados</h2>
+        <p>Estos son 4 de tus broadcasts reales con análisis estratégico de por qué funcionaron (o qué se puede mejorar).</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Broadcast 1 — "La Lapicera" (23/01) — 37 trials, 6 payments <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag bofu">TOP PERFORMER</span><span class="es-num">23 de enero 2025</span></div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> ¿Podrías vender una sola lapicera?</div>
+                  <div><strong>Preheader:</strong> Nosotros te contamos cómo hacerlo. Y así tus ventas no tendrán límites.</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"Vendeme esta lapicera, nombre. Así hacía Jordan Belfort, el lobo de Wall Street, para encontrar los mejores vendedores para su empresa y es un ejercicio interesante para responderte una pregunta: ¿podrías vender esa lapicera exitosamente?"</em></p>
+                  <p><em>"Ya sea que hayas cerrado cientos de tratos o todavía no lograste hacerlo con el primero, tenemos un recurso para que empieces a vender más."</em></p>
+                  <p><em>CTA: "Cómo ser un buen vendedor y dominar tu nicho de mercado"</em></p>
+                  <p><em>CTA final: "Creá tu tienda gratis acá"</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Por qué funcionó</h4>
+                  <p><strong>El hook cultural:</strong> Arranca con una referencia a El Lobo de Wall Street que todo el mundo conoce. No dice "tips para vender" — te desafía: "¿podrías vender una lapicera?" Es personal, intrigante, imposible de ignorar.</p>
+                  <p><strong>Subject de 7 palabras:</strong> "¿Podrías vender una sola lapicera?" — es una pregunta que genera curiosidad. Cumple tu regla de 25-30 caracteres orientado a emoción.</p>
+                  <p><strong>Doble CTA:</strong> Primero envía al blog (valor educativo), después a crear tienda (conversión). El lead no siente que le están vendiendo — siente que le están enseñando.</p>
+                  <p><strong>Resultado:</strong> 37 trials, 6 payments. El mejor broadcast del Q1.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Broadcast 2 — Hot Sale "Preparate" (01/04) — OR 40,63% <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag mofu">MEJOR OR</span><span class="es-num">1 de abril 2025</span></div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> Preparate… ¡Que ya viene!</div>
+                  <div><strong>Preheader:</strong> Hot Sale es en mayo. ¿Ya tenés todo listo para vender?</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"Acaba de empezar abril, pero nosotros ya estamos pensando en mayo. Y en vos también. Es que el mes que viene será Hot Sale, una de las fechas más importantes para el e-commerce en nuestro país."</em></p>
+                  <p><em>Incluye datos de NubeCommerce: rubros que más crecieron (Mascotas, Electrónica, Deportes).</em></p>
+                  <p><em>CTA: "¡Mirá toda la información sobre el Hot Sale Argentina 2025!"</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Por qué funcionó</h4>
+                  <p><strong>Urgencia + anticipación:</strong> Se manda un MES antes del Hot Sale. El lead siente que tiene tiempo para prepararse pero que necesita actuar ya.</p>
+                  <p><strong>Subject misterioso:</strong> "Preparate… ¡Que ya viene!" — no dice qué viene. Genera curiosidad. El preheader resuelve: "Hot Sale es en mayo".</p>
+                  <p><strong>Datos concretos:</strong> No dice "el Hot Sale va a ser grande" — dice qué rubros crecieron, qué fechas son, qué necesitás. Información accionable, no promesas vacías.</p>
+                  <p><strong>OR 40,63%:</strong> Casi el doble del promedio (22%). La combinación de urgencia temporal + tema relevante + subject corto generó el mejor open rate del año.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Broadcast 3 — "Columna de Shein" (06/02/2026) — 22.127 envíos <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag tofu">BROADCAST 2026</span><span class="es-num">6 de febrero 2026</span></div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> Que Shein y Temu no te ganen</div>
+                  <div><strong>Preheader:</strong> El tamaño no lo es todo. También necesitás identidad.</div>
+                  <div><strong>Sender:</strong> Santi de Tiendanube (hola@tiendanube.com)</div>
+                  <div><strong>Workflow:</strong> [Growth AR] Broadcast - Que shein y temu no te ganen (N...)</div>
+                  <div><strong>Campaña:</strong> [AR] Broadcast</div>
+                </div>
+                <div class="es-body">
+                  <p><em>Enviado a 22.127, entregado a 21.943. Tasa de apertura 22,42% (excluyendo bots: 21,79%). Tasa de clics 0,49%. Clickthrough 2,17%. Aperturas únicas: 4.920. Equipo: Escritorio 3%, Móvil 3%, Otro 65%.</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Análisis del rendimiento</h4>
+                  <p><strong>Volumen:</strong> 22.127 envíos — este es el alcance de un broadcast. Un delivery llega a ~1.052. Un broadcast llega a 22.000. Esa es la diferencia de volumen.</p>
+                  <p><strong>OR 22,42%:</strong> Dentro del rango saludable (15-30%). No es un top performer como Hot Sale (40,63%), pero es sólido. El subject toca un dolor real de los emprendedores (la competencia de Shein/Temu).</p>
+                  <p><strong>CTR 0,49%:</strong> Por debajo del promedio (2,23%). El tema genera apertura pero no tanto clic. Posible mejora: un CTA más concreto y accionable.</p>
+                  <p><strong>Dato técnico:</strong> "Santi de Tiendanube" como sender — esto es parte del A/B test de sender humano vs marca que se está corriendo en 2026.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Broadcast 4 — "Blue Monday 25% OFF" (20/01) — Urgencia + descuento <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <div class="email-showcase">
+                <div class="es-header"><span class="es-tag bofu">CONVERSIÓN DIRECTA</span><span class="es-num">20 de enero 2025</span></div>
+                <div class="es-meta">
+                  <div><strong>Subject:</strong> Todo muy lindo pero… ¿Y ahora?</div>
+                  <div><strong>Preheader:</strong> Ahora te toca disfrutar de un descuento exclusivo.</div>
+                </div>
+                <div class="es-body">
+                  <p><em>"Es lunes. Tenemos sueño. Las fiestas se terminaron. Tuvimos que volver al trabajo. Poco a poco, las vacaciones se acaban. El calor es fuerte, pero tenemos que movernos igual. Cierra la tarjeta de crédito dentro de poco, y las cuotas de los regalos se acumulan. Es el día más triste del año."</em></p>
+                  <p><em>"¡25% off en cualquier plan pago!"</em></p>
+                  <p><em>CTA: "Creá tu Tiendanube con 25% off"</em></p>
+                </div>
+                <div class="es-analysis">
+                  <h4>Lo que muestra este broadcast</h4>
+                  <p><strong>Empatía primero:</strong> Los 4 primeros renglones son pura empatía. No vende nada — describe cómo se siente el lector. Esto genera conexión emocional antes de cualquier oferta.</p>
+                  <p><strong>Subject enigmático:</strong> "Todo muy lindo pero… ¿Y ahora?" — no dice nada del descuento. No dice "Blue Monday". No dice "25% off". Genera pura curiosidad.</p>
+                  <p><strong>Conversión directa:</strong> A diferencia de La Lapicera (que manda a blog primero), este va directo al descuento. Es un broadcast de BOFU puro — para leads que ya saben qué es Tiendanube y solo necesitan un empujón económico.</p>
+                  <p><strong>En 2026:</strong> Este tipo de broadcast podría ser incluso más efectivo si se segmenta: a los que ya visitaron precios les mandás el descuento directo; a los que nunca visitaron precios les mandás primero al blog y después al descuento.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Patrón que se repite en tus mejores broadcasts</div>
+          <p><strong>1. Subject corto y emocional</strong> (pregunta o misterio, nunca descriptivo).<br>
+          <strong>2. Primer párrafo que engancha</strong> (empatía o desafío, nunca "te traemos un contenido").<br>
+          <strong>3. Valor antes de venta</strong> (blog, guía, datos — el CTA a "Creá tu tienda" siempre va al final).<br>
+          <strong>4. Referencia cultural</strong> (Jordan Belfort, Tom Cruise, Quino, Queen — conectan con el mundo del lector).</p>
+        </div>
 
         <div class="accordion">
           <div class="accordion-item">
