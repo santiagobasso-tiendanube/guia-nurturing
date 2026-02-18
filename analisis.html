@@ -25,7 +25,7 @@
   </nav>
   <div class="header-right">
     <button class="glos-trigger" id="glos-btn">📖 Glosario</button>
-    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/24</span></div>
+    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/27</span></div>
   </div>
 </header>
 <div class="progress-strip"><div class="progress-strip-fill" style="width:0%"></div></div>
@@ -36,6 +36,7 @@
   <div class="sub-tabs-wrap">
     <div class="sub-tabs">
       <button class="sub-tab active" data-sub="ana-caso">Paso a Paso <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="ana-reporte">Reporte Anotado <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="ana-lecciones">Lecciones <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="ana-numeros">Los Números del Área <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="ana-quiz">Quiz <span class="check-icon"></span></button>
@@ -170,6 +171,456 @@
 
       <div class="mark-read-wrap">
         <button class="mark-read-btn" data-section="ana-caso" onclick="markAsRead('ana-caso')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Reporte Anotado ─── -->
+  <div class="sub-page" data-sub="ana-reporte">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Reporte de Deliverys — Anotado</h1>
+        <p class="subtitle">El reporte completo de febrero 2026, slide por slide, con anotaciones estratégicas. Fuentes: HubSpot (hasta 13/02), Tableau (hasta 11/02), Payments by SCD (hasta 11/02).</p>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Para qué sirve esta sección</div>
+          <p>En la pestaña "Paso a Paso" aprendiste el <strong>framework de análisis</strong>. Acá tenés el <strong>reporte real completo</strong> con toda la data. Usalo como referencia cuando necesites repasar un dato específico o cuando quieras practicar el framework con los números reales.</p>
+        </div>
+
+        <!-- ── Slide 1: Métricas por Descargable ── -->
+        <h2>01 — Métricas por Descargable</h2>
+        <p>Performance de cada delivery en HubSpot. Los deliverys SMB fueron creados el 27/01/2026.</p>
+
+        <table class="data-table">
+          <thead><tr><th>Descargable</th><th>Enviados</th><th>Open Rate</th><th>Clics</th><th>CTR</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Planilla de control de stock</td><td>391</td><td>68,7%</td><td>181</td><td>46,9%</td><td>Top volumen</td></tr>
+            <tr><td>Planilla para calcular costos</td><td>247</td><td>63,5%</td><td>114</td><td>47,3%</td><td>Buen balance</td></tr>
+            <tr><td>Plantilla de plan de negocios</td><td>143</td><td>69,5%</td><td>74</td><td>52,5%</td><td>Alto CTR</td></tr>
+            <tr><td>Calendario de contenidos RRSS</td><td>80</td><td>71,8%</td><td>41</td><td>52,6%</td><td>Mejor OR</td></tr>
+            <tr><td>Calculadora de rentabilidad</td><td>74</td><td>56,8%</td><td>30</td><td>40,5%</td><td>Bajo volumen</td></tr>
+            <tr style="background:rgba(242,84,91,.08)"><td>Checklist para crear tienda online</td><td>64</td><td>48,4%</td><td>6</td><td><strong>9,4%</strong></td><td>Revisar urgente</td></tr>
+            <tr><td>Generador de SKU</td><td>30</td><td>75,0%</td><td>17</td><td><strong>60,7%</strong></td><td>Mejor CTR</td></tr>
+            <tr><td>Agenda digital 2026</td><td>23</td><td>52,2%</td><td>9</td><td>39,1%</td><td>Menor volumen</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Anotación estratégica</div>
+          <p><strong>Generador de SKU (60,7% CTR):</strong> El mejor CTR pero solo 30 envíos. Si le das más volumen (promoviéndolo en broadcasts), podría ser un delivery estrella.</p>
+          <p><strong>Checklist tienda online (9,4% CTR):</strong> El recurso más directamente relacionado con el producto tiene el peor rendimiento. Esto no es casualidad — sugiere que el email o el CTA están desalineados con la expectativa del lead. Revisión urgente del contenido del email.</p>
+          <p><strong>Planilla de stock (391 envíos):</strong> Mayor volumen por lejos. Esto indica que "organizar mi negocio" es la motivación más común. Pero esa motivación no necesariamente conecta con "abrir una tienda online".</p>
+        </div>
+
+        <!-- ── Slide 2: Email de Bienvenidos ── -->
+        <h2>02 — Email de Bienvenidos (Acumulado Histórico)</h2>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">120.137</div><div class="stat-label">Enviados (acumulado)</div></div>
+          <div class="stat-card"><div class="stat-value teal">37,71%</div><div class="stat-label">Tasa de apertura</div></div>
+          <div class="stat-card"><div class="stat-value coral">2,14%</div><div class="stat-label">Tasa de clics</div></div>
+          <div class="stat-card"><div class="stat-value teal">3,46%</div><div class="stat-label">Cancelaciones</div></div>
+        </div>
+
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Cómo leen el email</div>
+              <div class="ba-result">88% Vistazo</div>
+              <p>La mayoría solo le echa un ojo rápido. Solo el 10,2% lo lee completo. El email no retiene.</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Distribución de clics</div>
+              <div class="ba-result">70,7% a /tienda-gratis/</div>
+              <p>El 70,7% de los clics van a <code>tiendanube.com/tienda-gratis</code> — una página genérica que no conecta con el recurso descargado. Salto de intención.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Anotación estratégica</div>
+          <p><strong>3,46% de cancelaciones</strong> es alto. El benchmark es &lt;0,5%. Esto sugiere que el email genera rechazo — el tono, la relevancia o la frecuencia no son los esperados por el lead.</p>
+          <p><strong>El salto de intención:</strong> El lead descargó una planilla de stock (intención = organizar mi negocio). El siguiente email le dice "creá tu tienda gratis" (intención = vender online). El salto es demasiado grande. Necesitás un paso intermedio que conecte "organizarte" con "vender".</p>
+        </div>
+
+        <!-- ── Slide 3: Flujo del Delivery ── -->
+        <h2>03 — Flujo del Delivery (Workflow de HubSpot)</h2>
+        <p>Desde la descarga del recurso hasta el ingreso al TOFU:</p>
+
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-entry"><strong>Lead descarga recurso</strong><br>Form: nombre, email, teléfono, "¿Cómo vendés?"</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-tofu"><strong>Email del Descargable</strong><br>CTR 40-60% — Excelente</div></div>
+          <div class="flow-arrow">▼ Delay 2 min</div>
+          <div class="flow-row"><div class="flow-box flow-mofu"><strong>¿Ya recibió email de bienvenida?</strong><br>Ramificación condicional</div></div>
+          <div class="flow-arrow">▼ NO</div>
+          <div class="flow-row"><div class="flow-box flow-mofu"><strong>¿Es Evolución?</strong><br>Filtro Mid Market</div></div>
+          <div class="flow-arrow">▼ NO (es SMB)</div>
+          <div class="flow-row"><div class="flow-box flow-remark"><strong>Email de Bienvenidos</strong><br>CTR 2,14% — Cuello de botella</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-bofu"><strong>TOFU (Full-Funnel)</strong><br>Mismo flujo para todos</div></div>
+        </div>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Anotación estratégica</div>
+          <p><strong>El problema visual:</strong> Se pasa de 40-60% CTR a 2,14%. Se pierde el 95% del engagement. Todos entran al mismo TOFU genérico sin importar qué recurso descargaron ni cómo venden.</p>
+          <p><strong>Oportunidad:</strong> El form ya pregunta "¿Cómo vendés?" — esa data existe pero no se usa. Si el workflow ramificara por respuesta del form, cada segmento podría recibir un email personalizado.</p>
+        </div>
+
+        <!-- ── Slide 4: Conversión a Payment ── -->
+        <h2>04 — Conversión a Payment (Leads puros)</h2>
+        <p>Análisis de leads puros (Is New Seller = No) que llegaron a pagar desde el flujo de delivery.</p>
+
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-entry" style="max-width:280px"><strong>142</strong><br>Contactos Delivery<br>(No Seller) en Tableau</div></div>
+          <div class="flow-arrow">-92% ▼</div>
+          <div class="flow-row"><div class="flow-box flow-bofu" style="max-width:280px"><strong>11</strong><br>Contactos que pagaron<br>~8% conversión</div></div>
+        </div>
+
+        <p><strong>Promedio hasta payment:</strong> 15 días. El 70% convierte con un solo clic.</p>
+
+        <h3>Detalle de los 11 Payments</h3>
+        <table class="data-table">
+          <thead><tr><th>Store</th><th>Delivery</th><th>Días hasta payment</th><th>Landing pages visitadas</th><th>Origen</th></tr></thead>
+          <tbody>
+            <tr><td>axaresespaciossaludables</td><td>Planificación</td><td>0 días</td><td>equipo-tienda-online</td><td>SMB</td></tr>
+            <tr><td>cardalesdisenoexterior2</td><td>NubeCommerce AR 2025</td><td>24 días</td><td>planificacion-estrategica</td><td>SMB</td></tr>
+            <tr><td>felicityurbanmayorista</td><td>NubeCommerce AR 2025</td><td>9 días</td><td>equipo-tienda-online</td><td>SMB</td></tr>
+            <tr><td>lola326</td><td>IA para e-commerce</td><td>1 día</td><td>nubecommerce, evolucion</td><td>Evolución/Ads</td></tr>
+            <tr><td>mihogar29</td><td>IA para e-commerce</td><td>0 días</td><td>nubecommerce</td><td>Evolución/Ads</td></tr>
+            <tr><td>mundify3</td><td>IA para e-commerce</td><td>9 días</td><td>planificacion-estrategica</td><td>Evolución/Ads</td></tr>
+            <tr><td>clickshoppingok</td><td>IA para e-commerce</td><td>6 días</td><td>nubecommerce, planificacion, evolucion</td><td>Evolución/Ads</td></tr>
+            <tr><td>cuentoempatikos</td><td>IA para e-commerce</td><td>33 días</td><td>nubecommerce, planificacion, evolucion</td><td>Evolución/Ads</td></tr>
+            <tr><td>tiendajympuracalidad</td><td>IA para e-commerce</td><td>25 días</td><td>nubecommerce</td><td>Evolución/Ads</td></tr>
+            <tr><td>rabs2</td><td>Planificación</td><td>47 días</td><td>moda-en-foco-2024</td><td>SMB</td></tr>
+            <tr><td>yerbasac2</td><td>Planificación</td><td>10 días</td><td>moda-en-foco-2024</td><td>SMB</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Anotación estratégica</div>
+          <p><strong>Patrón claro:</strong> 6 de los 11 payments vienen de "IA para e-commerce" (Evolución/Ads). Todos visitaron páginas de alto valor: <code>/evolucion/</code>, <code>/nubecommerce/</code>, <code>/planificacion-estrategica/</code>.</p>
+          <p><strong>Los SMB:</strong> Solo 4 de Planificación, con tiempos variables (0 a 47 días). Landing pages diferentes (equipo-tienda-online, moda-en-foco). Más dispersos, sin patrón claro.</p>
+          <p><strong>Conclusión:</strong> "IA para e-commerce" atrae leads con intención real de compra. Los deliverys SMB atraen leads más genéricos. El tema del recurso predice la conversión.</p>
+        </div>
+
+        <!-- ── Slide 5: SMB vs Evolución ── -->
+        <h2>05 — SMB vs Evolución</h2>
+        <p>Comparación entre los deliverys SMB (nuevos, orgánicos) y los de Evolución (IA para e-commerce, Ads).</p>
+
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Deliverys SMB (nuevos)</div>
+              <div class="ba-result">Engagement alto, conversión pendiente</div>
+              <p><strong>Origen:</strong> Orgánico / Email<br>
+              <strong>Volumen:</strong> ~1.052 envíos<br>
+              <strong>CTR:</strong> 40-60%<br>
+              <strong>Payments:</strong> Sin data suficiente<br>
+              <strong>Tema:</strong> Planillas, herramientas<br>
+              <strong>Intención del lead:</strong> "Quiero organizar mi negocio"</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Deliverys Evolución (IA)</div>
+              <div class="ba-result">6 payments, ~9% conversión</div>
+              <p><strong>Origen:</strong> Ads<br>
+              <strong>Volumen:</strong> Menor pero con pauta<br>
+              <strong>CTR:</strong> Similar<br>
+              <strong>Payments:</strong> 6 payments<br>
+              <strong>Tema:</strong> IA aplicada al ecommerce<br>
+              <strong>Intención del lead:</strong> "Quiero optimizar mi ecommerce"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Insight clave</div>
+          <p>Los deliverys de Evolución convierten porque el tema (IA para e-commerce) <strong>conecta directamente con la propuesta de valor de Tiendanube</strong>. Los deliverys SMB actuales son herramientas útiles pero más genéricas — un lead puede descargar una planilla de stock sin tener intención de abrir una tienda online. El tema del recurso determina la calidad del lead.</p>
+        </div>
+
+        <!-- ── Slide 6: Clics para Convertir ── -->
+        <h2>06 — Clics para Convertir</h2>
+        <p>Cruce de 74.508 contactos SMB (HubSpot) con 2.778 registros de Tableau. 139 matchearon, 15 pagaron.</p>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">139</div><div class="stat-label">Usuarios cruzados</div></div>
+          <div class="stat-card"><div class="stat-value teal">15</div><div class="stat-label">Con payment</div></div>
+          <div class="stat-card"><div class="stat-value coral">10,8%</div><div class="stat-label">Tasa de conversión</div></div>
+          <div class="stat-card"><div class="stat-value teal">124</div><div class="stat-label">Trial sin payment</div></div>
+        </div>
+
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Pagaron</div>
+              <div class="ba-result">1,5 clics promedio</div>
+              <p>Mediana: 1 | Máx: 4<br>
+              <strong>67% pagó con 1 solo clic.</strong></p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">No pagaron</div>
+              <div class="ba-result">1,5 clics promedio</div>
+              <p>Mediana: 1 | Máx: 8<br>
+              Misma cantidad de clics promedio, pero el máximo sube a 8. Más clics no = más conversión.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Anotación estratégica</div>
+          <p><strong>Hallazgo contraintuitivo:</strong> Los que pagaron y los que no pagaron hicieron la misma cantidad de clics promedio (1,5). La diferencia no está en la cantidad de interacciones sino en la <strong>calidad del primer contacto</strong>. Si el primer clic lleva a la página correcta en el momento correcto, la conversión es instantánea. Si no, más clics no lo arreglan.</p>
+          <p><strong>Implicancia:</strong> No diseñes flujos de 15 emails esperando que el volumen convierta. Diseñá flujos que den <strong>el clic correcto en el momento correcto</strong>.</p>
+        </div>
+
+        <!-- ── Slide 7: Landing Pages ── -->
+        <h2>07 — Landing Pages que Convierten</h2>
+        <p>Tasa de conversión por landing page (solo usuarios SMB cruzados con Tableau, mín. 2 usuarios).</p>
+
+        <h3>Páginas que SÍ convierten</h3>
+        <table class="data-table">
+          <thead><tr><th>Landing Page</th><th>Usuarios</th><th>Pagaron</th><th>Tasa</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>/evolucion/</td><td>3</td><td>2</td><td><strong>66,7%</strong></td></tr>
+            <tr style="background:rgba(0,189,165,.08)"><td>/recursos/nubecommerce/</td><td>5</td><td>3</td><td><strong>60,0%</strong></td></tr>
+            <tr style="background:rgba(0,189,165,.08)"><td>/recursos/planificacion-estrategica/</td><td>6</td><td>3</td><td><strong>50,0%</strong></td></tr>
+            <tr><td>/tienda-gratis/</td><td>13</td><td>2</td><td>15,4%</td></tr>
+            <tr><td>/recursos/planillas/kit-de-plantillas/</td><td>15</td><td>2</td><td>13,3%</td></tr>
+            <tr><td>/crear-mi-tienda-online/</td><td>30</td><td>3</td><td>10,0%</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Páginas que NO convierten</h3>
+        <table class="data-table">
+          <thead><tr><th>Landing Page</th><th>Usuarios</th><th>Pagaron</th><th>Tasa</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(242,84,91,.06)"><td>/recursos/ebooks/negocios-digitales-guia/</td><td>26</td><td>0</td><td><strong>0%</strong></td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>/recursos/planillas/planilla-de-control-de-stock/</td><td>8</td><td>0</td><td><strong>0%</strong></td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>/recursos/planillas/buyer-persona-plantilla/</td><td>8</td><td>0</td><td><strong>0%</strong></td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>/herramientas/analisis-foda-online/</td><td>7</td><td>0</td><td><strong>0%</strong></td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>/blog/tipos-de-comercio-electronico/</td><td>5</td><td>0</td><td><strong>0%</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>Las páginas de <strong>Evolución (66,7%), NubeCommerce (60%) y Planificación Estratégica (50%)</strong> son donde se toma la decisión de pagar. Las herramientas genéricas (FODA, buyer persona) y ebooks tienen <strong>0% de conversión</strong>. El CTA de los emails debería apuntar a las páginas que convierten, no a las genéricas.</p>
+          <p><strong>Pero cuidado con los volúmenes:</strong> /evolucion/ tiene solo 3 usuarios. 66,7% de 3 son 2 personas. Necesitás más volumen para confirmar la tendencia. /crear-mi-tienda-online/ tiene 30 usuarios y 10% de conversión — en absoluto generó 3 payments, igual que /planificacion-estrategica/ pero con menos tasa.</p>
+        </div>
+
+        <!-- ── Slide 8: Sales Channel ── -->
+        <h2>08 — Sales Channel y Conversión</h2>
+        <p>Tasa de conversión según cómo vende actualmente el lead (cruce HubSpot x Tableau).</p>
+
+        <table class="data-table">
+          <thead><tr><th>Sales Channel</th><th>Total</th><th>Pagaron</th><th>Tasa Conv.</th><th>Avg Clics</th><th>Evaluación</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>Tienda online</td><td>27</td><td>6</td><td><strong>22,2%</strong></td><td>1,1</td><td>Mejor conversión</td></tr>
+            <tr><td>Redes Sociales</td><td>58</td><td>7</td><td>12,1%</td><td>1,5</td><td>Mayor volumen pagos</td></tr>
+            <tr><td>Tienda física</td><td>33</td><td>3</td><td>9,1%</td><td>1,6</td><td>Buena tasa</td></tr>
+            <tr><td>Aún no vendo</td><td>45</td><td>4</td><td>8,9%</td><td>1,4</td><td>Volumen alto, tasa baja</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>Marketplace</td><td>20</td><td>1</td><td>5,0%</td><td>1,9</td><td>Menor conversión</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Anotación estratégica</div>
+          <p><strong>Tienda online (22,2%):</strong> Los que ya tienen tienda online convierten 2,5x más que los que aún no venden. Ya entienden el valor — solo necesitan la herramienta. Son los más parecidos al perfil "Determinado CNPJ" de Quality Leads.</p>
+          <p><strong>Redes Sociales (12,1%):</strong> Mayor volumen absoluto de pagos (7). Son el segmento con más potencial de escala. Ya venden pero de forma informal — la propuesta de "profesionalizar" les habla directo.</p>
+          <p><strong>Marketplace (5,0%):</strong> Ya tienen canal de venta. No ven valor en tener tienda propia. Son los más difíciles de convertir — tal vez no deberían ser prioridad en nurturing.</p>
+          <p><strong>Promedio de clics (1,1 vs 1,9):</strong> Los de tienda online necesitan MENOS clics para pagar. Confirma que a mayor intención previa, menor fricción necesaria.</p>
+        </div>
+
+        <!-- ── Slide 9: Flujos que Convierten ── -->
+        <h2>09 — Flujos que Convierten</h2>
+        <p>Tasa de conversión por flujo de email (cruce HubSpot x Tableau).</p>
+
+        <table class="data-table">
+          <thead><tr><th>Flujo</th><th>Total</th><th>Pagaron</th><th>Tasa Conv.</th><th>Evaluación</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>Delivery</td><td>6</td><td>4</td><td><strong>66,7%</strong></td><td>El mejor flujo</td></tr>
+            <tr><td>FullFunnel-bofu-online</td><td>2</td><td>1</td><td>50,0%</td><td>Bajo volumen</td></tr>
+            <tr><td>Flujo Remarketing SMB</td><td>3</td><td>1</td><td>33,3%</td><td>Bajo volumen</td></tr>
+            <tr><td>Flujo Bienvenidos</td><td>11</td><td>1</td><td>9,1%</td><td>Mucho potencial</td></tr>
+            <tr><td>Broadcast</td><td>75</td><td>6</td><td>8,0%</td><td>Mayor volumen</td></tr>
+            <tr><td>FullFunnel-tofu-nn</td><td>27</td><td>1</td><td>3,7%</td><td>Baja conversión</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>FullFunnel-tofu-online</td><td>8</td><td>0</td><td>0%</td><td>Sin payments</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 La estrategia que sale de estos números</div>
+          <p><strong>Delivery convierte al 66,7%</strong> — de cada 6 leads que entran, 4 pagan. Es el flujo más eficiente por lejos. Broadcast tiene el mayor volumen (75 usuarios) pero solo 8% de conversión.</p>
+          <p><strong>La combinación ganadora:</strong> Usar Broadcast (volumen) para alimentar Delivery (conversión). Cada broadcast debería incluir un CTA a descargar un recurso, metiendo más gente en el flujo de mayor conversión.</p>
+          <p><strong>Oportunidad perdida:</strong> 124 usuarios crearon trial pero no pagaron. No es un problema de activación — es de cierre. Un flujo de remarketing/recupero enfocado en estos trials podría ser el quick win más grande.</p>
+        </div>
+
+        <!-- ── Slide 10-11: Plan de Acción ── -->
+        <h2>10 — Plan de Acción del Reporte</h2>
+        <p>El quick win principal propuesto en el reporte, y las acciones complementarias priorizadas por impacto.</p>
+
+        <div class="email-showcase">
+          <div class="es-header"><span class="es-tag bofu">QUICK WIN PRINCIPAL</span><span class="es-num">Implementable esta semana</span></div>
+          <div class="es-body">
+            <h4 style="margin-top:0;">Reemplazar el email de Bienvenidos por 3 BOFU segmentados</h4>
+            <p>El email de Bienvenidos actual tiene 2,14% CTR y manda a todos a <code>/tienda-gratis/</code>. Reemplazarlo por clones de los emails BOFU del Full-Funnel, segmentados por canal de venta.</p>
+
+            <h4>Paso 1: Clonar 3 emails BOFU</h4>
+            <table class="data-table">
+              <thead><tr><th>Email a clonar</th><th>Para quién</th><th>Leads</th></tr></thead>
+              <tbody>
+                <tr><td>BOFU "vende online" (1/5)</td><td>Redes / Tienda online / Marketplace</td><td>105</td></tr>
+                <tr><td>BOFU "vende físico" (1/5)</td><td>Tienda física</td><td>33</td></tr>
+                <tr><td>BOFU "nn" (1/5)</td><td>Aún no vende / vacío</td><td>45</td></tr>
+              </tbody>
+            </table>
+
+            <h4>Paso 2: Cambiar el CTA de cada clon</h4>
+            <table class="data-table">
+              <thead><tr><th>Clon BOFU</th><th>CTA actual</th><th>CTA nuevo</th></tr></thead>
+              <tbody>
+                <tr><td>Vende online</td><td>/site/pagina-web-de-ventas-ar/</td><td>/emprendedores/redes-sociales</td></tr>
+                <tr><td>Vende físico</td><td>/site/pagina-web-de-ventas-ar/</td><td>Landing "Para tienda física"</td></tr>
+                <tr><td>No vende</td><td>/site/pagina-web-de-ventas-ar/</td><td>Landing "Para empezar a vender"</td></tr>
+              </tbody>
+            </table>
+
+            <h4>Paso 3: Ramificar en el workflow</h4>
+          </div>
+        </div>
+
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-tofu"><strong>Email del Descargable</strong><br>Como está hoy (no se toca)</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-mofu"><strong>If/then: Sales Channel</strong><br>Ramificación por "¿Cómo vendés?"</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <div class="flow-box flow-bofu" style="max-width:220px;font-size:13px;"><strong>Redes/Online/Mktplace</strong><br>BOFU "vende online"<br><small>CTA → /emprendedores/redes-sociales</small></div>
+            <div class="flow-box flow-bofu" style="max-width:220px;font-size:13px;"><strong>Tienda física</strong><br>BOFU "vende físico"<br><small>CTA → Landing tienda física</small></div>
+            <div class="flow-box flow-bofu" style="max-width:220px;font-size:13px;"><strong>No vende / vacío</strong><br>BOFU "nn"<br><small>CTA → Landing empezar a vender</small></div>
+          </div>
+        </div>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Por qué funciona este plan</div>
+          <p><strong>No se crea nada nuevo.</strong> Los emails BOFU ya existen y tienen conversión. Las landing pages segmentadas ya existen. Solo se clonan 3 emails, se cambian 3 links, y se agrega un if/then en el workflow.</p>
+          <p><strong>Métricas a comparar (después de 2 semanas):</strong></p>
+          <table class="data-table">
+            <thead><tr><th>Métrica</th><th>Bienvenidos actual</th><th>Target BOFU segmentados</th></tr></thead>
+            <tbody>
+              <tr><td>Open Rate</td><td>37,71%</td><td>Mantener o mejorar</td></tr>
+              <tr><td>CTR</td><td>2,14%</td><td>&gt;5%</td></tr>
+              <tr><td>Tasa de lectura</td><td>10,2%</td><td>&gt;20%</td></tr>
+              <tr><td>Cancelaciones</td><td>3,46%</td><td>&lt;2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Acciones Complementarias (priorizadas)</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. Revisar y optimizar el Checklist para crear tienda online <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>CTR de 9,4% vs 40-60% del resto. Algo está roto en ese email/recurso. Revisar el contenido del email, el CTA, y el recurso en sí. Testear un nuevo approach: en vez de "checklist", ofrecer una "guía paso a paso" con tono emprendedor.</p>
+              <p><strong>Impacto:</strong> Alto | <strong>Esfuerzo:</strong> Bajo</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. Usar broadcasts para alimentar el flujo de Delivery <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Broadcasts tienen volumen (75 usuarios) pero 8% conversión. Delivery tiene 66,7%. Promover descarga de recursos en cada broadcast para meter más gente al flujo que mejor convierte.</p>
+              <p><strong>Impacto:</strong> Alto | <strong>Esfuerzo:</strong> Medio</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. Dar más volumen al Generador de SKU <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Tiene 60,7% CTR (el mejor) pero solo 30 envíos. Promocionarlo en broadcasts y en la página de recursos.</p>
+              <p><strong>Impacto:</strong> Medio | <strong>Esfuerzo:</strong> Bajo</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">4. Crear delivery SMB de "IA para empezar a vender online" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Adaptar el exitoso delivery de Evolución (9% conversión, 6 payments) al mercado SMB con enfoque "empezar fácil".</p>
+              <p><strong>Impacto:</strong> Alto | <strong>Esfuerzo:</strong> Medio</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">5. Medir payments de deliverys SMB en primera semana de marzo <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Los deliverys SMB tienen 2-3 semanas de vida. Promedio hasta payment es 15 días. Esperar para tener baseline real.</p>
+              <p><strong>Impacto:</strong> Medio | <strong>Esfuerzo:</strong> Bajo</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">6. Si el CTR sube con BOFU segmentados, aplicar al Full-Funnel <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Cambiar los CTAs de los BOFU originales del Full-Funnel a las landing pages segmentadas. Escalar lo que funcione.</p>
+              <p><strong>Impacto:</strong> Alto | <strong>Esfuerzo:</strong> Medio</p>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- ── Slide 12: Preguntas para el Equipo ── -->
+        <h2>12 — Preguntas para el Equipo</h2>
+        <p>Preguntas abiertas propuestas en el reporte para discutir en reunión:</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. ¿Se puede obtener el breakdown de "¿Cómo vendés?" por delivery? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Permitiría saber qué perfil de lead atrae cada recurso. Si la planilla de stock atrae mayormente "Aún no vendo" y el generador de SKU atrae "Tienda online", sabemos a quién le estamos hablando.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. ¿Cuántos leads del delivery de IA (Evolución) podrían re-segmentarse como SMB? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Si algunos son SMB que entraron por Ads de Evolución, podríamos aprender de su comportamiento para diseñar deliverys SMB más efectivos.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. ¿Qué recursos de tiendanube.com/recursos tienen más tráfico orgánico sin delivery? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Podría haber oportunidades de crear deliverys para recursos que ya atraen tráfico. No reinventar — aprovechar lo que ya funciona.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">4. ¿Se puede medir trial vs. activación? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>La diferencia entre "crear tienda" y "activar trial" es clave. Si los 124 sin payment ni siquiera activaron, el problema es onboarding. Si activaron pero no pagaron, el problema es pricing/cierre.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">5. ¿Hay data de "¿Cómo vendés?" cruzada con payments? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Si los que responden "Tienda física" o "Redes Sociales" convierten más, eso confirma la hipótesis de segmentación y justifica los BOFU segmentados.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">6. ¿El delivery de Evolución se puede adaptar a SMB? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>¿Hay restricciones de marca/contenido? Si se puede, es el delivery con más potencial de conversión para el mercado SMB.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">7. ¿Cuál es el volumen de leads nuevos por semana? <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Para proyectar cuándo tendremos data significativa de payments y cuánto volumen podemos esperar si escalamos los deliverys.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>Un buen reporte no solo presenta datos — <strong>abre conversaciones</strong>. Las preguntas que no podés responder con la data disponible son tan valiosas como las que sí. Señalan qué data necesitás pedirle a Analytics, qué cruce falta, qué hipótesis hay que validar.</p>
+        </div>
+
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ana-reporte" onclick="markAsRead('ana-reporte')">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>Marcar como leída</span>
         </button>

@@ -13,7 +13,7 @@ const ALL_SECTIONS = [
   /* sistema.html — El Sistema */
   'sis-vision','sis-funnel','sis-puertas','sis-ql','sis-quiz',
   /* analisis.html — Caso de Estudio + Numeros */
-  'ana-caso','ana-lecciones','ana-numeros','ana-quiz',
+  'ana-caso','ana-reporte','ana-lecciones','ana-numeros','ana-quiz',
   /* herramientas.html — HubSpot */
   'hs-intro','hs-contactos','hs-workflows','hs-emails','hs-broadcasts','hs-quiz',
   /* estrategia.html — Estrategia 2026 */
