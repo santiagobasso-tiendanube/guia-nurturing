@@ -308,15 +308,15 @@
         <h2>Ejemplo Real: Workflow del Delivery</h2>
         <div class="flow-diagram">
           <div class="flow-row"><div class="flow-box flow-entry"><strong>Trigger:</strong> Completó form de descarga</div></div>
-          <div class="flow-arrow">▼</div>
+          <div class="flow-arrow"></div>
           <div class="flow-row"><div class="flow-box flow-tofu"><strong>Acción:</strong> Enviar email con recurso descargable</div></div>
-          <div class="flow-arrow">▼ Delay 2 min</div>
+          <div class="flow-arrow">Delay 2 min</div>
           <div class="flow-row"><div class="flow-box flow-mofu"><strong>If/then:</strong> ¿Ya recibió email de bienvenida?</div></div>
-          <div class="flow-arrow">▼ No</div>
+          <div class="flow-arrow">No</div>
           <div class="flow-row"><div class="flow-box flow-mofu"><strong>If/then:</strong> ¿Es Evolución?</div></div>
-          <div class="flow-arrow">▼ No (es SMB)</div>
+          <div class="flow-arrow">No (es SMB)</div>
           <div class="flow-row"><div class="flow-box flow-bofu"><strong>Acción:</strong> Enviar email de Bienvenidos</div></div>
-          <div class="flow-arrow">▼</div>
+          <div class="flow-arrow"></div>
           <div class="flow-row"><div class="flow-box flow-remark"><strong>Enroll:</strong> Full-Funnel TOFU</div></div>
         </div>
 
@@ -329,13 +329,13 @@
             <h4 style="margin-top:0;">Workflow: "[Growth AR] Broadcast - Que Shein y Temu no te ganen"</h4>
             <div class="flow-diagram" style="text-align:left;">
               <div class="flow-row"><div class="flow-box flow-entry" style="text-align:left;"><strong>1. Enrollment Trigger</strong><br>Condición: "Es miembro de la lista [AR] Segmento Broadcasts" <strong>O</strong> "Es miembro de la lista ARGENTINAS".<br><small>Esto define quién entra: solo contactos argentinos activos en la lista de broadcasts.</small></div></div>
-              <div class="flow-arrow">▼</div>
+              <div class="flow-arrow"></div>
               <div class="flow-row"><div class="flow-box flow-tofu" style="text-align:left;"><strong>2. Delay (retraso de tiempo)</strong><br>Esperar hasta la fecha/hora programada de envío.<br><small>Esto permite crear el workflow con anticipación y que el broadcast se dispare a la hora exacta.</small></div></div>
-              <div class="flow-arrow">▼</div>
+              <div class="flow-arrow"></div>
               <div class="flow-row"><div class="flow-box flow-mofu" style="text-align:left;"><strong>3. Notificación interna</strong><br>Se envía una notificación al equipo (Derby status check).<br><small>Permite monitorear que el broadcast se disparó correctamente.</small></div></div>
-              <div class="flow-arrow">▼</div>
+              <div class="flow-arrow"></div>
               <div class="flow-row"><div class="flow-box flow-bofu" style="text-align:left;"><strong>4. If/then Branch: Horario</strong><br>Bifurcación por hora del día (ej: "antes de las 10AM" vs "después de las 10AM").<br><small>Permite testear envío en diferentes horarios para optimizar open rate.</small></div></div>
-              <div class="flow-arrow">▼ Rama A / Rama B</div>
+              <div class="flow-arrow">Rama A / Rama B</div>
               <div class="flow-row"><div class="flow-box flow-remark" style="text-align:left;"><strong>5. Enviar email (2 versiones)</strong><br>Cada rama envía una versión del mismo email.<br><small>Esto es un A/B test de horario. Mismo contenido, diferente momento de envío. Después comparás cuál tuvo mejor OR.</small></div></div>
             </div>
             <p style="margin-top:16px;font-size:14px;"><strong>Lo que esto te muestra:</strong> Un broadcast no es "escribir un email y darle Send". Es un workflow con trigger de audiencia, delay programado, monitoreo, bifurcación por horario y posibilidad de A/B test. Todo automatizado.</p>
@@ -691,9 +691,9 @@
 
         <div class="flow-diagram">
           <div class="flow-row"><div class="flow-box flow-entry" style="text-align:left;"><strong>Contacto</strong> (el individuo)<br><small>Email, país, has_store, is_main_user</small></div></div>
-          <div class="flow-arrow">▼ tiene asociada</div>
+          <div class="flow-arrow">tiene asociada</div>
           <div class="flow-row"><div class="flow-box flow-tofu" style="text-align:left;"><strong>Compañía</strong> (la tienda)<br><small>Store ID, status, plan, sign_up_at, products, GMV</small></div></div>
-          <div class="flow-arrow">▼ puede tener</div>
+          <div class="flow-arrow">puede tener</div>
           <div class="flow-row" style="display:flex;gap:12px;justify-content:center;">
             <div class="flow-box flow-mofu" style="text-align:left;flex:1;"><strong>Partner</strong><br><small>Afiliado que generó el trial</small></div>
             <div class="flow-box flow-bofu" style="text-align:left;flex:1;"><strong>Apps</strong><br><small>Apps instaladas en la tienda</small></div>
@@ -737,11 +737,11 @@
         <h2>El Flujo Completo</h2>
         <div class="flow-diagram">
           <div class="flow-row"><div class="flow-box flow-entry"><strong>1. Preparar el archivo</strong><br><small>Excel/CSV con tabla simple de doble entrada. Columnas = propiedades. Incluir siempre la clave única (email o Store ID).</small></div></div>
-          <div class="flow-arrow">▼</div>
+          <div class="flow-arrow"></div>
           <div class="flow-row"><div class="flow-box flow-tofu"><strong>2. Importar en HubSpot</strong><br><small>Companies → Import → Advanced. Elegir crear, actualizar, o ambos. Mapear columnas con propiedades.</small></div></div>
-          <div class="flow-arrow">▼</div>
+          <div class="flow-arrow"></div>
           <div class="flow-row"><div class="flow-box flow-mofu"><strong>3. Crear segmento</strong><br><small>Filtrar por import membership + combinar con otros criterios (ej: status = trial).</small></div></div>
-          <div class="flow-arrow">▼</div>
+          <div class="flow-arrow"></div>
           <div class="flow-row"><div class="flow-box flow-bofu"><strong>4. Armar workflow</strong><br><small>Usar el segmento como trigger. Agregar branches, delays, emails.</small></div></div>
         </div>
 

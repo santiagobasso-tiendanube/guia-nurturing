@@ -343,10 +343,10 @@ tbody tr:last-child td{border-bottom:none}
 .flow-node.navy{border-color:var(--navy);background:rgba(33,51,67,.04)}
 .flow-node strong{font-size:14px;display:block;margin-bottom:2px}
 .flow-node span{font-size:12px;color:var(--text2)}
-.flow-arrow{
+.flow .flow-arrow{
   width:2px;height:24px;background:var(--border);position:relative;
 }
-.flow-arrow::after{
+.flow .flow-arrow::after{
   content:'';position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);
   border-left:5px solid transparent;border-right:5px solid transparent;
   border-top:6px solid var(--border);
@@ -827,8 +827,43 @@ tbody tr:last-child td{border-bottom:none}
 .flow-bofu{background:rgba(255,122,89,.05);border-color:var(--coral);color:var(--charcoal)}
 .flow-remark{background:rgba(242,84,91,.04);border-color:var(--danger);color:var(--charcoal)}
 .flow-arrow{
-  text-align:center;font-size:14px;color:var(--text3);
-  padding:6px 0;font-weight:600;
+  text-align:center;
+  font-size:12px;
+  color:var(--text3);
+  padding:0;
+  position:relative;
+  min-height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  line-height:1.4;
+}
+.flow-arrow::before{
+  content:'';
+  position:absolute;
+  left:50%;top:0;bottom:7px;
+  width:2px;
+  background:var(--border);
+  transform:translateX(-50%);
+}
+.flow-arrow::after{
+  content:'';
+  position:absolute;
+  left:50%;bottom:0;
+  transform:translateX(-50%);
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:7px solid var(--border);
+}
+.flow-arrow:not(:empty){
+  min-height:38px;
+  text-shadow:
+    -3px 0 var(--bg),3px 0 var(--bg),
+    0 -2px var(--bg),0 2px var(--bg),
+    -2px -1px var(--bg),2px -1px var(--bg),
+    -2px 1px var(--bg),2px 1px var(--bg);
+  z-index:1;
 }
 
 /* ============================================================
