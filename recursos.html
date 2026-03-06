@@ -19,6 +19,8 @@
     <a href="index.html" class="header-tab">Inicio</a>
     <a href="sistema.html" class="header-tab">El Sistema</a>
     <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="deliverys.html" class="header-tab">Deliverys</a>
+    <a href="full-funnel.html" class="header-tab">Full-Funnel</a>
     <a href="herramientas.html" class="header-tab">HubSpot</a>
     <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
     <a href="recursos.html" class="header-tab" data-page="recursos">Recursos</a>
@@ -103,6 +105,15 @@
         <p>Para dominar HubSpot a nivel avanzado y entender las herramientas futuras.</p>
         <div class="accordion">
           <div class="accordion-item">
+            <button class="accordion-trigger">HubSpot Academy — Marketing Hub (gratis) — Recomendado por Paz <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Curso oficial sobre Marketing Hub: creación de segmentos, reportes, emails y flujos automatizados con apoyo de la herramienta.</p>
+              <p><strong>Por qué te sirve:</strong> Es el complemento práctico del curso de Inbound. Mientras Inbound te dice el "por qué", Marketing Hub te muestra el "cómo" dentro de la plataforma.</p>
+              <p><strong>Contexto:</strong> Paz lo recomendó en la capacitación del 05/03 como recurso clave para aprender a operar HubSpot.</p>
+              <p><strong>Link:</strong> <a href="https://academy.hubspot.com/courses/marketing-hub" target="_blank">academy.hubspot.com/courses/marketing-hub</a></p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
             <button class="accordion-trigger">HubSpot Academy — Marketing Automation (gratis) <span class="arrow">▼</span></button>
             <div class="accordion-body"><div class="accordion-body-inner">
               <p><strong>Qué es:</strong> Curso específico de automatización. Workflows avanzados, lead scoring, nurturing automatizado.</p>
@@ -140,12 +151,68 @@
           </div>
         </div>
 
+        <h2>Recursos Internos (Capacitación con Paz, 05/03/2026)</h2>
+        <p>Estos son recursos internos de Tiendanube que Paz compartió en la capacitación.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Dashboards de Nurturing MX (inspiración) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué son:</strong> Dos dashboards de HubSpot del equipo de Nurturing México. Sirven como referencia para cómo armar reportes y visualizar métricas.</p>
+              <p><strong>Links:</strong></p>
+              <ul>
+                <li><a href="https://app.hubspot.com/reports-dashboard/8180620/view/19242626" target="_blank">Dashboard Nurturing MX #1</a></li>
+                <li><a href="https://app.hubspot.com/reports-dashboard/8180620/view/16591439" target="_blank">Dashboard Nurturing MX #2</a></li>
+              </ul>
+              <p><strong>Cómo usarlos:</strong> No copiar, sino inspirarse. Ver qué métricas trackean, cómo las visualizan, y qué podemos adaptar para AR.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">CSV de propiedades sincronizadas HubSpot ↔ Userflow <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Qué es:</strong> Documento interno con todas las propiedades que se sincronizan entre la base de datos de Tiendanube y HubSpot. Incluye nombre técnico, descripción, frecuencia de actualización, estado de sincronización y valores posibles.</p>
+              <p><strong>Para qué usarlo:</strong> Antes de armar un segmento o workflow, chequear si la propiedad que necesitás está sincronizada y activa. Si no lo está, hay que pedir a Paz que la active o usar la solución de propiedad temporal.</p>
+              <p><strong>Las ~20 propiedades más relevantes para Nurturing están detalladas en la sección <a href="herramientas.html">HubSpot → Propiedades</a>.</strong></p>
+            </div></div>
+          </div>
+        </div>
+
+        <h2>Preguntas para la Próxima Capacitación</h2>
+        <p>De la sesión con Paz (05/03) surgieron preguntas que quedan pendientes para profundizar.</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Para Paz Paoletta (HubSpot Ops) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <ol>
+                <li>"¿Cuál es la propiedad exacta para fecha de vencimiento del trial? Julián la usaba pero era temporal."</li>
+                <li>"¿Se puede segmentar por apps instaladas de una tienda? ¿Está sincronizado ese dato?"</li>
+                <li>"¿Se puede hacer un trigger por páginas vistas o acciones en la plataforma (configuró pago, cargó producto)?"</li>
+                <li>"¿Hay límite de workflows activos o de branches dentro de un workflow?"</li>
+                <li>"¿Hay forma de automatizar la importación de leads de eventos con n8n en vez de hacerla manual?"</li>
+              </ol>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">Para Julián Pelliza (Nurturing Strategy) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <ol>
+                <li>"¿Por qué preferís excluir en el trigger y no con suppression segments?"</li>
+                <li>"¿Por qué los deliveries están en workflows separados y no como branches del full-funnel?"</li>
+                <li>"Al final del TOFU, ¿mandás a todos a MOFU aunque no cumplan el goal?"</li>
+                <li>"¿Cómo hiciste el reporte cruzando Tableau + HubSpot para analizar deliveries?"</li>
+                <li>"¿Cuáles son exactamente los criterios de pasaje TOFU → MOFU?"</li>
+              </ol>
+            </div></div>
+          </div>
+        </div>
+
         <div class="callout-strategy">
           <div class="cs-title">🧠 Orden sugerido</div>
           <p><strong>Semana 1-2:</strong> HubSpot Email Marketing + Inbound Marketing (cimientos teóricos)<br>
-          <strong>Semana 3-4:</strong> Marketing Automation + Really Good Emails (operativo avanzado)<br>
+          <strong>Semana 3-4:</strong> Marketing Hub + Marketing Automation + Really Good Emails (operativo avanzado)<br>
           <strong>Mes 2:</strong> Hacking Growth + Lean Analytics (framework de experimentación)<br>
-          <strong>Continuo:</strong> Reforge Blog + Copyhackers (mantenerte actualizado)</p>
+          <strong>Continuo:</strong> Reforge Blog + Copyhackers (mantenerte actualizado)<br>
+          <strong>Práctica:</strong> Revisar dashboards MX + hacer importación de prueba con Paz</p>
         </div>
       </div>
 

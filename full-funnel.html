@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Full-Funnel Report — Nurturing Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-logo">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    Nurturing <span>Academy</span>
+  </div>
+  <nav class="header-tabs">
+    <a href="index.html" class="header-tab">Inicio</a>
+    <a href="sistema.html" class="header-tab">El Sistema</a>
+    <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="deliverys.html" class="header-tab">Deliverys</a>
+    <a href="full-funnel.html" class="header-tab active" data-page="full-funnel">Full-Funnel</a>
+    <a href="herramientas.html" class="header-tab">HubSpot</a>
+    <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
+    <a href="recursos.html" class="header-tab">Recursos</a>
+  </nav>
+  <div class="header-right">
+    <button class="glos-trigger" id="glos-btn">📖 Glosario</button>
+    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/38</span></div>
+  </div>
+</header>
+<div class="progress-strip"><div class="progress-strip-fill" style="width:0%"></div></div>
+
+<main class="app-main">
+<div class="page active" data-page="full-funnel">
+
+  <div class="sub-tabs-wrap">
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="ff-resumen">Resumen <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="ff-etapas">Por Etapa <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="ff-segmentos">Segmentos <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="ff-emails">Los 52 Emails <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="ff-desgaste">Desgaste <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="ff-broadcasts">Broadcasts <span class="check-icon"></span></button>
+    </div>
+  </div>
+
+  <!-- ─── Resumen ─── -->
+  <div class="sub-page active" data-sub="ff-resumen">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Full-Funnel Email Report — Resumen</h1>
+        <p class="subtitle">Performance completa de los 52 emails del sistema de nurturing. Fuente: <a href="https://full-funnel-report.vercel.app/" target="_blank" rel="noopener">full-funnel-report.vercel.app</a></p>
+
+        <p>Este reporte cruza métricas de email (HubSpot) con datos de conversión (Tableau) para mostrar cómo rinde cada etapa y segmento del full-funnel. <strong>52 emails, 3 segmentos, 4 etapas.</strong></p>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">52</div><div class="stat-label">Emails en el sistema</div></div>
+          <div class="stat-card"><div class="stat-value teal">~372K</div><div class="stat-label">Entregados totales</div></div>
+          <div class="stat-card"><div class="stat-value coral">33,7%</div><div class="stat-label">OR promedio TOFU</div></div>
+          <div class="stat-card"><div class="stat-value teal">3,68%</div><div class="stat-label">CTR promedio TOFU</div></div>
+          <div class="stat-card"><div class="stat-value coral">37,7%</div><div class="stat-label">OR promedio BOFU</div></div>
+          <div class="stat-card"><div class="stat-value danger">1,30%</div><div class="stat-label">CTR MOFU (pre-optim.)</div></div>
+        </div>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">⚡</div>
+          <div class="callout-body">
+            <strong>¿Qué vemos acá?</strong>
+            <p>El funnel tiene <strong>buen engagement en OR</strong> (30-38% en todas las etapas). El CTR de MOFU era 1,30% antes de la optimización — los leads abrían pero no hacían clic. Esto se <strong>identificó y se actuó</strong>: entre enero y febrero de 2026 se optimizaron los 21 emails de MOFU (asuntos, preheaders, cuerpos y CTAs). TOFU y BOFU tienen CTR razonable (3,17-3,68%).</p>
+          </div>
+        </div>
+
+        <h3>El embudo en números</h3>
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-tofu" style="max-width:340px"><strong>TOFU</strong> — 16 emails<br>~226.197 entregados<br>OR 33,7% · CTR 3,68%</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-mofu" style="max-width:300px"><strong>MOFU</strong> — 21 emails (optimizados)<br>~86.112 entregados<br>OR 34,3% · CTR 1,30% <span style="font-size:11px;opacity:.7">(pre-optim.)</span></div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-bofu" style="max-width:260px"><strong>BOFU</strong> — 15 emails<br>~7.957 entregados<br>OR 37,7% · CTR 3,17%</div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-remark" style="max-width:220px"><strong>Remarketing</strong> — 4 emails<br>~51.852 entregados<br>OR 22,3% · CTR 1,53%</div></div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Takeaways clave</div>
+          <p>• <strong>MOFU fue el cuello de botella:</strong> CTR 1,30% pre-optimización — ya se aplicaron mejoras en ene-feb 2026<br>
+          • <strong>BOFU tiene el mejor OR</strong> (37,7%) — los que llegan al final están interesados<br>
+          • <strong>El volumen cae 28x</strong> de TOFU (226K) a BOFU (8K) — la caída más fuerte está en MOFU<br>
+          • <strong>Remarketing pierde OR</strong> (22,3%) — los leads que no avanzaron están fríos<br>
+          • <strong>"Vende Físico" en BOFU</strong> tiene el mejor CTR del sistema: 5,58%</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ff-resumen" onclick="markAsRead('ff-resumen')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Por Etapa ─── -->
+  <div class="sub-page" data-sub="ff-etapas">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Métricas por Etapa del Funnel</h1>
+        <p class="subtitle">OR, CTR y volumen de entregados desglosados por TOFU, MOFU, BOFU y Remarketing.</p>
+
+        <h3>Open Rate (OR) por Etapa</h3>
+        <table class="data-table">
+          <thead><tr><th>Etapa</th><th>OR Promedio</th><th>Emails</th><th>Evaluación</th></tr></thead>
+          <tbody>
+            <tr><td>TOFU</td><td>33,72%</td><td>16</td><td>Bueno — consistente</td></tr>
+            <tr><td>MOFU</td><td>34,28%</td><td>21</td><td>Bueno — abren pero no clickean</td></tr>
+            <tr style="background:rgba(0,189,165,.08)"><td>BOFU</td><td><strong>37,69%</strong></td><td>15</td><td>El mejor OR del funnel</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>Remarketing</td><td>22,33%</td><td>4</td><td>Bajo — leads fríos</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Click-Through Rate (CTR) por Etapa</h3>
+        <table class="data-table">
+          <thead><tr><th>Etapa</th><th>CTR Promedio</th><th>Evaluación</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>TOFU</td><td><strong>3,68%</strong></td><td>El mejor CTR del funnel</td></tr>
+            <tr style="background:rgba(242,84,91,.08)"><td>MOFU</td><td><strong>1,30%</strong></td><td>Optimizado ene-feb 2026</td></tr>
+            <tr><td>BOFU</td><td>3,17%</td><td>Buen CTR, bajo volumen</td></tr>
+            <tr><td>Remarketing</td><td>1,53%</td><td>Bajo pero esperable</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Volumen de Entregados</h3>
+        <table class="data-table">
+          <thead><tr><th>Etapa</th><th>No venden</th><th>Vende Online</th><th>Vende Físico</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>TOFU</td><td>151.873</td><td>61.309</td><td>13.015</td><td><strong>~226.197</strong></td></tr>
+            <tr><td>MOFU</td><td>55.211</td><td>27.345</td><td>3.556</td><td><strong>~86.112</strong></td></tr>
+            <tr><td>BOFU</td><td>3.662</td><td>3.700</td><td>595</td><td><strong>~7.957</strong></td></tr>
+            <tr><td>Remarketing</td><td colspan="3" style="text-align:center">Sin segmentar</td><td><strong>~51.852</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ ¿Qué leer acá?</div>
+          <p><strong>La caída de volumen:</strong> De TOFU a MOFU se pierden ~140K leads (62%). De MOFU a BOFU se pierden ~78K (91%). Solo el <strong>3,5%</strong> de los leads que entran a TOFU llegan a BOFU. Esto es esperable en un full-funnel. El CTR de MOFU pre-optimización (1,30%) indicaba que muchos leads se estancaban; por eso <strong>se optimizaron los 21 emails</strong> entre enero y febrero de 2026.</p>
+          <p><strong>BOFU equilibra segmentos:</strong> A diferencia de TOFU y MOFU donde "No venden" domina en volumen, en BOFU el segmento "Vende Online" tiene casi el mismo volumen (3.700 vs 3.662). Los que ya venden online llegan más al final del funnel.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ff-etapas" onclick="markAsRead('ff-etapas')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Segmentos ─── -->
+  <div class="sub-page" data-sub="ff-segmentos">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Análisis por Segmento</h1>
+        <p class="subtitle">Comparativa de cómo rinden los 3 segmentos (No venden, Vende Online, Vende Físico) en cada etapa.</p>
+
+        <h3>Heatmap: OR por Etapa y Segmento</h3>
+        <table class="data-table">
+          <thead><tr><th>Etapa</th><th>No venden / No se sabe</th><th>Vende Online</th><th>Vende Físico</th></tr></thead>
+          <tbody>
+            <tr><td>TOFU</td><td>33,02%</td><td>33,86%</td><td>34,28%</td></tr>
+            <tr><td>MOFU</td><td>31,27%</td><td>35,16%</td><td>37,25%</td></tr>
+            <tr><td>BOFU</td><td>32,29%</td><td style="background:rgba(0,189,165,.15)"><strong>42,23%</strong></td><td>38,54%</td></tr>
+            <tr><td>Remarketing</td><td>22,33%</td><td colspan="2" style="text-align:center;color:var(--text3)">Sin segmentar</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>Insight de OR</strong>
+            <p><strong>"Vende Online" domina en BOFU</strong> con 42,23% de OR — 10 puntos más que "No venden" (32,29%). Los que ya tienen experiencia vendiendo online están más comprometidos al final del funnel. Esto confirma que <strong>segmentar por canal de venta es clave</strong>.</p>
+          </div>
+        </div>
+
+        <h3>Heatmap: CTR por Etapa y Segmento</h3>
+        <table class="data-table">
+          <thead><tr><th>Etapa</th><th>No venden / No se sabe</th><th>Vende Online</th><th>Vende Físico</th></tr></thead>
+          <tbody>
+            <tr><td>TOFU</td><td>2,93%</td><td style="background:rgba(0,189,165,.15)"><strong>4,58%</strong></td><td>3,54%</td></tr>
+            <tr><td>MOFU</td><td style="background:rgba(242,84,91,.08)">0,95%</td><td>1,59%</td><td>1,40%</td></tr>
+            <tr><td>BOFU</td><td>2,29%</td><td>1,65%</td><td style="background:rgba(0,189,165,.15)"><strong>5,58%</strong></td></tr>
+            <tr><td>Remarketing</td><td>1,53%</td><td colspan="2" style="text-align:center;color:var(--text3)">Sin segmentar</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 ¿Qué significa esto?</div>
+          <p><strong>Cada segmento brilla en una etapa diferente:</strong></p>
+          <ul>
+            <li><strong>"Vende Online"</strong> lidera en TOFU (4,58% CTR) — el contenido de exploración les interesa</li>
+            <li><strong>"Vende Físico"</strong> lidera en BOFU (5,58% CTR) — cuando llegan al final, actúan. Pero son <strong>solo 595 entregados</strong>, el volumen más bajo del funnel</li>
+            <li><strong>"No venden"</strong> tiene el peor rendimiento consistente — necesitan un approach diferente</li>
+          </ul>
+          <p>El MOFU de "No venden" tenía <strong>0,95% CTR</strong> sobre 55.211 entregados (pre-optimización). Se reescribieron los 7 emails del segmento con foco en beneficios concretos y personalización.</p>
+        </div>
+
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Mayor volumen</div>
+              <div class="ba-result">"No venden" — 210K+ entregados</div>
+              <p>Dominan el funnel en cantidad, pero tienen el CTR más bajo en todas las etapas. Son la mayoría pero los más difíciles de convertir.</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Mayor eficiencia</div>
+              <div class="ba-result">"Vende Físico" BOFU — 5,58% CTR</div>
+              <p>Volumen mínimo (595 entregados) pero máxima acción. Si pudiéramos meter más leads de tienda física al BOFU, el impacto sería enorme.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ff-segmentos" onclick="markAsRead('ff-segmentos')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Los 52 Emails ─── -->
+  <div class="sub-page" data-sub="ff-emails">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Detalle de los 52 Emails</h1>
+        <p class="subtitle">Performance individual de cada email del full-funnel, organizado por etapa. Fuente: HubSpot.</p>
+
+        <div class="accordion">
+
+          <!-- TOFU -->
+          <div class="accordion-item open">
+            <button class="accordion-trigger">TOFU — 12 emails (16 contando variantes) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:12px"><strong>OR promedio:</strong> 33,72% · <strong>CTR promedio:</strong> 3,68% · <strong>Entregados:</strong> ~226.197</p>
+              <h4>Segmento: No venden / No se sabe</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/4</td><td>Guía GRATIS: emprendé tu negocio online sin enloquecer 🤯</td><td>38.722</td><td>34,24%</td><td><strong>5,35%</strong></td></tr>
+                  <tr><td>2/4</td><td>Emprendé a tu manera: 5 modelos de e-commerce para elegir</td><td>38.918</td><td>31,15%</td><td>2,88%</td></tr>
+                  <tr><td>3/4</td><td>E-commerce en Argentina: ¡una oportunidad para vos! 🚀</td><td>37.436</td><td>31,63%</td><td>1,88%</td></tr>
+                  <tr><td>4/4</td><td>4 estrategias clave para generar visitas a tu tienda</td><td>35.797</td><td>35,04%</td><td>1,60%</td></tr>
+                </tbody>
+              </table>
+              <h4>Segmento: Vende Online</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/4</td><td>El secreto 🤫 para vender mientras dormís</td><td>16.073</td><td>33,26%</td><td><strong>6,42%</strong></td></tr>
+                  <tr><td>2/4</td><td>¿Tu negocio es realmente el que querés?</td><td>15.305</td><td>28,85%</td><td>4,33%</td></tr>
+                  <tr><td>3/4</td><td>El e-commerce argentino creció un 79%. [Descargá la guía]</td><td>15.281</td><td>32,45%</td><td>4,98%</td></tr>
+                  <tr><td>4/4</td><td>El secreto para vender más está en el tráfico</td><td>14.650</td><td>40,89%</td><td>2,60%</td></tr>
+                </tbody>
+              </table>
+              <h4>Segmento: Vende Físico</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/4</td><td>El secreto para vender a todo el país está acá</td><td>3.424</td><td>36,77%</td><td><strong>5,64%</strong></td></tr>
+                  <tr><td>2/4</td><td>Nuestro CEO te cuenta cómo llevar tu negocio físico al mundo digital</td><td>3.219</td><td>29,89%</td><td>3,64%</td></tr>
+                  <tr><td>3/4</td><td>El e-commerce argentino creció un 79%. [Descargá la guía]</td><td>3.247</td><td>32,25%</td><td>2,77%</td></tr>
+                  <tr><td>4/4</td><td>El secreto para vender más allá de tu local 🤫</td><td>3.125</td><td>38,21%</td><td>2,09%</td></tr>
+                </tbody>
+              </table>
+              <div class="callout-editorial" style="margin-top:12px">
+                <div class="ce-title">✏️ Patrón</div>
+                <p>En los 3 segmentos, el <strong>email 1/4 tiene el mejor CTR</strong> (5-6%). A partir del 2do email cae. El primer contacto es el más valioso — hay que maximizar la acción ahí.</p>
+              </div>
+            </div></div>
+          </div>
+
+          <!-- MOFU -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">MOFU — 21 emails (optimizados ene-feb 2026) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:12px"><strong>OR promedio:</strong> 34,28% · <strong>CTR promedio:</strong> 1,30% · <strong>Entregados:</strong> ~86.112</p>
+              <div class="callout-strategy" style="margin-bottom:16px">
+                <div class="cs-title">🔄 Optimizaciones aplicadas</div>
+                <p>Los 21 emails de MOFU fueron <strong>optimizados entre enero y febrero de 2026</strong>. Se cambiaron asuntos, preheaders, estructura del cuerpo y CTAs según el diagnóstico previo. Los asuntos mostrados a continuación son las <strong>versiones actualizadas</strong>. Las métricas aún reflejan el acumulado pre-optimización; se espera mejora progresiva.</p>
+              </div>
+              <h4>Segmento: No venden / No se sabe</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr><td>1/7</td><td>Hacé tus envíos más fáciles y rápidos: 4 pasos para lograrlo</td><td>10.094</td><td>42,54%</td><td>0,93%</td></tr>
+                  <tr><td>2/7</td><td>💸 Olvidate de perder ventas</td><td>9.753</td><td>19,06%</td><td>1,40%</td></tr>
+                  <tr style="background:rgba(0,189,165,.06)"><td>3/7</td><td>[Nombre], tenés Pago Nube esperando en tu tienda</td><td>9.220</td><td><strong>46,84%</strong></td><td>1,16%</td></tr>
+                  <tr><td>4/7</td><td>[Nombre], ¡diseñá tu tienda online sin ser experto!</td><td>3.054</td><td>34,68%</td><td>1,13%</td></tr>
+                  <tr><td>5/7</td><td>[Nombre/¡Ey!], ¿te viene bien un empleado extra (gratis)?</td><td>8.797</td><td>34,01%</td><td>0,47%</td></tr>
+                  <tr><td>6/7</td><td>Elegí cómo va a crecer tu negocio</td><td>7.176</td><td>14,40%</td><td>0,97%</td></tr>
+                  <tr><td>7/7</td><td>[Nombre/Eu], ¿querés que tu trabajo sea más fácil?</td><td>7.113</td><td>27,36%</td><td>0,57%</td></tr>
+                </tbody>
+              </table>
+              <h4>Segmento: Vende Online</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr><td>1/7</td><td>[Nombre], reducí tus costos de envío hasta un 20%</td><td>4.048</td><td>40,37%</td><td>1,04%</td></tr>
+                  <tr><td>2/7</td><td>Olvidate de perder ventas, [Nombre]</td><td>4.092</td><td>24,24%</td><td>2,02%</td></tr>
+                  <tr><td>3/7</td><td>El checkout acelerado de Pago Nube te ayuda a ganar</td><td>3.716</td><td>40,96%</td><td>1,84%</td></tr>
+                  <tr><td>4/7</td><td>✨ El diseño de tu tienda, sin complicaciones técnicas</td><td>4.395</td><td>37,84%</td><td>1,44%</td></tr>
+                  <tr><td>5/7</td><td>Trabajá menos, vendé más</td><td>3.894</td><td>36,44%</td><td>0,56%</td></tr>
+                  <tr style="background:rgba(0,189,165,.06)"><td>6/7</td><td>Tienda online lista en minutos: 7 días gratis para probar</td><td>3.383</td><td>37,01%</td><td><strong>3,27%</strong></td></tr>
+                  <tr><td>7/7</td><td>Llegó tu equipo ideal, [Nombre] 🚀</td><td>3.817</td><td>29,26%</td><td>0,98%</td></tr>
+                </tbody>
+              </table>
+              <h4>Segmento: Vende Físico</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr><td>1/7</td><td>[Nombre], vendé aun con tu tienda cerrada</td><td>743</td><td>37,28%</td><td>2,89%</td></tr>
+                  <tr><td>2/7</td><td>¿Y si no perdés más clientes, [Nombre]?</td><td>748</td><td>37,43%</td><td>1,07%</td></tr>
+                  <tr><td>3/7</td><td>[Nombre], vendé hasta un 8% más</td><td>734</td><td>43,05%</td><td>1,27%</td></tr>
+                  <tr><td>4/7</td><td>Tu tienda online, lista en minutos</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td>5/7</td><td>La ayuda extra que tu local necesita</td><td>718</td><td>34,54%</td><td>0,81%</td></tr>
+                  <tr><td>6/7</td><td>Tu marca, de un local al mundo. ¡Gratis! 🙌</td><td>613</td><td>33,93%</td><td>0,96%</td></tr>
+                  <tr><td>7/7</td><td>¿Caos en la gestión de tu local? Centralizá todo acá</td><td>—</td><td>—</td><td>—</td></tr>
+                </tbody>
+              </table>
+              <div class="callout callout-insight" style="margin-top:12px">
+                <div class="callout-icon">🔄</div>
+                <div class="callout-body">
+                  <strong>Diagnóstico previo y acciones tomadas</strong>
+                  <p>El análisis pre-optimización detectó que los asuntos eran demasiado product-focused ("Pago Nube", "checkout acelerado", "IA") sin conectar con un problema del lead. El CTR promedio era 1,30%: los leads abrían pero no accionaban.</p>
+                  <p style="margin-top:6px"><strong>¿Qué se hizo?</strong> Se reescribieron asuntos, preheaders, cuerpos y CTAs con foco en: apelar a beneficios concretos en vez de features, usar personalización con [Nombre], plantear problema → solución, y reforzar CTAs con valor claro. Ejemplo: <em>"[Nombre], ¡acelerá tu negocio con la IA!"</em> pasó a <em>"¿Te viene bien un empleado extra (gratis)?"</em>.</p>
+                  <p style="margin-top:6px">Las métricas mostradas son el <strong>acumulado previo</strong>. Se espera mejora progresiva a medida que los nuevos emails acumulen envíos.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <!-- BOFU -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">BOFU — 15 emails <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:12px"><strong>OR promedio:</strong> 37,69% · <strong>CTR promedio:</strong> 3,17% · <strong>Entregados:</strong> ~7.957</p>
+              <h4>Segmento: No venden / No se sabe</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/5</td><td>🚀 ¡Tu tienda online, sin costo por transacción!</td><td>853</td><td>41,38%</td><td><strong>3,68%</strong></td></tr>
+                  <tr style="background:rgba(242,84,91,.06)"><td>2/5</td><td>Tu tienda online, 100% gratis y sin complicaciones ✨</td><td>829</td><td>37,64%</td><td><strong>0,32%</strong></td></tr>
+                  <tr><td>3/5</td><td>De las ferias al éxito online: la historia de RUD Shoes</td><td>816</td><td>37,50%</td><td>2,61%</td></tr>
+                  <tr><td>4/5</td><td>Personalizá tu tienda online como un experto</td><td>770</td><td>19,09%</td><td>2,04%</td></tr>
+                  <tr><td>5/5</td><td>Tu tienda online gratis te espera 🚀 ¿Empezamos?</td><td>1.394</td><td>25,82%</td><td>2,78%</td></tr>
+                </tbody>
+              </table>
+              <h4>Segmento: Vende Online</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/5</td><td>Aumentá tus ventas integrando tus canales</td><td>771</td><td><strong>45,40%</strong></td><td>2,29%</td></tr>
+                  <tr><td>2/5</td><td>Centralizá tus ventas y evitá errores de stock 📦</td><td>764</td><td>37,83%</td><td>2,08%</td></tr>
+                  <tr><td>3/5</td><td>De juegos de cartas a 16 países con Tiendanube 🚀</td><td>748</td><td>42,38%</td><td>1,58%</td></tr>
+                  <tr><td>4/5</td><td>Creá tu tienda online y uní tu pasión a +170K marcas 🚀</td><td>718</td><td>41,92%</td><td>1,99%</td></tr>
+                  <tr style="background:rgba(242,84,91,.06)"><td>5/5</td><td>¡Tomá el control de tu negocio! 📈</td><td>699</td><td>43,63%</td><td><strong>0,33%</strong></td></tr>
+                </tbody>
+              </table>
+              <h4>Segmento: Vende Físico</h4>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entreg.</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/5</td><td>Gestioná stock, envíos y ventas en un solo lugar</td><td>121</td><td>38,84%</td><td><strong>8,51%</strong></td></tr>
+                  <tr><td>2/5</td><td>Vendé en tu local, online, y marketplaces con un clic 😉</td><td>123</td><td>37,40%</td><td>0,00%</td></tr>
+                  <tr style="background:rgba(0,189,165,.15)"><td>3/5</td><td>De las redes a facturar en 3 días lo de un mes 📈</td><td>121</td><td>38,84%</td><td><strong>10,64%</strong></td></tr>
+                  <tr><td>4/5</td><td>La gestión de tu stock nunca fue tan simple 🙌</td><td>119</td><td>35,29%</td><td>2,38%</td></tr>
+                  <tr><td>5/5</td><td>El catálogo de tu local, ahora 100% online y organizado</td><td>111</td><td>42,34%</td><td>6,38%</td></tr>
+                </tbody>
+              </table>
+              <div class="callout-strategy" style="margin-top:12px">
+                <div class="cs-title">🧠 Hallazgo destacado</div>
+                <p><strong>BOFU Vende Físico 3/5</strong> tiene el <strong>mejor CTR de todo el funnel: 10,64%</strong>. El asunto "De las redes a facturar en 3 días lo de un mes" es un caso de éxito con resultado concreto. Pero solo 121 entregados. Este email es candidato a ampliarse o adaptarse a otros segmentos.</p>
+                <p>Patrón opuesto: los emails 2/5 y 5/5 de "Vende Online" tienen excelente OR (37-43%) pero CTR de <strong>0,32-0,33%</strong>. Los abren y no clickean — problema de CTA o contenido.</p>
+              </div>
+            </div></div>
+          </div>
+
+          <!-- Remarketing -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Remarketing — 4 emails <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:12px"><strong>OR promedio:</strong> 22,33% · <strong>CTR promedio:</strong> 1,53% · <strong>Entregados:</strong> ~51.852</p>
+              <table class="data-table" style="font-size:13px">
+                <thead><tr><th>#</th><th>Asunto</th><th>Entregados</th><th>OR%</th><th>CTR%</th></tr></thead>
+                <tbody>
+                  <tr style="background:rgba(0,189,165,.06)"><td>1/4</td><td>Este -25% es el empujón que necesitabas 💙</td><td>17.289</td><td>20,46%</td><td><strong>2,60%</strong></td></tr>
+                  <tr><td>2/4</td><td>Tu tienda online puede verse así de profesional 😍</td><td>9.448</td><td><strong>35,18%</strong></td><td>1,44%</td></tr>
+                  <tr><td>3/4</td><td>⏰ Todavía estás a tiempo de recuperar esas ventas</td><td>9.007</td><td>16,94%</td><td>0,92%</td></tr>
+                  <tr style="background:rgba(242,84,91,.06)"><td>4/4</td><td>¿Y si tu tienda online empezara hoy? ✨</td><td>16.108</td><td>16,75%</td><td>1,15%</td></tr>
+                </tbody>
+              </table>
+              <div class="callout-editorial" style="margin-top:12px">
+                <div class="ce-title">✏️ Para pensar</div>
+                <p>El remarketing no está segmentado por canal de venta. El email 1/4 con descuento del 25% tiene el mejor CTR (2,60%) pero OR bajo (20,46%). El 2/4 tiene el mejor OR (35,18%) pero CTR bajo (1,44%). <strong>¿Qué pasaría si combináramos el mejor asunto con el mejor CTA?</strong></p>
+              </div>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ff-emails" onclick="markAsRead('ff-emails')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Desgaste ─── -->
+  <div class="sub-page" data-sub="ff-desgaste">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Desgaste del Funnel</h1>
+        <p class="subtitle">Cómo cambia el engagement a medida que avanzamos en la secuencia de emails.</p>
+
+        <p>El "desgaste" mide si los leads pierden interés a medida que reciben más emails de una misma etapa. Si el CTR cae mucho del email 1 al 4 (o al 7 en MOFU), hay un problema de fatiga o contenido.</p>
+
+        <h3>TOFU — CTR por posición en la secuencia</h3>
+        <table class="data-table">
+          <thead><tr><th>Email</th><th>No venden</th><th>Vende Online</th><th>Vende Físico</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.06)"><td>1/4</td><td><strong>5,35%</strong></td><td><strong>6,42%</strong></td><td><strong>5,64%</strong></td></tr>
+            <tr><td>2/4</td><td>2,88%</td><td>4,33%</td><td>3,64%</td></tr>
+            <tr><td>3/4</td><td>1,88%</td><td>4,98%</td><td>2,77%</td></tr>
+            <tr><td>4/4</td><td>1,60%</td><td>2,60%</td><td>2,09%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">📉</div>
+          <div class="callout-body">
+            <strong>Caída de CTR en TOFU</strong>
+            <p><strong>"No venden":</strong> de 5,35% a 1,60% — pierde el 70% del CTR en 4 emails.<br>
+            <strong>"Vende Online":</strong> de 6,42% a 2,60% — pierde el 59%.<br>
+            <strong>"Vende Físico":</strong> de 5,64% a 2,09% — pierde el 63%.<br>
+            El email 1 es <strong>3x más efectivo</strong> que el email 4 en promedio.</p>
+          </div>
+        </div>
+
+        <h3>TOFU — OR por posición (no cae tanto)</h3>
+        <table class="data-table">
+          <thead><tr><th>Email</th><th>No venden</th><th>Vende Online</th><th>Vende Físico</th></tr></thead>
+          <tbody>
+            <tr><td>1/4</td><td>34,24%</td><td>33,26%</td><td>36,77%</td></tr>
+            <tr><td>2/4</td><td>31,15%</td><td>28,85%</td><td>29,89%</td></tr>
+            <tr><td>3/4</td><td>31,63%</td><td>32,45%</td><td>32,25%</td></tr>
+            <tr><td>4/4</td><td>35,04%</td><td><strong>40,89%</strong></td><td>38,21%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Insight: OR vs CTR</div>
+          <p>El OR <strong>no cae</strong> — incluso sube en el email 4/4 (35-41%). Los leads <strong>siguen abriendo</strong>, pero <strong>dejan de clickear</strong>. Esto sugiere que:</p>
+          <ul>
+            <li>Los <strong>asuntos</strong> siguen siendo efectivos (buen OR)</li>
+            <li>El <strong>contenido</strong> deja de ser relevante o el CTA no es lo suficientemente atractivo</li>
+            <li>El lead ya vio la propuesta de valor en el email 1 y no encontró algo nuevo que le interese</li>
+          </ul>
+        </div>
+
+        <h3>MOFU — Picos y valles (secuencia de 7 emails)</h3>
+        <table class="data-table">
+          <thead><tr><th>Email</th><th>No venden OR</th><th>No venden CTR</th><th>Vende Online OR</th><th>Vende Online CTR</th></tr></thead>
+          <tbody>
+            <tr><td>1/7</td><td>42,54%</td><td>0,93%</td><td>40,37%</td><td>1,04%</td></tr>
+            <tr><td>2/7</td><td>19,06%</td><td>1,40%</td><td>24,24%</td><td>2,02%</td></tr>
+            <tr style="background:rgba(0,189,165,.06)"><td>3/7</td><td><strong>46,84%</strong></td><td>1,16%</td><td><strong>40,96%</strong></td><td>1,84%</td></tr>
+            <tr><td>4/7</td><td>34,68%</td><td>1,13%</td><td>37,84%</td><td>1,44%</td></tr>
+            <tr><td>5/7</td><td>34,01%</td><td>0,47%</td><td>36,44%</td><td>0,56%</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>6/7</td><td><strong>14,40%</strong></td><td>0,97%</td><td>37,01%</td><td><strong>3,27%</strong></td></tr>
+            <tr><td>7/7</td><td>27,36%</td><td>0,57%</td><td>29,26%</td><td>0,98%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Análisis MOFU (pre-optimización)</div>
+          <p>Estos datos reflejan el estado <strong>antes</strong> de las optimizaciones de ene-feb 2026. El patrón era irregular:</p>
+          <ul>
+            <li><strong>Email 3/7</strong> tenía el pico de OR (46,84%) — personalizado con [Nombre], tema Pago Nube</li>
+            <li><strong>Email 6/7 "No venden"</strong> caía a 14,40% OR — asunto demasiado comercial sin contexto. Se optimizó a "Elegí cómo va a crecer tu negocio"</li>
+            <li><strong>Email 6/7 "Vende Online"</strong> era la excepción positiva: 3,27% CTR — CTA con "7 días gratis"</li>
+            <li><strong>Emails 5-7</strong> mostraban fatiga severa. Se reescribieron asuntos, cuerpos y CTAs con enfoque problema → solución</li>
+          </ul>
+          <p><strong>Próximo paso:</strong> monitorear las métricas post-optimización para validar si los cambios mejoran el CTR en la segunda mitad de la secuencia.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ff-desgaste" onclick="markAsRead('ff-desgaste')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Broadcasts ─── -->
+  <div class="sub-page" data-sub="ff-broadcasts">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Broadcasts — Análisis Completo</h1>
+        <p class="subtitle">Asuntos, preheaders, contenido y conversiones de los 31 broadcasts enviados entre enero y mayo 2025.</p>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">46</div><div class="stat-label">Broadcasts (ene-ago)</div></div>
+          <div class="stat-card"><div class="stat-value teal">405</div><div class="stat-label">Trials (ene-may)</div></div>
+          <div class="stat-card"><div class="stat-value coral">32</div><div class="stat-label">Payments (ene-may)</div></div>
+          <div class="stat-card"><div class="stat-value teal">7,9%</div><div class="stat-label">Trial-to-Payment rate</div></div>
+        </div>
+        <p style="font-size:12px;color:var(--text3);margin-top:-12px;margin-bottom:16px">Datos de conversión (trials y payments) disponibles solo para ene-may 2025. Los broadcasts de jun-ago incluyen asuntos y contenido pero sin métricas de conversión.</p>
+
+        <h3>Top 5 — Los broadcasts que mejor convirtieron</h3>
+        <table class="data-table" style="font-size:13px">
+          <thead><tr><th>Fecha</th><th>Asunto</th><th>Tema</th><th>Trials</th><th>Pay</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>29/01</td><td>Quedate en casa… ¡Y vendé igual!</td><td>50 cosas para vender</td><td><strong>48</strong></td><td>2</td></tr>
+            <tr style="background:rgba(0,189,165,.08)"><td>23/01</td><td>¿Podrías vender una sola lapicera?</td><td>Tips buen vendedor</td><td>37</td><td><strong>6</strong></td></tr>
+            <tr style="background:rgba(0,189,165,.06)"><td>14/01</td><td>💫 Un regalo (y un aviso) de Reyes</td><td>Calendario 2025</td><td>35</td><td>1</td></tr>
+            <tr style="background:rgba(0,189,165,.06)"><td>03/02</td><td>La calculadora con la que todos ganan 🔥</td><td>Herramienta gratis</td><td>29</td><td>2</td></tr>
+            <tr style="background:rgba(0,189,165,.06)"><td>25/03</td><td>Los más buscados de la región</td><td>Productos en tendencia</td><td>23</td><td>3</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-insight" style="margin-top:12px">
+          <div class="callout-icon">🔍</div>
+          <div class="callout-body">
+            <strong>¿Qué tienen en común los top 5?</strong>
+            <p>Todos apelan a un <strong>problema o deseo concreto del lead</strong> (qué vender, cómo ser mejor vendedor, qué fechas aprovechar) y ofrecen un recurso útil. Ninguno menciona directamente "Tiendanube" en el asunto. El CTA a crear tienda está al final, después de aportar valor.</p>
+          </div>
+        </div>
+
+        <h3>Detalle por mes</h3>
+        <div class="accordion">
+
+          <!-- Enero -->
+          <div class="accordion-item open">
+            <button class="accordion-trigger">Enero 2025 — 5 broadcasts · 154 trials · 11 payments <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th><th>T</th><th>P</th></tr></thead>
+                <tbody>
+                  <tr><td>14/01</td><td>💫 Un regalo (y un aviso) de Reyes</td><td>Aunque no hayas dejado pasto junto al arbolito, hay obsequio igual: ¡un calendario!</td><td>General</td><td>35</td><td>1</td></tr>
+                  <tr><td>16/01</td><td>¡Tenés una venta! ¡Y otra! ¡Y otra!</td><td>Así será tu día a día si potenciás tus redes. En este video, dos emprendedoras te cuentan cómo hacerlo.</td><td>General</td><td>22</td><td>—</td></tr>
+                  <tr><td>20/01</td><td>Todo muy lindo pero… ¿Y ahora?</td><td>Ahora te toca disfrutar de un descuento exclusivo. 😉</td><td>General</td><td>12</td><td>2</td></tr>
+                  <tr style="background:rgba(0,189,165,.06)"><td>23/01</td><td>¿Podrías vender una sola lapicera?</td><td>Nosotros te contamos cómo hacerlo. Y así tus ventas no tendrán límites.</td><td>General</td><td><strong>37</strong></td><td><strong>6</strong></td></tr>
+                  <tr style="background:rgba(0,189,165,.06)"><td>29/01</td><td>Quedate en casa… ¡Y vendé igual!</td><td>Te traemos 50 ideas para ganar dinero sin moverte del sillón.</td><td>General</td><td><strong>48</strong></td><td>2</td></tr>
+                </tbody>
+              </table>
+              <p style="font-size:12px;color:var(--text3);margin-top:6px"><strong>Temas:</strong> Calendario comercial · Caso de éxito redes (L'ymage) · Blue Monday -25% off · Tips de ventas · Ideas para vender desde casa</p>
+            </div></div>
+          </div>
+
+          <!-- Febrero -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Febrero 2025 — 5 broadcasts · 59 trials · 3 payments <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th><th>T</th><th>P</th></tr></thead>
+                <tbody>
+                  <tr><td>03/02</td><td>La calculadora con la que todos ganan 🔥</td><td>Preparate para las fechas especiales con esta herramienta GRATIS.</td><td>General</td><td>29</td><td>2</td></tr>
+                  <tr><td>11/02</td><td>Amor a primera compra 😍</td><td>Llega San Valentín: ¡enamorá a tus clientes con estas estrategias!</td><td>General</td><td>—</td><td>—</td></tr>
+                  <tr><td>17/02</td><td>Nuevo estreno: Misión Posible.</td><td>Armar un calendario de redes sociales ¡se puede!</td><td>General</td><td>—</td><td>—</td></tr>
+                  <tr><td>20/02</td><td>Pasado, presente y futuro</td><td>Te traemos toda la información que necesitás: informe NubeCommerce.</td><td>General</td><td>13</td><td>1</td></tr>
+                  <tr><td>25/02</td><td>No te creas estas mentiras ❌</td><td>¡Todo el mundo puede emprender! Hoy te desbancaremos los mitos.</td><td>General</td><td>17</td><td>—</td></tr>
+                </tbody>
+              </table>
+              <p style="font-size:12px;color:var(--text3);margin-top:6px"><strong>Temas:</strong> Calculadora de descuentos · San Valentín · Calendario RRSS · NubeCommerce · Mitos de emprender</p>
+            </div></div>
+          </div>
+
+          <!-- Marzo -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Marzo 2025 — 6 broadcasts · 108 trials · 11 payments <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th><th>T</th><th>P</th></tr></thead>
+                <tbody>
+                  <tr><td>03/03</td><td>Vendé como Flash en Carnaval ⚡</td><td>Descansá este feriado ¡y facturá igual!</td><td>General</td><td>23</td><td>1</td></tr>
+                  <tr><td>12/03</td><td>No son todos iguales</td><td>¡Los clientes, eh! ¿Los conocés a todos?</td><td>General</td><td>19</td><td>2</td></tr>
+                  <tr><td>18/03</td><td>Verde, ¿que te quiero verde?</td><td>Hoy es verde por San Patricio, pero encontrá los colores de tu marca.</td><td>General</td><td>9</td><td>1</td></tr>
+                  <tr><td>25/03</td><td>Los más buscados de la región</td><td>Las tendencias de este 2025 que no veías venir.</td><td>General</td><td>23</td><td>3</td></tr>
+                  <tr><td>27/03</td><td>Te regalamos la gallina de los huevos de oro</td><td>Lo último en tecnología: es online y la integrás a tu tienda.</td><td>General</td><td>12</td><td>—</td></tr>
+                  <tr style="background:rgba(0,189,165,.06)"><td>31/03</td><td>¡¿Ya pasaron 3 meses del 2025?!</td><td>El tiempo pasa volando. Aprendé a gestionarlo. 😉</td><td>General</td><td>22</td><td><strong>4</strong></td></tr>
+                </tbody>
+              </table>
+              <p style="font-size:12px;color:var(--text3);margin-top:6px"><strong>Temas:</strong> Flash sale Carnaval · Tipos de clientes · Paleta de colores · Productos tendencia · Blog · Gestión del tiempo</p>
+            </div></div>
+          </div>
+
+          <!-- Abril -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Abril 2025 — 9 broadcasts · 90 trials · 9 payments (incluye Hot Sale) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:8px;font-size:12px">En abril se empezó a <strong>segmentar por base</strong> (Vendo / No vendo) además de los envíos generales. Los broadcasts de Hot Sale son para base "Vendo".</p>
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th><th>T</th><th>P</th></tr></thead>
+                <tbody>
+                  <tr><td>01/04</td><td>Preparate… ¡Que ya viene!</td><td>Hot Sale es en mayo. ¿Ya tenés todo listo para vender?</td><td>General</td><td>16</td><td>3</td></tr>
+                  <tr><td>04/04</td><td>Entrená sin moverte del sillón</td><td>¡Y vendé más! Tenemos tres sesiones listas para vos.</td><td>Vendo</td><td>—</td><td>—</td></tr>
+                  <tr><td>10/04</td><td>Los secretos que Instagram no te contó</td><td>Nosotros te los resumimos para que vendas más.</td><td>No vendo</td><td>20</td><td>1</td></tr>
+                  <tr><td>14/04</td><td>Encontramos tu pareja perfecta 💕</td><td>Envío gratis y transferencias para tus clientes en Hot Sale.</td><td>Vendo</td><td>4</td><td>1</td></tr>
+                  <tr><td>15/04</td><td>Tu Pascua más dulce ya llega</td><td>Con estos arreglos, tus fiestas y tus ventas serán deliciosas.</td><td>No vendo</td><td>10</td><td>—</td></tr>
+                  <tr><td>18/04</td><td>Estas acciones sí que suben 📈</td><td>¡Suben tus ventas! En Hot Sale y durante todo el año.</td><td>Vendo</td><td>9</td><td>2</td></tr>
+                  <tr><td>23/04</td><td>No vas a querer quedarte afuera de esto</td><td>Son beneficios exclusivos para clientes de Tiendanube.</td><td>Vendo</td><td>9</td><td>2</td></tr>
+                  <tr><td>23/04</td><td>¿Ya encontraste tu norte? 🧭</td><td>Te ayudamos a dilucidarlo para empezar a vender.</td><td>No vendo</td><td>13</td><td>—</td></tr>
+                  <tr><td>30/04</td><td>Tu selección de películas para este finde largo 🎬</td><td>23 de las mejores con una lección para tu emprendimiento.</td><td>No vendo</td><td>9</td><td>—</td></tr>
+                </tbody>
+              </table>
+              <div class="callout-editorial" style="margin-top:8px">
+                <div class="ce-title">✏️ Hot Sale "Vendo" vs "No vendo"</div>
+                <p>Los broadcasts a base "Vendo" (Entrenamiento Nube, Pago Nube, Guía HS, Promos) generaron <strong>pocos trials pero sí payments</strong> (5 payments de 22 trials). Los "No vendo" (Instagram, Pascua, plan de negocios, películas) generaron <strong>más trials pero 0 payments</strong>.</p>
+              </div>
+            </div></div>
+          </div>
+
+          <!-- Mayo -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Mayo 2025 — 6 broadcasts · 36 trials · 1 payment ⚠️ <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th><th>T</th><th>P</th></tr></thead>
+                <tbody>
+                  <tr><td>05/05</td><td>¿2x1? Para Hot Sale, mejor 4x1</td><td>Cubrí cuatro aspectos de tu negocio con un mismo kit.</td><td>General</td><td>16</td><td>1</td></tr>
+                  <tr><td>12/05</td><td>Con esto sí tendrás un Hot Sale feliz</td><td>Potenciá tu tienda online con estas herramientas.</td><td>Vendo</td><td>—</td><td>—</td></tr>
+                  <tr><td>19/05</td><td>Seguí vendiendo después de Hot Sale</td><td>¡Fidelizá a tus clientes para que vuelvan a comprar!</td><td>Vendo</td><td>1</td><td>—</td></tr>
+                  <tr><td>19/05</td><td>Cómo la reina del contenido se hizo viral 🎵</td><td>Julieta, de Poteito's, te cuenta las claves.</td><td>No vendo</td><td>2</td><td>—</td></tr>
+                  <tr><td>22/05</td><td>Los récords de Hot Sale te quieren decir algo</td><td>¡Con Tiendanube se vende muuuucho más!</td><td>General</td><td>6</td><td>—</td></tr>
+                  <tr><td>30/05</td><td>Solo necesitás 8 minutos.</td><td>¡Para atraer clientes! Estrategias de expertos.</td><td>General</td><td>11</td><td>—</td></tr>
+                </tbody>
+              </table>
+              <div class="callout callout-insight" style="margin-top:8px">
+                <div class="callout-icon">⚠️</div>
+                <div class="callout-body">
+                  <strong>Caída severa en mayo</strong>
+                  <p>De 154 trials en enero a 36 en mayo. Solo 1 payment. Posibles causas: <strong>fatiga de la base</strong> (mismo público recibiendo emails semanales desde enero), saturación por Hot Sale (muchos emails en poco tiempo), y el contenido post-Hot Sale ya no generaba urgencia.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+
+          <!-- Junio -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Junio 2025 — 5 broadcasts (sin data de conversión) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:8px;font-size:12px;color:var(--text3)">El CSV de análisis solo cubre hasta mayo. No hay datos de trials/payments para estos broadcasts.</p>
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th></tr></thead>
+                <tbody>
+                  <tr><td>04/06</td><td>Regalá esto en el Día del Padre</td><td>Te traemos ideas para inspirar tus regalos.</td><td>General</td></tr>
+                  <tr><td>09/06</td><td>¿Otra vez la pregunta de siempre?</td><td>Respondela sin mirar WhatsApp: ¡que Chat Nube lo haga por vos!</td><td>Vendo</td></tr>
+                  <tr><td>18/06</td><td>"La herramienta que cambió todo"</td><td>¿Una integración en tu tienda puede mejorar tu vida? Paloma Clothes dice que sí.</td><td>Vendo</td></tr>
+                  <tr><td>24/06</td><td>Consejos para que no te abandonen</td><td>¡El carrito! Mirá estas estrategias para recuperar clientes.</td><td>General</td></tr>
+                  <tr><td>30/06</td><td>Un premio para celebrar tus memes</td><td>¡Feliz día de las redes sociales! Llevate una guía para aprovecharlas.</td><td>General</td></tr>
+                </tbody>
+              </table>
+              <p style="font-size:12px;color:var(--text3);margin-top:6px"><strong>Temas:</strong> Día del Padre · Chat Nube (producto) · Caso de éxito Paloma Clothes · Carrito abandonado · Día de las Redes Sociales. Junio fue el primer mes con <strong>2 envíos dedicados a producto propio</strong> (Chat Nube).</p>
+            </div></div>
+          </div>
+
+          <!-- Julio -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Julio 2025 — 5 broadcasts (sin data de conversión) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p style="margin-bottom:8px;font-size:12px;color:var(--text3)">Desde julio se consolida la segmentación Vendo / No vendo con contenido diferenciado por broadcast.</p>
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th></tr></thead>
+                <tbody>
+                  <tr><td>07/07</td><td>Tu logo listo en 3 clics</td><td>¡Y GRATIS! Aprovechá nuestro creador de logos para darle color a tu marca.</td><td>General</td></tr>
+                  <tr><td>16/07</td><td>Tu tienda gratis llega en 5</td><td>¡En 5 pasos! Te traemos una guía que resuelve tus dudas.</td><td>No vendo</td></tr>
+                  <tr><td>16/07</td><td>Tus problemas tienen solución</td><td>¡Basta de perder ventas por no contestar mensajes! Llegó Chat Nube.</td><td>Vendo</td></tr>
+                  <tr><td>21/07</td><td>¿Tenés tu negocio bajo control?</td><td>Con este kit GRATIS de planillas para ahorrar tiempo y caos, lo vas a tener.</td><td>General</td></tr>
+                  <tr><td>25/07</td><td>¿IA? Mejor, Ingresos Asegurados</td><td>¡La inteligencia artificial te puede hacer ganar mucho dinero!</td><td>General</td></tr>
+                </tbody>
+              </table>
+            </div></div>
+          </div>
+
+          <!-- Agosto -->
+          <div class="accordion-item">
+            <button class="accordion-trigger">Agosto 2025 — 5 broadcasts (sin data de conversión) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <table class="data-table" style="font-size:12px">
+                <thead><tr><th>Fecha</th><th>Asunto</th><th>Preheader</th><th>Base</th></tr></thead>
+                <tbody>
+                  <tr><td>30/07</td><td>Esto te debería convencer</td><td>¡Para abrir tu propia tienda online! Mirá las razones: NubeCommerce Mid Term.</td><td>General</td></tr>
+                  <tr><td>05/08</td><td>Tu sueño hecho realidad 🪄</td><td>¿Un clon que trabaje con vos? Con Chat Nube, ¡deseo cumplido!</td><td>Vendo</td></tr>
+                  <tr><td>05/08</td><td>¡Boom! Tus ventas acaban de explotar 💣</td><td>Mirá qué productos se venden más y empezá a ganar dinero.</td><td>No vendo</td></tr>
+                  <tr><td>13/08</td><td>¿Vos sos la persona que buscamos?</td><td>Eso deberías preguntarte para vender online. ¡Contestalo con esta plantilla gratis!</td><td>General</td></tr>
+                  <tr><td>18/08</td><td>20 formas de ganar dinero online 🤑</td><td>¡La info que necesitás para empezar a generar ingresos hoy mismo!</td><td>General</td></tr>
+                  <tr><td>27/08</td><td>Te damos una brújula</td><td>Para navegar por el complejo mar del emprendimiento. ¡Gratis!</td><td>General</td></tr>
+                </tbody>
+              </table>
+              <p style="font-size:12px;color:var(--text3);margin-top:6px"><strong>Temas:</strong> NubeCommerce Mid Term · Chat Nube personalización · Productos más vendidos · Buyer persona · Ganar dinero online · Análisis FODA. Continúa la fórmula de <strong>herramienta gratis + contenido educativo</strong>.</p>
+            </div></div>
+          </div>
+
+        </div>
+
+        <h3 style="margin-top:24px">Análisis por tipo de contenido</h3>
+        <table class="data-table" style="font-size:13px">
+          <thead><tr><th>Tipo de contenido</th><th>Broadcasts</th><th>Trials</th><th>Payments</th><th>T→P rate</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.06)"><td><strong>Recursos/herramientas gratis</strong> (calendario, calculadora, kit, planillas)</td><td>5</td><td>148</td><td>10</td><td><strong>6,8%</strong></td></tr>
+            <tr><td><strong>Contenido educativo</strong> (tips, guías, productos tendencia)</td><td>10</td><td>136</td><td>12</td><td>8,8%</td></tr>
+            <tr><td><strong>Hot Sale / eventos</strong> (anticipación, herramientas, promos)</td><td>8</td><td>55</td><td>9</td><td>16,4%</td></tr>
+            <tr><td><strong>Casos de éxito / video</strong> (L'ymage, Poteito's)</td><td>3</td><td>24</td><td>—</td><td>0%</td></tr>
+            <tr><td><strong>Descuento directo</strong> (Blue Monday -25%)</td><td>1</td><td>12</td><td>2</td><td>16,7%</td></tr>
+            <tr><td><strong>Datos/informes</strong> (NubeCommerce, resultados HS)</td><td>3</td><td>19</td><td>1</td><td>5,3%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-strategy" style="margin-top:16px">
+          <div class="cs-title">🧠 Hallazgos clave</div>
+          <ul>
+            <li><strong>Los recursos descargables son la máquina de trials:</strong> calendarios, calculadoras y kits generan el mayor volumen (148 trials en 5 envíos = 29,6 trials/broadcast)</li>
+            <li><strong>Hot Sale tiene la mejor conversión a payment:</strong> 16,4% T→P rate. El contexto de fecha especial genera urgencia real</li>
+            <li><strong>Los casos de éxito en video no convierten:</strong> 0 payments. Inspiran pero no accionan. Funcionarían mejor como contenido complementario dentro de un email con CTA distinto</li>
+            <li><strong>El descuento directo funciona pero no escala:</strong> 16,7% T→P pero solo 12 trials. No se puede hacer todos los meses</li>
+            <li><strong>Enero fue 4x mejor que mayo:</strong> la frescura de la base al inicio del año es un factor enorme. Hay que cuidar la frecuencia</li>
+          </ul>
+        </div>
+
+        <div class="before-after" style="margin-top:16px">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Asuntos que generan apertura</div>
+              <div class="ba-result">Curiosidad + problema concreto</div>
+              <p>"¿Podrías vender una sola lapicera?" · "Todo muy lindo pero… ¿Y ahora?" · "Los más buscados de la región" — asuntos que plantean una pregunta o prometen descubrimiento.</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Asuntos que generan acción</div>
+              <div class="ba-result">Beneficio inmediato + herramienta</div>
+              <p>"Quedate en casa… ¡Y vendé igual!" · "La calculadora con la que todos ganan" · "¿2x1? Para Hot Sale, mejor 4x1" — ofrecen algo concreto que el lead puede usar hoy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-strategy" style="margin-top:16px">
+          <div class="cs-title">🧠 Para conectar con el Reporte de Deliverys</div>
+          <p>Los broadcasts generan <strong>volumen</strong> (405 trials) pero baja conversión a payment (7,9%). El flujo de Delivery convierte al <strong>66,7%</strong>. La estrategia debería ser: <strong>usar broadcasts para alimentar el flujo de delivery</strong> — incluir CTAs de descarga de recursos en cada broadcast para meter a los leads en el flujo que mejor convierte.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="ff-broadcasts" onclick="markAsRead('ff-broadcasts')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<!-- GLOSSARY -->
+<div class="glos-overlay" id="glos-overlay"></div>
+<div class="glos-panel" id="glos-panel">
+  <div class="glos-head"><h3>Glosario</h3><button class="glos-close">&times;</button></div>
+  <div class="glos-search"><input type="text" placeholder="Buscar término…"></div>
+  <div class="glos-list">
+    <div class="glos-item"><div class="glos-term">OR (Open Rate)</div><div class="glos-def">Porcentaje de emails abiertos sobre entregados. Mide la efectividad del asunto.</div></div>
+    <div class="glos-item"><div class="glos-term">CTR (Click-Through Rate)</div><div class="glos-def">Porcentaje de clics sobre abiertos. Mide la efectividad del contenido y CTA.</div></div>
+    <div class="glos-item"><div class="glos-term">Desgaste</div><div class="glos-def">Reducción progresiva de engagement a medida que el lead recibe más emails de una misma etapa.</div></div>
+    <div class="glos-item"><div class="glos-term">Broadcast</div><div class="glos-def">Email masivo enviado a toda la base (o segmento) en una fecha específica, fuera de los flujos automatizados.</div></div>
+    <div class="glos-item"><div class="glos-term">TOFU</div><div class="glos-def">Top of Funnel — etapa de descubrimiento. El lead conoce Tiendanube por primera vez.</div></div>
+    <div class="glos-item"><div class="glos-term">MOFU</div><div class="glos-def">Middle of Funnel — etapa de consideración. El lead evalúa si Tiendanube es para él.</div></div>
+    <div class="glos-item"><div class="glos-term">BOFU</div><div class="glos-def">Bottom of Funnel — etapa de decisión. El lead está listo para crear su tienda.</div></div>
+  </div>
+</div>
+
+<footer class="app-footer">Nurturing Academy — Growth AR — 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>

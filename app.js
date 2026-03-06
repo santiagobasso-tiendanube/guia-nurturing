@@ -14,8 +14,12 @@ const ALL_SECTIONS = [
   'sis-vision','sis-funnel','sis-puertas','sis-ql','sis-quiz',
   /* analisis.html — Caso de Estudio + Numeros */
   'ana-caso','ana-reporte','ana-lecciones','ana-numeros','ana-quiz',
+  /* deliverys.html — Reporte Deliverys */
+  'del-resumen','del-metricas','del-bienvenidos','del-conversion','del-segmentos','del-accion',
+  /* full-funnel.html — Full-Funnel Report */
+  'ff-resumen','ff-etapas','ff-segmentos','ff-emails','ff-desgaste','ff-broadcasts',
   /* herramientas.html — HubSpot */
-  'hs-intro','hs-contactos','hs-workflows','hs-emails','hs-broadcasts','hs-quiz',
+  'hs-intro','hs-contactos','hs-workflows','hs-emails','hs-broadcasts','hs-modelo','hs-importacion','hs-propiedades','hs-quiz',
   /* estrategia.html — Estrategia 2026 */
   'est-vision','est-pilares','est-proyectos','est-riesgos','est-framework','est-quiz',
   /* recursos.html — Recursos */

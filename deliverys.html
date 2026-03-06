@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Reporte Deliverys — Nurturing Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-logo">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    Nurturing <span>Academy</span>
+  </div>
+  <nav class="header-tabs">
+    <a href="index.html" class="header-tab">Inicio</a>
+    <a href="sistema.html" class="header-tab">El Sistema</a>
+    <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="deliverys.html" class="header-tab active" data-page="deliverys">Deliverys</a>
+    <a href="full-funnel.html" class="header-tab">Full-Funnel</a>
+    <a href="herramientas.html" class="header-tab">HubSpot</a>
+    <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
+    <a href="recursos.html" class="header-tab">Recursos</a>
+  </nav>
+  <div class="header-right">
+    <button class="glos-trigger" id="glos-btn">📖 Glosario</button>
+    <div class="progress-mini"><div class="progress-mini-bar"><div class="progress-mini-fill" style="width:0%"></div></div><span class="progress-text">0/32</span></div>
+  </div>
+</header>
+<div class="progress-strip"><div class="progress-strip-fill" style="width:0%"></div></div>
+
+<main class="app-main">
+<div class="page active" data-page="deliverys">
+
+  <div class="sub-tabs-wrap">
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-sub="del-resumen">Resumen Ejecutivo <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="del-metricas">Métricas por Descargable <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="del-bienvenidos">Email de Bienvenidos <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="del-conversion">Conversión a Payment <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="del-segmentos">Segmentación <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="del-accion">Plan de Acción <span class="check-icon"></span></button>
+    </div>
+  </div>
+
+  <!-- ─── Resumen Ejecutivo ─── -->
+  <div class="sub-page active" data-sub="del-resumen">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Reporte de Deliverys — Resumen Ejecutivo</h1>
+        <p class="subtitle">Panorama completo del sistema de deliverys. Fuente: <a href="https://reporte-deliverys.vercel.app/" target="_blank" rel="noopener">reporte-deliverys.vercel.app</a></p>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">1.052</div><div class="stat-label">Envíos totales</div></div>
+          <div class="stat-card"><div class="stat-value teal">~65%</div><div class="stat-label">Open Rate promedio</div></div>
+          <div class="stat-card"><div class="stat-value coral">~45%</div><div class="stat-label">CTR promedio</div></div>
+          <div class="stat-card"><div class="stat-value teal">10,8%</div><div class="stat-label">Conversión a payment (cruce)</div></div>
+          <div class="stat-card"><div class="stat-value coral">1,5</div><div class="stat-label">Clics promedio para pagar</div></div>
+          <div class="stat-card"><div class="stat-value teal">66,7%</div><div class="stat-label">Conv. Delivery (mejor flujo)</div></div>
+        </div>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">⚡</div>
+          <div class="callout-body">
+            <strong>¿Por qué importa?</strong>
+            <p>El engagement de los deliverys (65% OR, 45% CTR) es excepcional frente al benchmark de industria (15-30% OR, 1,5-3% CTR). El flujo de Delivery convierte al 66,7% — el mejor del sistema. Pero el volumen es bajo: 1.052 envíos frente a decenas de miles en broadcasts. <strong>La oportunidad: escalar lo que funciona.</strong></p>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Takeaways clave</div>
+          <p>• <strong>Engagement excepcional</strong> — CTR 45% vs 2-5% industria<br>
+          • <strong>Cuello de botella:</strong> Email de Bienvenidos (95% drop de CTR)<br>
+          • <strong>67%</strong> de quienes pagan lo hacen con 1 solo clic<br>
+          • <strong>Delivery</strong> es el flujo que más convierte (66,7%)<br>
+          • <strong>124 trials</strong> sin payment esperando cierre</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="del-resumen" onclick="markAsRead('del-resumen')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Métricas por Descargable ─── -->
+  <div class="sub-page" data-sub="del-metricas">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Métricas por Descargable</h1>
+        <p class="subtitle">Performance de cada delivery en HubSpot. Los deliverys SMB fueron creados el 27/01/2026.</p>
+
+        <table class="data-table">
+          <thead><tr><th>Descargable</th><th>Enviados</th><th>Open Rate</th><th>CTR</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Planilla control de stock</td><td>391</td><td>68,7%</td><td>46,9%</td><td>Top volumen</td></tr>
+            <tr><td>Planilla calcular costos</td><td>247</td><td>63,5%</td><td>47,3%</td><td>Buen balance</td></tr>
+            <tr><td>Plantilla plan de negocios</td><td>143</td><td>69,5%</td><td>52,5%</td><td>Alto CTR</td></tr>
+            <tr><td>Calendario RRSS</td><td>80</td><td>71,8%</td><td>52,6%</td><td>Mejor OR</td></tr>
+            <tr><td>Calculadora rentabilidad</td><td>74</td><td>56,8%</td><td>40,5%</td><td>Bajo volumen</td></tr>
+            <tr style="background:rgba(242,84,91,.08)"><td>Checklist tienda online</td><td>64</td><td>48,4%</td><td><strong>9,4%</strong></td><td>REVISAR URGENTE</td></tr>
+            <tr><td>Generador de SKU</td><td>30</td><td>75,0%</td><td><strong>60,7%</strong></td><td>Mejor CTR</td></tr>
+            <tr><td>Agenda digital 2026</td><td>23</td><td>52,2%</td><td>39,1%</td><td>Menor volumen</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ ¿Por qué importa?</div>
+          <p><strong>Checklist (9,4% CTR):</strong> El recurso más directamente relacionado con "crear tienda online" tiene el peor CTR. Algo está roto en ese email o CTA.</p>
+          <p><strong>Generador de SKU (60,7% CTR, solo 30 envíos):</strong> El mejor performer con menor volumen. Darle más alcance es quick win.</p>
+          <p><strong>Comparación:</strong> La mayoría ronda 40-60% CTR. El Checklist está 5x por debajo del promedio.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="del-metricas" onclick="markAsRead('del-metricas')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Email de Bienvenidos ─── -->
+  <div class="sub-page" data-sub="del-bienvenidos">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Email de Bienvenidos — El Cuello de Botella</h1>
+        <p class="subtitle">Análisis del punto donde se pierde el 95% del engagement. Acumulado histórico.</p>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">120.137</div><div class="stat-label">Enviados (acumulado)</div></div>
+          <div class="stat-card"><div class="stat-value teal">37,71%</div><div class="stat-label">Tasa de apertura</div></div>
+          <div class="stat-card"><div class="stat-value coral">2,14%</div><div class="stat-label">Tasa de clics</div></div>
+          <div class="stat-card"><div class="stat-value teal">3,46%</div><div class="stat-label">Cancelaciones</div></div>
+        </div>
+
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-tofu"><strong>Email del Descargable</strong><br>CTR 40-60%</div></div>
+          <div class="flow-arrow" style="color:var(--danger)">▼ Se pierde el 95%</div>
+          <div class="flow-row"><div class="flow-box flow-remark"><strong>Email de Bienvenidos</strong><br>CTR 2,14%</div></div>
+        </div>
+
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">Cómo leen el email</div>
+              <div class="ba-result">88% solo vistazo</div>
+              <p>10,2% lectura completa. El email no retiene — la mayoría solo le echa un ojo rápido.</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Distribución de clics</div>
+              <div class="ba-result">70,7% a /tienda-gratis/</div>
+              <p>El 70,7% de los clics van a una página genérica que no conecta con el recurso descargado. Salto de intención.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Insight clave</div>
+          <p><strong>95% drop</strong> de CTR entre el email del descargable (40-60%) y el Bienvenidos (2,14%). El lead está caliente después de descargar su recurso, pero el siguiente email lo enfría completamente porque:</p>
+          <ul>
+            <li>El email es <strong>genérico</strong> — no conecta con el recurso que descargó</li>
+            <li>El CTA manda a <code>/tienda-gratis/</code> — sin continuidad</li>
+            <li>El 70,7% de los clics van a una página que no conecta</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="del-bienvenidos" onclick="markAsRead('del-bienvenidos')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Conversión a Payment ─── -->
+  <div class="sub-page" data-sub="del-conversion">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Conversión a Payment</h1>
+        <p class="subtitle">Funnel de contactos delivery (No Seller) hasta payment. Cruce HubSpot × Tableau.</p>
+
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-entry" style="max-width:280px"><strong>142</strong><br>Contactos Delivery<br>(No Seller) en Tableau</div></div>
+          <div class="flow-arrow">~8% ▼</div>
+          <div class="flow-row"><div class="flow-box flow-bofu" style="max-width:280px"><strong>11</strong><br>Contactos que pagaron<br>~8% conversión</div></div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-value coral">15</div><div class="stat-label">Días promedio hasta payment</div></div>
+          <div class="stat-card"><div class="stat-value teal">67%</div><div class="stat-label">Paga con 1 solo clic</div></div>
+          <div class="stat-card"><div class="stat-value coral">124</div><div class="stat-label">Trials sin payment (oportunidad)</div></div>
+        </div>
+
+        <h3>Detalle de los 11 Payments</h3>
+        <table class="data-table">
+          <thead><tr><th>Store</th><th>Delivery</th><th>Días hasta payment</th><th>Landing pages visitadas</th><th>Origen</th></tr></thead>
+          <tbody>
+            <tr><td>axaresespaciossaludables</td><td>Planificación</td><td>0 días</td><td>equipo-tienda-online</td><td>SMB</td></tr>
+            <tr><td>cardalesdisenoexterior2</td><td>NubeCommerce AR 2025</td><td>24 días</td><td>planificacion-estrategica</td><td>SMB</td></tr>
+            <tr><td>felicityurbanmayorista</td><td>NubeCommerce AR 2025</td><td>9 días</td><td>equipo-tienda-online</td><td>SMB</td></tr>
+            <tr><td>lola326</td><td>IA para e-commerce</td><td>1 día</td><td>nubecommerce, evolucion</td><td>Evolución/Ads</td></tr>
+            <tr><td>mihogar29</td><td>IA para e-commerce</td><td>0 días</td><td>nubecommerce</td><td>Evolución/Ads</td></tr>
+            <tr><td>mundify3</td><td>IA para e-commerce</td><td>9 días</td><td>planificacion-estrategica</td><td>Evolución/Ads</td></tr>
+            <tr><td>clickshoppingok</td><td>IA para e-commerce</td><td>6 días</td><td>nubecommerce, planificacion, evolucion</td><td>Evolución/Ads</td></tr>
+            <tr><td>cuentoempatikos</td><td>IA para e-commerce</td><td>33 días</td><td>nubecommerce, planificacion, evolucion</td><td>Evolución/Ads</td></tr>
+            <tr><td>tiendajympuracalidad</td><td>IA para e-commerce</td><td>25 días</td><td>nubecommerce</td><td>Evolución/Ads</td></tr>
+            <tr><td>rabs2</td><td>Planificación</td><td>47 días</td><td>moda-en-foco-2024</td><td>SMB</td></tr>
+            <tr><td>yerbasac2</td><td>Planificación</td><td>10 días</td><td>moda-en-foco-2024</td><td>SMB</td></tr>
+          </tbody>
+        </table>
+
+        <h3>SMB vs Evolución</h3>
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <div class="ba-subject">SMB</div>
+              <div class="ba-result">~1.052 envíos, CTR 40-60%</div>
+              <p><strong>Tema:</strong> Planillas y herramientas<br>
+              <strong>Intención:</strong> "Organizar mi negocio"<br>
+              <strong>Payments:</strong> 4-5 (SMB + Planificación)</p>
+            </div>
+            <div class="ba-after">
+              <div class="ba-subject">Evolución</div>
+              <div class="ba-result">6 payments, ~9% conversión</div>
+              <p><strong>Tema:</strong> IA para e-commerce<br>
+              <strong>Origen:</strong> Ads<br>
+              <strong>Insight:</strong> El tema conecta con la propuesta de valor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Para pensar</div>
+          <p>Evolución convierte porque el tema "IA para e-commerce" <strong>conecta directamente con la propuesta de valor de Tiendanube</strong>. Los deliverys SMB son útiles pero genéricos — un lead puede descargar una planilla sin intención de abrir tienda. El tema del recurso predice la conversión.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="del-conversion" onclick="markAsRead('del-conversion')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Segmentación ─── -->
+  <div class="sub-page" data-sub="del-segmentos">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Segmentación — Por Canal de Ventas y Flujos</h1>
+        <p class="subtitle">Conversión por Sales Channel, landing pages y flujos. Cruce HubSpot × Tableau.</p>
+
+        <h3>Sales Channel — Conversión</h3>
+        <table class="data-table">
+          <thead><tr><th>Sales Channel</th><th>Total</th><th>Pagaron</th><th>Tasa Conv.</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>Tienda online</td><td>27</td><td>6</td><td><strong>22,2%</strong></td></tr>
+            <tr><td>Redes Sociales</td><td>58</td><td>7</td><td>12,1%</td></tr>
+            <tr><td>Tienda física</td><td>33</td><td>3</td><td>9,1%</td></tr>
+            <tr><td>Aún no vende</td><td>45</td><td>4</td><td>8,9%</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>Marketplace</td><td>20</td><td>1</td><td>5,0%</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Landing Pages que Convierten</h3>
+        <table class="data-table">
+          <thead><tr><th>Landing Page</th><th>Usuarios</th><th>Pagaron</th><th>Tasa</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>/evolución/</td><td>3</td><td>2</td><td><strong>66,7%</strong></td></tr>
+            <tr style="background:rgba(0,189,165,.08)"><td>/recursos/nubecommerce/</td><td>5</td><td>3</td><td><strong>60,0%</strong></td></tr>
+            <tr style="background:rgba(0,189,165,.08)"><td>/recursos/planificación-estratégica/</td><td>6</td><td>3</td><td><strong>50,0%</strong></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Páginas con 0% de conversión</h3>
+        <table class="data-table">
+          <thead><tr><th>Landing Page</th><th>Usuarios</th><th>Pagaron</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(242,84,91,.06)"><td>negocios-digitales-guía</td><td>26</td><td>0</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>planilla-de-control-de-stock</td><td>8</td><td>0</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>buyer-persona</td><td>8</td><td>0</td></tr>
+            <tr style="background:rgba(242,84,91,.06)"><td>foda</td><td>7</td><td>0</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Flujos que Convierten</h3>
+        <table class="data-table">
+          <thead><tr><th>Flujo</th><th>Total</th><th>Pagaron</th><th>Tasa</th></tr></thead>
+          <tbody>
+            <tr style="background:rgba(0,189,165,.08)"><td>Delivery</td><td>6</td><td>4</td><td><strong>66,7%</strong></td></tr>
+            <tr><td>Broadcast</td><td>75</td><td>6</td><td>8,0%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Insight de 1 clic</div>
+          <p><strong>Estrategia:</strong> Usar broadcasts (volumen) para alimentar delivery (conversión). Cada broadcast debería incluir CTA a descargar un recurso y meter más gente en el flujo que mejor convierte.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="del-segmentos" onclick="markAsRead('del-segmentos')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Plan de Acción ─── -->
+  <div class="sub-page" data-sub="del-accion">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Plan de Acción</h1>
+        <p class="subtitle">Quick win principal y acciones complementarias priorizadas por impacto.</p>
+
+        <div class="email-showcase">
+          <div class="es-header"><span class="es-tag bofu">QUICK WIN PRINCIPAL</span><span class="es-num">Implementable esta semana</span></div>
+          <div class="es-body">
+            <h4 style="margin-top:0;">Reemplazar Bienvenidos por 3 BOFU segmentados por canal de venta</h4>
+            <p>Clonar 3 emails BOFU del Full-Funnel y ramificar en el workflow según "¿Cómo vendés?". Los emails ya existen — solo cambiar 3 links y agregar if/then.</p>
+
+            <table class="data-table">
+              <thead><tr><th>Segmento</th><th>Clon BOFU</th><th>CTA nuevo</th></tr></thead>
+              <tbody>
+                <tr><td>Vende online / Redes / Marketplace</td><td>BOFU "vende online"</td><td>/emprendedores/redes-sociales</td></tr>
+                <tr><td>Vende físico</td><td>BOFU "vende físico"</td><td>Landing tienda física</td></tr>
+                <tr><td>No vende / vacío</td><td>BOFU "nn"</td><td>Landing empezar a vender</td></tr>
+              </tbody>
+            </table>
+
+            <p><strong>Target:</strong> Pasar de 2,14% CTR a &gt;5% en 2 semanas.</p>
+          </div>
+        </div>
+
+        <h3>Acciones complementarias</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. Corregir Checklist (9,4% CTR) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>El recurso más relevante para el producto tiene el peor CTR. Revisar email, CTA y recurso en sí.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. Usar broadcasts para alimentar delivery <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Broadcast tiene volumen (75 usuarios, 8% conv.). Delivery tiene 66,7%. Combinar volumen + conversión.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. Dar más volumen al Generador de SKU (60,7% CTR, solo 30 envíos) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Promocionar en broadcasts y página de recursos. El mejor CTR merece más alcance.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">4. Crear delivery SMB de "IA para e-commerce" <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Adaptar el exitoso delivery de Evolución (9% conversión) al mercado SMB.</p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger">5. Medir payments de deliverys SMB en marzo <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Los deliverys SMB tienen pocas semanas de vida. Promedio hasta payment: 15 días. Esperar baseline real.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Métricas a monitorear</div>
+          <table class="data-table">
+            <thead><tr><th>Métrica</th><th>Actual</th><th>Target</th></tr></thead>
+            <tbody>
+              <tr><td>CTR Bienvenidos</td><td>2,14%</td><td>&gt;5%</td></tr>
+              <tr><td>Payments desde Delivery SMB</td><td>Por medir</td><td>—</td></tr>
+              <tr><td>Envíos totales deliverys/mes</td><td>~1.052</td><td>2.000+</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="del-accion" onclick="markAsRead('del-accion')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<!-- GLOSSARY -->
+<div class="glos-overlay" id="glos-overlay"></div>
+<div class="glos-panel" id="glos-panel">
+  <div class="glos-head"><h3>Glosario</h3><button class="glos-close">&times;</button></div>
+  <div class="glos-search"><input type="text" placeholder="Buscar término…"></div>
+  <div class="glos-list">
+    <div class="glos-item"><div class="glos-term">Cuello de botella</div><div class="glos-def">Punto del flujo donde se pierde la mayor cantidad de leads.</div></div>
+    <div class="glos-item"><div class="glos-term">Cruce de datos</div><div class="glos-def">Combinar datos de diferentes fuentes (HubSpot + Tableau) para obtener insights más profundos.</div></div>
+    <div class="glos-item"><div class="glos-term">Quick Win</div><div class="glos-def">Acción de alto impacto y bajo esfuerzo que se puede implementar rápidamente.</div></div>
+  </div>
+</div>
+
+<footer class="app-footer">Nurturing Academy — Growth AR — 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>

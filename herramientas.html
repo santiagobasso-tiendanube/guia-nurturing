@@ -19,6 +19,8 @@
     <a href="index.html" class="header-tab">Inicio</a>
     <a href="sistema.html" class="header-tab">El Sistema</a>
     <a href="analisis.html" class="header-tab">Caso de Estudio</a>
+    <a href="deliverys.html" class="header-tab">Deliverys</a>
+    <a href="full-funnel.html" class="header-tab">Full-Funnel</a>
     <a href="herramientas.html" class="header-tab" data-page="herramientas">HubSpot</a>
     <a href="estrategia.html" class="header-tab">Estrategia 2026</a>
     <a href="recursos.html" class="header-tab">Recursos</a>
@@ -40,6 +42,9 @@
       <button class="sub-tab" data-sub="hs-workflows">Workflows <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="hs-emails">Emails <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="hs-broadcasts">Broadcasts <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-modelo">Modelo de Datos <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-importacion">Importación <span class="check-icon"></span></button>
+      <button class="sub-tab" data-sub="hs-propiedades">Propiedades <span class="check-icon"></span></button>
       <button class="sub-tab" data-sub="hs-quiz">Quiz <span class="check-icon"></span></button>
     </div>
   </div>
@@ -228,6 +233,76 @@
               <p><strong>¿Por qué importa?</strong> Sin goal, un lead que creó tienda en el Email 2 del TOFU seguiría recibiendo los emails 3 y 4 del TOFU, luego todos los de MOFU, etc. — un desperdicio. Con goal, sale del TOFU y entra directo al BOFU (o al onboarding).</p>
             </div></div>
           </div>
+        </div>
+
+        <h2>Delays Avanzados (de la capacitación con Paz)</h2>
+        <p>Los delays no son solo "esperar X días". Paz mostró 3 tipos que cambian cómo pensás un workflow:</p>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Delay por propiedad de fecha — El más poderoso <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>En vez de "esperar 3 días", le decís al workflow: <strong>"esperá hasta 7 días antes de que la propiedad free_license_end_date sea la fecha"</strong>.</p>
+              <p>Esto permite enviar emails sincronizados con el ciclo de vida real del trial. Ejemplo: "Tu trial vence en una semana" se envía exactamente 7 días antes del vencimiento de cada lead individual, no en una fecha fija.</p>
+              <p><strong>Opciones:</strong> on date (en la fecha), before date (X días antes), after date (X días después). Se puede elegir la hora exacta de envío.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Delay status branch — Evitar emails fuera de tiempo <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Cuando usás un delay por fecha, HubSpot crea automáticamente un branch según el <strong>estado del delay</strong>. Si la fecha ya pasó cuando el contacto llega al delay, va por el camino "after assigned day" — y ahí podés decidir no enviarle nada.</p>
+              <p><strong>Ejemplo:</strong> Tenés un recordatorio para un evento el viernes. Un contacto se registra el sábado. Sin delay status branch, recibiría el recordatorio diciendo "faltan 5 días" cuando el evento ya pasó. Con el branch, ese contacto no recibe nada.</p>
+              <p><strong>Paz destacó que esto es muy útil para eventos y recordatorios.</strong></p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Suppression segments — El filtro de seguridad <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Además de los goals, podés agregar un <strong>suppression segment</strong> al workflow. Los contactos que pertenecen a este segmento no reciben emails aunque cumplan todas las condiciones de enrollment.</p>
+              <p><strong>Cuándo usarlos:</strong> para excluir contactos saturados (ya recibieron muchos emails), rebotados, inválidos, o que están en otro proceso que tiene prioridad.</p>
+              <p>Es diferente del goal: el goal saca al contacto del workflow porque cumplió el objetivo. El suppression previene que le llegue comunicación sin sacarlo del flujo.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Re-enrollment — Cuándo dejar que vuelvan <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Si activás re-enrollment, un contacto que ya pasó por el workflow puede volver a enrolarse si cumple las condiciones de nuevo. Paz explicó que esto es como la diferencia entre listas activas y estáticas aplicada a workflows.</p>
+              <p><strong>Activarlo:</strong> broadcasts recurrentes, workflows que se disparan por comportamiento repetible (ej: cada vez que descarga un recurso).</p>
+              <p><strong>No activarlo:</strong> flujos de bienvenida, onboarding, secuencias que solo deben pasar una vez.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <h2>Cómo Arma Julián los Workflows (Análisis Real)</h2>
+        <p>En la capacitación, Paz abrió los workflows reales de Julián para mostrar cómo están armados. Esto es lo que se vio:</p>
+
+        <div class="email-showcase">
+          <div class="es-header"><span class="es-tag mofu">ANÁLISIS REAL</span><span class="es-num">Workflow TOFU Full-Funnel de Julián</span></div>
+          <div class="es-body" style="background:var(--surface2);padding:20px 24px;">
+            <h4 style="margin-top:0;">Lógica del workflow</h4>
+            <ul style="font-size:15px;line-height:1.9;">
+              <li><strong>Trigger:</strong> Contacto rellenó un formulario <strong>Y</strong> no es miembro de listas de MOFU, BOFU, descartados, afiliados, ni supresión</li>
+              <li><strong>Exclusión extensiva:</strong> En vez de usar suppression segments, Julián excluye directamente en el trigger de entrada. Así solo entran contactos que son puramente TOFU</li>
+              <li><strong>Branch por recurso:</strong> Si el contacto descargó un delivery específico (inventario, planillas, calendario), va por un branch dedicado a ese delivery</li>
+              <li><strong>Branch por Sales Channel:</strong> Dentro del flujo, personaliza el mensaje según cómo vende el lead (online, físico, no vende)</li>
+              <li><strong>Delay de 1 día:</strong> Después del registro, espera un día antes de enviar el primer email</li>
+              <li><strong>Goal:</strong> Convertirse en MOFU (el contacto sale del flujo TOFU y pasa al de MOFU)</li>
+              <li><strong>Métrica visible:</strong> En el diagrama se ve cuántos contactos "meet goal" en cada punto — 17 contactos cumplieron el goal después de cierto email</li>
+            </ul>
+            <p style="margin-top:12px;font-size:14px;"><strong>Dato operativo:</strong> En el diagrama del workflow se ve cuántos contactos están "en delay" esperando. Eso permite monitorear el flujo en tiempo real.</p>
+          </div>
+        </div>
+
+        <div class="callout-editorial">
+          <div class="ce-title">✏️ Preguntas para Julián</div>
+          <p>De la capacitación surgieron preguntas que todavía no tienen respuesta:<br>
+          <strong>1.</strong> ¿Por qué preferís excluir en el trigger y no con suppression segments?<br>
+          <strong>2.</strong> ¿Por qué los deliveries están en workflows separados y no como branches del full-funnel?<br>
+          <strong>3.</strong> Al final del TOFU, ¿mandás a todos a MOFU aunque no cumplan el goal?<br>
+          <strong>4.</strong> ¿Cuáles son exactamente los criterios de pasaje TOFU → MOFU?</p>
         </div>
 
         <h2>Ejemplo Real: Workflow del Delivery</h2>
@@ -559,6 +634,291 @@
     </div>
   </div>
 
+  <!-- ─── Modelo de Datos ─── -->
+  <div class="sub-page" data-sub="hs-modelo">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Modelo de Datos de HubSpot</h1>
+        <p class="subtitle">Lo que Paz enseñó en la capacitación del 05/03: cómo se estructura la información dentro del CRM.</p>
+
+        <p>HubSpot no es una tabla plana. Es un sistema de <strong>objetos conectados</strong>. Entender esta estructura es clave para importar datos, armar segmentos y pensar workflows.</p>
+
+        <h2>Los 3 Tipos de Objetos</h2>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">Objetos nativos del CRM <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Son los que vienen con HubSpot de fábrica:</p>
+              <ul>
+                <li><strong>Contactos:</strong> Cada persona individual. Un lead, un trial, un merchant — todos son contactos. La clave única es el <strong>email</strong>.</li>
+                <li><strong>Compañías:</strong> En nuestro caso, cada compañía es una <strong>tienda</strong>. La clave única es el <strong>Store ID</strong> (nuestra clave interna) o el <strong>Record ID</strong> (clave de HubSpot).</li>
+                <li><strong>Carritos, Tickets:</strong> Otros objetos nativos que no usamos directamente en Nurturing.</li>
+              </ul>
+              <p><strong>Regla fundamental:</strong> Un lead que todavía no creó tienda <strong>no tiene compañía asociada</strong>. El valor de status de compañía queda vacío. Esto es importante para filtros.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Objetos de ventas <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Deals</strong> (negocios): Los usa el equipo de Sales/Evolución para trackear pipeline. Nurturing no los usa directamente, pero sí podríamos conectarnos con Sales cuando un lead CNPJ llega a BOFU.</p>
+              <p>También hay: line items, subscriptions, quotes. Ninguno relevante para nuestro día a día.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">Objetos custom (creados por TN) <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Tiendanube creó sus propios objetos dentro de HubSpot:</p>
+              <ul>
+                <li><strong>Partners:</strong> Todos los afiliados, tech partners y agencias. Tiene su propio registro con propiedades específicas.</li>
+                <li><strong>Apps:</strong> Todas las apps creadas por tech partners (ej: Facturitas, Perfit). Cada app es un registro con sus datos.</li>
+              </ul>
+              <div class="callout callout-insight">
+                <div class="callout-icon">💡</div>
+                <div class="callout-body">
+                  <strong>Cuidado con la confusión</strong>
+                  <p>Importar el <strong>objeto</strong> Apps (crear registros de apps) es distinto de identificar qué app tiene asociada una compañía en una columna de Excel. Son cosas diferentes. Lo primero es crear datos; lo segundo es filtrar por una propiedad.</p>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <h2>Cómo se Conectan los Objetos</h2>
+        <p>Cada objeto puede estar asociado a otros. Cuando pasás el mouse sobre un objeto en HubSpot, ves las conexiones:</p>
+
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-entry" style="text-align:left;"><strong>Contacto</strong> (el individuo)<br><small>Email, país, has_store, is_main_user</small></div></div>
+          <div class="flow-arrow">▼ tiene asociada</div>
+          <div class="flow-row"><div class="flow-box flow-tofu" style="text-align:left;"><strong>Compañía</strong> (la tienda)<br><small>Store ID, status, plan, sign_up_at, products, GMV</small></div></div>
+          <div class="flow-arrow">▼ puede tener</div>
+          <div class="flow-row" style="display:flex;gap:12px;justify-content:center;">
+            <div class="flow-box flow-mofu" style="text-align:left;flex:1;"><strong>Partner</strong><br><small>Afiliado que generó el trial</small></div>
+            <div class="flow-box flow-bofu" style="text-align:left;flex:1;"><strong>Apps</strong><br><small>Apps instaladas en la tienda</small></div>
+          </div>
+        </div>
+
+        <p>Un contacto que es merchant puede tener una app conectada, una compañía (su tienda) y un partner asociado (porque creó la tienda a través del partner). Y el partner a su vez tiene sus propias conexiones.</p>
+
+        <h2>Claves Únicas — Lo que Matchea Todo</h2>
+        <table class="data-table">
+          <thead><tr><th>Objeto</th><th>Clave única interna (TN)</th><th>Clave única HubSpot</th><th>Cuándo se usa</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Contacto</strong></td><td>Email</td><td>Email</td><td>Importar leads, matchear contactos entre Excel y HubSpot</td></tr>
+            <tr><td><strong>Compañía</strong></td><td>Store ID</td><td>Record ID</td><td>Importar datos de tiendas, matchear con Tableau/Data Warehouse</td></tr>
+          </tbody>
+        </table>
+        <p>Si el contacto ya existe en HubSpot, se actualiza. Si es nuevo, se crea. El Store ID es la forma de conectar datos entre HubSpot, Tableau y cualquier archivo externo.</p>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>Cuando necesités un dato que no está en HubSpot (ej: "¿esta tienda tiene sección mayorista?"), la primera pregunta es: <strong>"¿Es una propiedad de contacto o de compañía?"</strong> Si es de compañía y no está sincronizada, hay dos caminos: el largo (pedir a data + engineering que la sincronicen) o el rápido (propiedad temporal + importación vía Excel). Paz te puede guiar en ambos.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-modelo" onclick="markAsRead('hs-modelo')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Importación y Segmentos ─── -->
+  <div class="sub-page" data-sub="hs-importacion">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Importación de Datos y Segmentos</h1>
+        <p class="subtitle">El camino completo: desde un Excel hasta un workflow disparando emails. Basado en la capacitación con Paz (05/03).</p>
+
+        <h2>El Flujo Completo</h2>
+        <div class="flow-diagram">
+          <div class="flow-row"><div class="flow-box flow-entry"><strong>1. Preparar el archivo</strong><br><small>Excel/CSV con tabla simple de doble entrada. Columnas = propiedades. Incluir siempre la clave única (email o Store ID).</small></div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-tofu"><strong>2. Importar en HubSpot</strong><br><small>Companies → Import → Advanced. Elegir crear, actualizar, o ambos. Mapear columnas con propiedades.</small></div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-mofu"><strong>3. Crear segmento</strong><br><small>Filtrar por import membership + combinar con otros criterios (ej: status = trial).</small></div></div>
+          <div class="flow-arrow">▼</div>
+          <div class="flow-row"><div class="flow-box flow-bofu"><strong>4. Armar workflow</strong><br><small>Usar el segmento como trigger. Agregar branches, delays, emails.</small></div></div>
+        </div>
+
+        <h2>Quick Import vs Advanced Import</h2>
+        <div class="before-after">
+          <div class="ba-cols">
+            <div class="ba-before">
+              <h5>Quick Import</h5>
+              <p>Solo para <strong>contactos</strong>. Rápido y simple. Ideal para importar leads de eventos donde solo tenés nombre + email.</p>
+              <p><strong>Clave de match:</strong> Email (siempre).</p>
+            </div>
+            <div class="ba-after">
+              <h5>Advanced Import</h5>
+              <p>Para <strong>compañías, deals, custom objects</strong>. Más opciones: crear, actualizar, mapear columnas, excluir datos.</p>
+              <p><strong>Clave de match:</strong> Store ID o Record ID para compañías.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Paso a Paso de la Importación</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger">1. Preparar el archivo <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p><strong>Formato obligatorio:</strong> tabla simple de doble entrada (filas = registros, columnas = propiedades). No tablas dinámicas, no pivots, no hojas con múltiples niveles.</p>
+              <p><strong>Incluir siempre:</strong> la columna de clave única (email para contactos, Store ID para compañías).</p>
+              <p><strong>Tip:</strong> Si bajaste datos de Tableau y el archivo tiene estructura compleja (fechas como columnas, agrupaciones), limpialo antes. HubSpot necesita una tabla plana.</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">2. Mapear columnas <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>HubSpot escanea tu archivo y trata de matchear las columnas con propiedades existentes. Si una columna se llama igual que una propiedad (ej: "store_id"), la detecta automáticamente.</p>
+              <p><strong>Si no la detecta:</strong> buscá la propiedad manualmente en el dropdown. Si no existe, podés crear una propiedad temporal (ver abajo).</p>
+              <p><strong>Si no querés importar una columna:</strong> seleccioná "Don't import" y listo, la skipea sin tener que volver a limpiar el archivo.</p>
+              <p><strong>Al final:</strong> HubSpot te pregunta con qué propiedad querés matchear los registros existentes. Elegí Store ID (para compañías) o Email (para contactos).</p>
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">3. Crear segmento post-importación <span class="arrow">▼</span></button>
+            <div class="accordion-body"><div class="accordion-body-inner">
+              <p>Después de importar, podés crear un segmento (lista) con los contactos/compañías importados:</p>
+              <ul>
+                <li>Ir a la importación → "Add imported contacts to a list"</li>
+                <li>O crear una lista nueva desde CRM → Segments → filtrar por <code>import membership</code></li>
+              </ul>
+              <p><strong>Lo más potente:</strong> combinar el filtro de importación con otros criterios. Ejemplo: "Contactos de esta importación <strong>Y</strong> cuya compañía asociada tenga status = trial". Así cruzás datos de tu Excel con comportamiento real en HubSpot.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <h2>Propiedades Temporales — El Atajo</h2>
+        <div class="callout callout-insight">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>Cuándo usarlas</strong>
+            <p>Cuando necesitás un dato que <strong>no está sincronizado</strong> con HubSpot y el proceso formal (equipo de data → engineering → sincronización) es largo. Paz crea la propiedad temporal, vos importás los valores vía Excel, la usás para tu acción puntual, y después Paz la borra. Es una solución "one-shot".</p>
+          </div>
+        </div>
+        <p><strong>Ejemplo real de la capacitación:</strong> Si querés detectar tiendas que tienen sección mayorista pero esa propiedad no existe en HubSpot, Paz te crea una propiedad temporal "es_mayorista" (true/false), vos importás un Excel con Store IDs + el valor, armás el segmento, mandás la campaña, y después Paz borra la propiedad para no desordenar el CRM.</p>
+
+        <h2>Filtros Cruzados: Contacto + Compañía</h2>
+        <p>Esta es una de las funcionalidades más poderosas que mostró Paz. Podés crear una lista de <strong>contactos</strong> filtrando por propiedades de su <strong>compañía asociada</strong>:</p>
+
+        <div class="email-showcase">
+          <div class="es-header"><span class="es-tag tofu">EJEMPLO REAL</span><span class="es-num">Filtro cruzado en acción</span></div>
+          <div class="es-body" style="background:var(--surface2);padding:20px 24px;">
+            <h4 style="margin-top:0;">Caso: "Traeme los leads que aún no tienen tienda"</h4>
+            <ol style="font-size:15px;line-height:1.8;">
+              <li>Crear lista → Objeto: <strong>Contacto</strong></li>
+              <li>Agregar filtro: <code>import membership</code> = [tu importación]</li>
+              <li>Agregar filtro: <strong>Compañía asociada</strong> → <code>status</code> = <em>is unknown</em> (vacío)</li>
+              <li>Si el status está vacío, significa que el contacto no tiene tienda creada</li>
+            </ol>
+            <p style="margin-top:12px;font-size:14px;"><strong>Lo que esto te permite:</strong> segmentar con un nivel de granularidad que no se logra solo con propiedades de contacto. Podés combinar "quién es" (contacto) con "qué hace su tienda" (compañía).</p>
+          </div>
+        </div>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>El caso de uso más frecuente para vos va a ser <strong>importar leads de eventos</strong>: recibís un Excel con los registrados (nombre + email), lo importás por Quick Import, creás un segmento con esos contactos, y lo usás como trigger de un journey post-evento. Paz confirmó que Julián ya hace esto regularmente.</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-importacion" onclick="markAsRead('hs-importacion')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Propiedades Sincronizadas ─── -->
+  <div class="sub-page" data-sub="hs-propiedades">
+    <div class="content-wrap">
+      <div class="article">
+        <h1>Propiedades Sincronizadas</h1>
+        <p class="subtitle">Las ~20 propiedades que más importan para Nurturing AR, filtradas de las 140+ del CSV interno.</p>
+
+        <p>HubSpot tiene cientos de propiedades. No necesitás conocerlas todas. Estas son las que vas a usar para armar segmentos, branches en workflows y entender a los leads.</p>
+
+        <div class="callout callout-insight">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>Dato de Paz</strong>
+            <p><code>po_sales_channel</code> es la propiedad de pre-onboarding que alimenta el Sales Channel. Es lo que el merchant responde cuando ingresa: "¿cómo vendés?". Esa respuesta es la base de toda la segmentación del full-funnel (No vende, Vende Online, Vende Físico).</p>
+          </div>
+        </div>
+
+        <h2>Propiedades de Compañía (Tienda)</h2>
+        <p>Estas propiedades describen la <strong>tienda</strong>, no la persona. Se acceden filtrando por "compañía asociada" en listas de contactos.</p>
+
+        <table class="data-table">
+          <thead><tr><th>Propiedad</th><th>Descripción</th><th>Valores</th><th>Uso en Nurturing</th></tr></thead>
+          <tbody>
+            <tr><td><strong>status</strong></td><td>Estado del plan</td><td>paying, churn, trial, free, non-activation, cancel</td><td>Filtro fundamental. Un contacto con status vacío = lead sin tienda.</td></tr>
+            <tr><td><strong>plan</strong> <small>(licence_str)</small></td><td>Plan actual</td><td>plan-free, plan-a, plan-b, plan-c, enterprise</td><td>Diferenciar freemium de pagos. Enterprise va a Sales, no a Nurturing.</td></tr>
+            <tr><td><strong>sign_up_at</strong></td><td>Fecha creación tienda</td><td>Fecha</td><td>Calcular antigüedad. Trials recientes vs viejos.</td></tr>
+            <tr><td><strong>first_payment_at</strong></td><td>Fecha primer pago</td><td>Fecha</td><td>El goal final. Si tiene fecha = ya pagó = sale del flujo.</td></tr>
+            <tr><td><strong>last_access_admin</strong></td><td>Último acceso al admin</td><td>Fecha</td><td>Detectar trials inactivos. Si no entró en 3 días → alerta 72hs.</td></tr>
+            <tr><td><strong>q_products</strong></td><td>Productos cargados</td><td>Número</td><td>Indicador de activación. 0 productos = trial fantasma.</td></tr>
+            <tr><td><strong>po_sales_channel</strong></td><td>Canal de venta (pre-onboarding)</td><td>online_store, social_media, pos, marketplaces, skip</td><td>La base de la segmentación del full-funnel.</td></tr>
+            <tr><td><strong>po_selling_status</strong></td><td>Si ya vendía al ingresar</td><td>already_selling, starting, skip</td><td>Distinguir emprendedores nuevos de migradores.</td></tr>
+            <tr><td><strong>status-by-orders</strong></td><td>Nivel de seller</td><td>top-seller → no-seller (7 niveles)</td><td>Entender madurez comercial del merchant.</td></tr>
+            <tr><td><strong>has_nuvempago</strong></td><td>Pago Nube activo</td><td>true/false</td><td>Personalizar MOFU: si no tiene Pago Nube, destacar esa solución.</td></tr>
+            <tr><td><strong>has_nuvemenvio</strong></td><td>Envío Nube activo</td><td>true/false</td><td>Igual que Pago Nube para envíos.</td></tr>
+            <tr><td><strong>brick_and_mortars</strong></td><td>Si tiene local físico</td><td>showroom, no-b&m, 1-b&m, 1-5-b&m, 5-plus-b&m</td><td>Identificar Offline Sellers para segmento "Vende Físico".</td></tr>
+            <tr><td><strong>apps_activos</strong></td><td>Apps instaladas</td><td>Lista separada por coma</td><td>Detectar si usa Marketing Nube, Chat Nube, etc.</td></tr>
+            <tr><td><strong>gmv_30d_fintech</strong></td><td>Facturación 30 días</td><td>Número (moneda local)</td><td>Proxy de madurez comercial y tamaño del merchant.</td></tr>
+            <tr><td><strong>churned_at</strong></td><td>Fecha de churn</td><td>Fecha</td><td>Trigger para remarketing y win-back.</td></tr>
+            <tr><td><strong>Main Payment Method</strong></td><td>Medio de pago principal</td><td>pago-nube, mercadopago, etc.</td><td>Si no usa Pago Nube, oportunidad de cross-sell.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Propiedades de Contacto</h2>
+        <p>Estas propiedades describen a la <strong>persona</strong>, no a la tienda.</p>
+
+        <table class="data-table">
+          <thead><tr><th>Propiedad</th><th>Descripción</th><th>Valores</th><th>Uso en Nurturing</th></tr></thead>
+          <tbody>
+            <tr><td><strong>country</strong></td><td>País</td><td>BR, AR, MX, CO, CL</td><td>Filtro básico: solo AR para nuestros flujos.</td></tr>
+            <tr><td><strong>has_store</strong></td><td>Tiene tienda</td><td>true/false</td><td>Distinguir leads puros de trials.</td></tr>
+            <tr><td><strong>user_is_active</strong></td><td>Usuario activo</td><td>true/false</td><td>Filtrar contactos inactivos de envíos.</td></tr>
+            <tr><td><strong>is_main_user</strong></td><td>Usuario principal</td><td>true/false</td><td>Enviar emails al dueño, no a colaboradores.</td></tr>
+            <tr><td><strong>last_access_admin</strong></td><td>Último acceso</td><td>Fecha</td><td>Misma lógica que en compañía, a nivel persona.</td></tr>
+            <tr><td><strong>user_is_partner</strong></td><td>Es partner</td><td>true/false</td><td>Excluir partners de flujos de nurturing (no son merchants).</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Propiedades con Sincronización Interrumpida</h2>
+        <p>Algunas propiedades útiles están marcadas como <strong>"Sincronização interrompida (sem uso)"</strong> en el CSV. Eso significa que existieron pero ya no se actualizan. Si necesitás una de estas, hay que pedirle a Paz/Engineering que la reactiven:</p>
+        <ul>
+          <li><code>total_orders_30d</code> — Órdenes de los últimos 30 días (sería muy útil pero está interrumpida)</li>
+          <li><code>business_size</code> — Tamaño de la empresa en empleados</li>
+          <li><code>has_fbshopping</code> — Si tiene Facebook Shopping conectado</li>
+          <li><code>tiktok_integration</code> — Integración con TikTok</li>
+          <li><code>store_visits</code> — Visitas a la tienda</li>
+        </ul>
+
+        <div class="callout-strategy">
+          <div class="cs-title">🧠 Pensar como Estratega</div>
+          <p>No necesitás memorizar todas las propiedades. Necesitás saber 3 cosas: <strong>1)</strong> si la propiedad es de contacto o de compañía, <strong>2)</strong> si está activamente sincronizada, y <strong>3)</strong> qué valores posibles tiene. Con eso podés armar cualquier segmento. Paz dijo que "son siempre las mismas las que vas a usar — a medida que las vayas laburando te van a salir de memoria".</p>
+        </div>
+      </div>
+
+      <div class="mark-read-wrap">
+        <button class="mark-read-btn" data-section="hs-propiedades" onclick="markAsRead('hs-propiedades')">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Marcar como leída</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── Quiz ─── -->
   <div class="sub-page" data-sub="hs-quiz">
     <div class="content-wrap">
@@ -607,6 +967,50 @@
           </div>
           <div class="q-feedback q-right">Correcto. Los broadcasts pasan de "cerrar" a "activar" — su CTA lleva a flujos, no a conversión directa.</div>
           <div class="q-feedback q-wrong">Los broadcasts no desaparecen ni buscan cerrar directamente. Se reconvierten en motor de activación para los flujos automatizados.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="b">
+          <h3>5. ¿Cuál es la clave única para importar compañías (tiendas) en HubSpot?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq5" value="a"><span>El email del merchant</span></label>
+            <label class="q-opt"><input type="radio" name="hq5" value="b"><span>El Store ID o el Record ID</span></label>
+            <label class="q-opt"><input type="radio" name="hq5" value="c"><span>El nombre de la tienda</span></label>
+          </div>
+          <div class="q-feedback q-right">Correcto. El email es la clave para contactos. Para compañías (tiendas), se usa el Store ID (clave interna TN) o el Record ID (clave HubSpot).</div>
+          <div class="q-feedback q-wrong">El email sirve para contactos. Las compañías se matchean por Store ID (clave TN) o Record ID (clave HubSpot). El nombre no es un identificador único.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="c">
+          <h3>6. ¿Qué hace un "delay status branch" en un workflow?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq6" value="a"><span>Envía el email más rápido si el contacto está muy activo</span></label>
+            <label class="q-opt"><input type="radio" name="hq6" value="b"><span>Duplica el email por seguridad</span></label>
+            <label class="q-opt"><input type="radio" name="hq6" value="c"><span>Si la fecha del delay ya pasó, redirige al contacto por otro camino (ej: no enviar nada)</span></label>
+          </div>
+          <div class="q-feedback q-right">Exacto. Es clave para eventos: si alguien se registra después de la fecha del recordatorio, no recibe un email desfasado.</div>
+          <div class="q-feedback q-wrong">El delay status branch verifica si la fecha del delay ya pasó. Si pasó, manda al contacto por un camino alternativo para evitar enviar emails fuera de tiempo.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="a">
+          <h3>7. ¿Qué propiedad define la segmentación principal del full-funnel?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq7" value="a"><span>po_sales_channel (canal de venta del pre-onboarding)</span></label>
+            <label class="q-opt"><input type="radio" name="hq7" value="b"><span>plan (tipo de licencia)</span></label>
+            <label class="q-opt"><input type="radio" name="hq7" value="c"><span>country (país)</span></label>
+          </div>
+          <div class="q-feedback q-right">Sí. po_sales_channel es lo que el merchant responde al entrar ("¿cómo vendés?") y define si va al segmento No vende, Vende Online o Vende Físico.</div>
+          <div class="q-feedback q-wrong">Country filtra por país y plan por licencia, pero la segmentación del funnel se basa en po_sales_channel: cómo vende el lead.</div>
+        </div>
+
+        <div class="quiz-card" data-correct="b">
+          <h3>8. Un contacto con status de compañía vacío (unknown), ¿qué significa?</h3>
+          <div class="q-options">
+            <label class="q-opt"><input type="radio" name="hq8" value="a"><span>Que su cuenta fue cancelada</span></label>
+            <label class="q-opt"><input type="radio" name="hq8" value="b"><span>Que es un lead puro — todavía no creó tienda</span></label>
+            <label class="q-opt"><input type="radio" name="hq8" value="c"><span>Que hay un error en HubSpot</span></label>
+          </div>
+          <div class="q-feedback q-right">Correcto. Si no tiene compañía asociada, el status está vacío, lo que indica que el contacto nunca creó una tienda.</div>
+          <div class="q-feedback q-wrong">No es un error. Un contacto sin compañía asociada simplemente no tiene tienda creada — es un lead que aún no hizo trial.</div>
         </div>
       </div>
 
