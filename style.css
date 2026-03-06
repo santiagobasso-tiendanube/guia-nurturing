@@ -130,6 +130,7 @@ em{font-style:italic;color:var(--charcoal-light)}
   display:flex;gap:0;overflow-x:auto;
   padding:0 24px;
   -webkit-overflow-scrolling:touch;
+  flex-wrap:wrap;
 }
 .sub-tabs::-webkit-scrollbar{display:none}
 .sub-tab{
@@ -218,7 +219,7 @@ em{font-style:italic;color:var(--charcoal-light)}
 }
 .callout-icon{font-size:20px;flex-shrink:0;line-height:1.4}
 .callout-body{flex:1}
-.callout-body strong{display:block;margin-bottom:3px;font-size:14px}
+.callout-body > strong{display:block;margin-bottom:3px;font-size:14px}
 .callout-body p{margin-bottom:6px;font-size:14px;line-height:1.65}
 .callout-body p:last-child{margin-bottom:0}
 
